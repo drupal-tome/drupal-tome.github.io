@@ -46,16 +46,16 @@
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "install-tome": "./scripts/install.sh",
         "run": "./scripts/run.sh",
-        "symlink": "./scripts/symlink.sh"
+        "symlink": "./scripts/symlink.sh",
+        "post-install-cmd": [
+            "@drupal-scaffold",
+            "@symlink"
+        ],
+        "post-update-cmd": [
+            "@drupal-scaffold",
+            "@symlink"
+        ]
     },
-    "post-install-cmd": [
-        "@drupal-scaffold",
-        "@symlink"
-    ],
-    "post-update-cmd": [
-        "@drupal-scaffold",
-        "@symlink"
-    ],
     "patches": {
         "drupal/core": {
             "Alt text lost when normalizing": "https://www.drupal.org/files/issues/2018-06-05/2935738-14.patch"
