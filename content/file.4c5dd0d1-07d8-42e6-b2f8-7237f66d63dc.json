@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "597de545-8a67-44ec-a4ec-337c4c6bd669"
+            "value": "4c5dd0d1-07d8-42e6-b2f8-7237f66d63dc"
         }
     ],
     "langcode": [
@@ -34,7 +34,7 @@
     ],
     "filesize": [
         {
-            "value": 58265
+            "value": 72053
         }
     ],
     "status": [
@@ -44,13 +44,13 @@
     ],
     "created": [
         {
-            "value": "2018-06-18T04:56:33+00:00",
+            "value": "2018-06-18T14:03:59+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-18T04:56:51+00:00",
+            "value": "2018-06-18T14:04:03+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ]

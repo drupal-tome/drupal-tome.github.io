@@ -55,7 +55,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-18T04:56:51+00:00",
+            "value": "2018-06-18T14:04:03+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -82,9 +82,16 @@
     "metatag": {
         "value": {
             "title": "Home | Tome",
+            "twitter_cards_type": "summary_large_image",
             "canonical_url": "http:\/\/127.0.0.1:8888\/home",
+            "twitter_cards_title": "Home",
+            "twitter_cards_description": "Tome is a static site generator lovingly crafted with Drupal 8. Work locally and sync your changes with Git.",
             "description": "Tome is a static site generator lovingly crafted with Drupal 8. Work locally and sync your changes with Git.",
-            "image_src": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/home-preview.png"
+            "twitter_cards_creator_id": "@DrupalSAM",
+            "twitter_cards_creator": "@DrupalSAM",
+            "image_src": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/home-preview_0.png",
+            "twitter_cards_image_alt": "Build Drupal from source, sync changes back, and export static HTML.",
+            "twitter_cards_image": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/home-preview_0.png"
         }
     },
     "path": [
@@ -131,12 +138,12 @@
     ],
     "field_preview_image": [
         {
-            "alt": "Home preview image",
+            "alt": "Build Drupal from source, sync changes back, and export static HTML.",
             "title": "",
-            "width": 1680,
-            "height": 660,
+            "width": 1738,
+            "height": 658,
             "target_type": "file",
-            "target_uuid": "597de545-8a67-44ec-a4ec-337c4c6bd669",
+            "target_uuid": "4c5dd0d1-07d8-42e6-b2f8-7237f66d63dc",
             "url": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/home-preview.png"
         }
     ]
