@@ -46,7 +46,6 @@
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "install-tome": "./scripts/install.sh",
         "gh-pages": "./scripts/gh-pages.sh",
-        "run": "./scripts/run.sh",
         "symlink": "./scripts/symlink.sh",
         "post-install-cmd": [
             "@drupal-scaffold",
