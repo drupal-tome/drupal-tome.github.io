@@ -1,0 +1,41 @@
+module:
+  block: 0
+  block_content: 0
+  book: 0
+  breakpoint: 0
+  ckeditor: 0
+  contextual: 0
+  dblog: 0
+  dynamic_page_cache: 0
+  editor: 0
+  entity_reference_revisions: 0
+  field: 0
+  field_ui: 0
+  file: 0
+  filter: 0
+  image: 0
+  link: 0
+  node: 0
+  options: 0
+  page_cache: 0
+  paragraphs_clean: 0
+  path: 0
+  responsive_image: 0
+  serialization: 0
+  svg_formatter: 0
+  system: 0
+  text: 0
+  tome: 0
+  toolbar: 0
+  update: 0
+  user: 0
+  paragraphs: 11
+  minimal: 1000
+theme:
+  stable: 0
+  classy: 0
+  seven: 0
+  tomefyi: 0
+profile: minimal
+_core:
+  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

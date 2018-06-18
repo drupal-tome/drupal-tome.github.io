@@ -1,0 +1,45 @@
+uuid: e1982bb4-59d0-495e-aeb4-9446735149b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero
+    - image.style.hero_200px
+    - image.style.hero_380px
+  theme:
+    - tomefyi
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: tomefyi.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero
+  -
+    breakpoint_id: tomefyi.wide
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero
+  -
+    breakpoint_id: tomefyi.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_380px
+  -
+    breakpoint_id: tomefyi.narrow
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_380px
+  -
+    breakpoint_id: tomefyi.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_200px
+  -
+    breakpoint_id: tomefyi.mobile
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_200px
+breakpoint_group: tomefyi
+fallback_image_style: hero

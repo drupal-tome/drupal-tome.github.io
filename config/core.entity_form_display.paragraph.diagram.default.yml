@@ -1,0 +1,34 @@
+uuid: bd6fb826-fb3e-49bf-a236-de44878a91bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.diagram.field_description
+    - field.field.paragraph.diagram.field_file
+    - paragraphs.paragraphs_type.diagram
+  module:
+    - file
+id: paragraph.diagram.default
+targetEntityType: paragraph
+bundle: diagram
+mode: default
+content:
+  field_description:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

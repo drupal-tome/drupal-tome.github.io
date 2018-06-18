@@ -1,0 +1,88 @@
+{
+    "uuid": [
+        {
+            "value": "9bfc2f10-419f-4f69-95d1-809bdd5b5df8"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "diagram",
+            "target_type": "paragraphs_type",
+            "target_uuid": "0a4a0da5-80f0-4692-88fa-7298914f41a7"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-17T16:05:05+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "5"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_paragraphs"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_description": [
+        {
+            "value": "Re-think your editorial workflow. Update content and code in a single pull request."
+        }
+    ],
+    "field_file": [
+        {
+            "display": true,
+            "description": "",
+            "target_type": "file",
+            "target_uuid": "add6d3e2-286d-49a2-954b-62f8ab959235",
+            "url": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/diagram2.svg"
+        }
+    ]
+}

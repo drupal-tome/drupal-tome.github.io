@@ -1,0 +1,17 @@
+name: Tome FYI
+type: theme
+base theme: classy
+description: 'Theme for the tome.fyi website.'
+version: VERSION
+core: 8.x
+libraries:
+  - tomefyi/main
+
+regions:
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+
+ckeditor_stylesheets:
+  - css/main.css

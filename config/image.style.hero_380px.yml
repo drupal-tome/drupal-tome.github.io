@@ -1,0 +1,15 @@
+uuid: 3c94e743-41a7-4cd9-b42b-68665cebe106
+langcode: en
+status: true
+dependencies: {  }
+name: hero_380px
+label: 'Hero (380px)'
+effects:
+  603e367b-c883-4f01-a1a0-d6bf11c68ae7:
+    uuid: 603e367b-c883-4f01-a1a0-d6bf11c68ae7
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 380
+      upscale: false

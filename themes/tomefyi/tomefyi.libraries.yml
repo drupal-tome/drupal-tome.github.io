@@ -1,0 +1,11 @@
+main:
+  version: VERSION
+  css:
+    component:
+      css/main.css: {}
+      //fonts.googleapis.com/css?family=Montserrat:900i|Rubik: { external: true }
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

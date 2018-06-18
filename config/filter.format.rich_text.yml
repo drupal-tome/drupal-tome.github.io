@@ -1,0 +1,17 @@
+uuid: 777ea6a5-9923-46e1-9b42-b1cf59cbb0d5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rich text'
+format: rich_text
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid> <u> <p> <h1> <pre>'
+      filter_html_help: true
+      filter_html_nofollow: false

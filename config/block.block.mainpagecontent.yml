@@ -1,0 +1,20 @@
+uuid: 752e13c1-4528-44fa-8258-7b58af8a36a3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tomefyi
+id: mainpagecontent
+theme: tomefyi
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

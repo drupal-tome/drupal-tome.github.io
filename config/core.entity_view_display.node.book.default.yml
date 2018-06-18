@@ -1,0 +1,26 @@
+uuid: fd6592c6-60c7-431e-9324-edfdac4c0f57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.book.body
+    - node.type.book
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: UWTnZUj-u-jp8I_S1C1nUCTlM5iIV2QKdxm37ehFjoI
+id: node.book.default
+targetEntityType: node
+bundle: book
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  links: true

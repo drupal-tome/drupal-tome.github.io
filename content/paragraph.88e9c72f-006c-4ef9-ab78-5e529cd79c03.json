@@ -1,0 +1,101 @@
+{
+    "uuid": [
+        {
+            "value": "88e9c72f-006c-4ef9-ab78-5e529cd79c03"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "hero",
+            "target_type": "paragraphs_type",
+            "target_uuid": "1678f17b-44eb-4043-9a6f-296bf6294737"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-17T16:08:07+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "5"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_paragraphs"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_alignment": [
+        {
+            "value": "right"
+        }
+    ],
+    "field_background_color": [
+        {
+            "value": "43C366"
+        }
+    ],
+    "field_headline": [
+        {
+            "value": "EXPERIMENT"
+        }
+    ],
+    "field_link": [],
+    "field_text": [
+        {
+            "value": "<p>Play with a vast library of modules and themes, without having to worry about destroying production.<\/p>\r\n",
+            "format": "rich_text"
+        }
+    ],
+    "field_text_color": [
+        {
+            "value": "FFFFFF"
+        }
+    ]
+}

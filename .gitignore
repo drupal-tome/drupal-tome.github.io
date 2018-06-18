@@ -1,0 +1,5 @@
+/vendor/
+/web
+/composer.lock
+/html
+.idea

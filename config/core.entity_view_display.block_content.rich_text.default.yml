@@ -1,0 +1,22 @@
+uuid: 7489a875-6f80-4b38-8be0-b62a24386adb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.rich_text
+    - field.field.block_content.rich_text.body
+  module:
+    - text
+id: block_content.rich_text.default
+targetEntityType: block_content
+bundle: rich_text
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

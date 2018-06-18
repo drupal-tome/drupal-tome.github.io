@@ -1,0 +1,8 @@
+uuid: 56c1c7e7-d8e5-4ff4-a8ba-02aa4609556d
+langcode: en
+status: true
+dependencies: {  }
+id: rich_text
+label: 'Rich text'
+revision: 0
+description: ''

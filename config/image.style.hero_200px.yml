@@ -1,0 +1,15 @@
+uuid: d2ce88f7-36c6-4eea-a222-6004871aa7de
+langcode: en
+status: true
+dependencies: {  }
+name: hero_200px
+label: 'Hero (200px)'
+effects:
+  6f83f3fa-c065-4b2f-a4fe-71a66f369238:
+    uuid: 6f83f3fa-c065-4b2f-a4fe-71a66f369238
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 200
+      upscale: false

@@ -1,0 +1,80 @@
+{
+    "uuid": [
+        {
+            "value": "3618af94-22ab-4f86-a770-9803b69f22f0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "rich_text",
+            "target_type": "paragraphs_type",
+            "target_uuid": "5203281b-3de4-4795-ba16-4ea0c62aa531"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-16T17:28:17+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "parent_id": [
+        {
+            "value": "5"
+        }
+    ],
+    "parent_type": [
+        {
+            "value": "node"
+        }
+    ],
+    "parent_field_name": [
+        {
+            "value": "field_paragraphs"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_text": [
+        {
+            "value": "<div class=\"flex\">\r\n<div class=\"small-callout\">\r\n<h3>AGILE<\/h3>\r\n\r\n<p>Brings your ideas to life faster. Deploying is as easy as sending HTML to production.<\/p>\r\n<\/div>\r\n\r\n<div class=\"small-callout\">\r\n<h3>SECURE<\/h3>\r\n\r\n<p>Remove the risk of running an insecure site. Working locally keeps your public site safe.<\/p>\r\n<\/div>\r\n\r\n<div class=\"small-callout\">\r\n<h3>SIMPLE<\/h3>\r\n\r\n<p>Collaborate on code and content in one place, and contribute with tools you already know.<\/p>\r\n<\/div>\r\n<\/div>\r\n",
+            "format": "rich_text"
+        }
+    ]
+}

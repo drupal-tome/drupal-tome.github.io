@@ -1,0 +1,96 @@
+{
+    "uuid": [
+        {
+            "value": "35c0a22b-5453-44a0-92c6-73f8f206d094"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book",
+            "target_type": "node_type",
+            "target_uuid": "870f5e4b-075f-48ba-972b-7b47064b4efd"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-06-16T22:02:18+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "Getting started"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-16T21:58:14+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-17T05:41:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/docs\/getting-started",
+            "pid": 2,
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>While anyone can download and install Tome on a new or existing Drupal site, it works best when used with specific Drupal configurations. This guide will take you from creating a new site to making your first commit.<\/p>\r\n\r\n<p>Before continuing, it\u2019s expected that your local machine has:<\/p>\r\n\r\n<ol>\r\n\t<li>PHP 7 or greater installed.<\/li>\r\n\t<li>Composer installed globally.<\/li>\r\n<\/ol>\r\n\r\n<p>A global Drush installation is not required to use Tome, but is easier to use than typing \u201c.\/vendor\/bin\/drush\u201d every time you want to run a command. This guide will assume that the \u201cdrush\u201d command is available.<\/p>\r\n\r\n<p>To start, create a new instance of the starter project by running:<\/p>\r\n\r\n<p><code>composer create-project drupal-tome\/tome-project:8.x-dev my_site --stability dev --no-interaction<br \/>\r\ncd my_site<br \/>\r\ngit init<br \/>\r\ngit commit -am 'Initial commit of starter codebase.' <\/code><\/p>\r\n\r\n<p>The starter kit only comes with Drupal core, so you\u2019ll probably need to install contributed themes and modules as well. Eventually the starter kit will come with a Tome-specific distribution, which will be the recommended way to make simple sites. Since Tome is still in development, things are bare-bones for now.<\/p>\r\n\r\n<p>Next you\u2019ll need to install a profile and setup the base configuration of your site. To keep your site lean, I would recommend starting with the Standard profile. Run the following commands:<\/p>\r\n\r\n<p><code>drush si standard -y<br \/>\r\ndrush pmu search history comment contact -y<br \/>\r\ndrush en tome -y<br \/>\r\ndrush tome:export -y<\/code><\/p>\r\n\r\n<p>You\u2019ve now installed Drupal, enabled Tome, and made an initial export. The \u201cdrush pmu\u201d command uninstalls modules that don\u2019t make sense for a static site.<\/p>\r\n\r\n<p>If you run \u201cgit status\u201d at this point, you should see that the \u201cconfig\u201d folder is full of exported configuration. You\u2019ll want to commit those changes now so you have a base to work off of in your history. Run:<\/p>\r\n\r\n<p><code>git commit -am 'Installed the Standard profile.' <\/code><\/p>\r\n\r\n<p>Next you\u2019ll need to start up a local webserver. In a new tab, run:<\/p>\r\n\r\n<p><code>cd [path to your my_site codebase]<br \/>\r\ndrush runserver --user=admin -l 127.0.0.1:8888 \/<\/code><\/p>\r\n\r\n<p>A browser window should pop up and log you in as admin. If this doesn\u2019t happen, switch back to your original tab, then run \u201cdrush uli -l 127.0.0.1:8888\u201d. This should generate a valid link to log you in as admin.<\/p>\r\n\r\n<p>Now you\u2019re ready to start using Drupal to build you site. Let\u2019s start by adding a new article. Expand \u201cShortcuts\u201d in the admin toolbar, click \u201cAdd content\u201d, then \u201cArticle\u201d. Fill out the fields to your liking, and make sure to upload an image.<\/p>\r\n\r\n<p>Once your article has been created, go back to your command line window and run \u201cgit status\u201d. You should see that&nbsp;two new files exist in the \u201ccontent\u201d directory, one for the article node you made, and one for the file you uploaded. There should also be a copy of your uploaded file in the \u201cfiles\u201d directory. Feel free to commit these files now if you\u2019d like.<\/p>\r\n\r\n<p>Tome is always watching your site for changes, and automatically syncs modified config, content, and files as needed. Running \u201cdrush tome:export\u201d, which exports everything currently on your site, should be pretty rare after your initial install.<\/p>\r\n\r\n<p>We\u2019re going to test that your site can be fully rebuilt from scratch, to ensure that everything is working properly. Run:<\/p>\r\n\r\n<p><code>drush si standard -y<br \/>\r\ndrush en tome -y<br \/>\r\ndrush tome:import -y<\/code><\/p>\r\n\r\n<p>If you visit your site again, you should see that your article and image as they originally appeared. Running these commands every install can get tedious, so you can also run \u201ccomposer run-script install\u201d<\/p>\r\n\r\n<p>Even though your site doesn't have much going on yet, let\u2019s test the static site generation as well. Whenever you\u2019re ready to generate static HTML for your site, run:<\/p>\r\n\r\n<p><code>drush tome:static <\/code><\/p>\r\n\r\n<p>This should put a copy of your site in the \u201chtml\u201d directory, which you can then upload to a host of your choosing.<\/p>\r\n\r\n<p>That's it for now. You're free to start making your Tome site. Make sure to check out the other documentation, and keep in mind that the project is still in development. Thanks!<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n",
+            "format": "rich_text",
+            "summary": ""
+        }
+    ]
+}

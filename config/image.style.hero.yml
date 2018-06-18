@@ -1,0 +1,15 @@
+uuid: 4f2e47e3-8324-4f27-beb8-225bbc03752c
+langcode: en
+status: true
+dependencies: {  }
+name: hero
+label: 'Hero (675px)'
+effects:
+  761e0a26-c4ef-45c4-8c03-22ea786e896a:
+    uuid: 761e0a26-c4ef-45c4-8c03-22ea786e896a
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 675
+      upscale: false

@@ -1,0 +1,25 @@
+uuid: 7f2c11ee-9d13-48d3-942a-88f7f260df89
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:rich_text:41a379f1-9578-43d6-9b62-977bfe857232'
+  module:
+    - block_content
+  theme:
+    - tomefyi
+id: footerblock
+theme: tomefyi
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:41a379f1-9578-43d6-9b62-977bfe857232'
+settings:
+  id: 'block_content:41a379f1-9578-43d6-9b62-977bfe857232'
+  label: 'Footer block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

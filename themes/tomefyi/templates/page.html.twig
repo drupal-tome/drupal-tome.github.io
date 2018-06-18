@@ -1,0 +1,27 @@
+<div class="page page-node-{{ node.bundle() }}">
+
+  {% if page.header %}
+    <header>
+      {{ page.header }}
+    </header>
+  {% endif %}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+
+    {% if not node or node.bundle() != "landing_page" %}
+      <aside class="sidebar" role="complementary">
+        {{ page.sidebar }}
+      </aside>
+    {% endif %}
+
+    <div class="content">
+      {{ page.content }}
+    </div>
+  </main>
+
+  <footer>
+    {{ page.footer }}
+  </footer>
+
+</div>

@@ -1,0 +1,21 @@
+uuid: e6a9e5bc-1ed4-4453-aaa9-4839ddf33d41
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+type: string
+settings:
+  max_length: 6
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
