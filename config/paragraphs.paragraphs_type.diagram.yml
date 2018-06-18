@@ -1,9 +1,0 @@
-uuid: 0a4a0da5-80f0-4692-88fa-7298914f41a7
-langcode: en
-status: true
-dependencies: {  }
-id: diagram
-label: Diagram
-icon_uuid: null
-description: 'A ful width diagram'
-behavior_plugins: {  }
