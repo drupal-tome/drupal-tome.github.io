@@ -55,7 +55,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-18T00:22:11+00:00",
+            "value": "2018-06-18T04:56:51+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -79,11 +79,24 @@
             "value": true
         }
     ],
+    "metatag": {
+        "value": {
+            "title": "Home | Tome",
+            "canonical_url": "http:\/\/127.0.0.1:8888\/home",
+            "description": "Tome is a static site generator lovingly crafted with Drupal 8. Work locally and sync your changes with Git.",
+            "image_src": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/home-preview.png"
+        }
+    },
     "path": [
         {
             "alias": "\/home",
             "pid": 5,
             "langcode": "en"
+        }
+    ],
+    "field_description": [
+        {
+            "value": "Tome is a static site generator lovingly crafted with Drupal 8. Work locally and sync your changes with Git."
         }
     ],
     "field_paragraphs": [
@@ -114,6 +127,17 @@
         {
             "target_type": "paragraph",
             "target_uuid": "3e488c7b-33bd-497d-bb8f-20059027751e"
+        }
+    ],
+    "field_preview_image": [
+        {
+            "alt": "Home preview image",
+            "title": "",
+            "width": 1680,
+            "height": 660,
+            "target_type": "file",
+            "target_uuid": "597de545-8a67-44ec-a4ec-337c4c6bd669",
+            "url": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/home-preview.png"
         }
     ]
 }

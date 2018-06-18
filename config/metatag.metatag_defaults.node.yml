@@ -1,0 +1,20 @@
+uuid: 72e9f7f2-b9f3-4bd8-ba98-e1e4af377dd7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Content
+tags:
+  title: '[node:title] | [site:name]'
+  canonical_url: '[node:url]'
+  description: '[node:summary][node:field_description]'
+  image_src: '[node:field_preview_image]'
+  twitter_cards_creator: '@DrupalSAM'
+  twitter_cards_image: '[node:field_preview_image]'
+  twitter_cards_description: '[node:summary][node:field_description]'
+  twitter_cards_image_alt: '[node:field_preview_image:alt]'
+  twitter_cards_creator_id: '@DrupalSAM'
+  twitter_cards_type: summary_large_image
+  twitter_cards_title: '[node:title]'

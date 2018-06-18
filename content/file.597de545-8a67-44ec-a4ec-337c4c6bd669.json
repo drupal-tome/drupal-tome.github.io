@@ -1,0 +1,57 @@
+{
+    "uuid": [
+        {
+            "value": "597de545-8a67-44ec-a4ec-337c4c6bd669"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
+            "url": "\/user\/1"
+        }
+    ],
+    "filename": [
+        {
+            "value": "home-preview.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/2018-06\/home-preview.png",
+            "url": "\/sites\/default\/files\/2018-06\/home-preview.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 58265
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-06-18T04:56:33+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-06-18T04:56:51+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ]
+}

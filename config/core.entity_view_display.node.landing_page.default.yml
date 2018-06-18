@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.field_description
     - field.field.node.landing_page.field_paragraphs
+    - field.field.node.landing_page.field_preview_image
     - node.type.landing_page
   module:
     - entity_reference_revisions
@@ -15,7 +17,7 @@ mode: default
 content:
   field_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 102
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -23,8 +25,10 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_description: true
+  field_preview_image: true

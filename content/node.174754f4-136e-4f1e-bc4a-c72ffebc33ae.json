@@ -55,7 +55,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-16T23:28:04+00:00",
+            "value": "2018-06-18T04:47:24+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -79,6 +79,13 @@
             "value": true
         }
     ],
+    "metatag": {
+        "value": {
+            "title": "Documentation | Tome",
+            "canonical_url": "http:\/\/127.0.0.1:8888\/docs",
+            "description": "Thanks for checking out Tome! Use the links to your left to navigate and find what you're looking for."
+        }
+    },
     "path": [
         {
             "alias": "\/docs",
@@ -90,7 +97,7 @@
         {
             "value": "<p>Thanks for checking out Tome! Use the links to your left to navigate and find what you're looking for.<\/p>\r\n",
             "format": "rich_text",
-            "summary": ""
+            "summary": "Thanks for checking out Tome! Use the links to your left to navigate and find what you're looking for."
         }
     ]
 }
