@@ -113,17 +113,19 @@
 
 <p>To start, create a new instance of the starter project by running:</p>
 
-<p><code>composer create-project drupal-tome/tome-project:8.x-dev my_site --stability dev --no-interaction<br />
+<p><code>composer create-project drupal-tome/tome-project my_site --stability dev --no-interaction --no-install<br />
 cd my_site<br />
+composer install<br />
 git init<br />
-git commit -am 'Initial commit of starter codebase.' </code></p>
+git add .<br />
+git commit -m 'Initial commit of starter codebase.' </code></p>
 
 <p>The starter kit only comes with Drupal core, so you’ll probably need to install contributed themes and modules as well. Eventually the starter kit will come with a Tome-specific distribution, which will be the recommended way to make simple sites. Since Tome is still in development, things are bare-bones for now.</p>
 
 <p>Next you’ll need to install a profile and setup the base configuration of your site. To keep your site lean, I would recommend starting with the Standard profile. Run the following commands:</p>
 
 <p><code>drush si standard -y<br />
-drush pmu search history comment contact -y<br />
+drush pmu search history contact -y<br />
 drush en tome -y<br />
 drush tome:export -y</code></p>
 
@@ -131,14 +133,19 @@ drush tome:export -y</code></p>
 
 <p>If you run “git status” at this point, you should see that the “config” folder is full of exported configuration. You’ll want to commit those changes now so you have a base to work off of in your history. Run:</p>
 
-<p><code>git commit -am 'Installed the Standard profile.' </code></p>
+<p><code>
+git add .<br />
+git commit -am 'Installed the Standard profile.'<br />
+ </code></p>
 
 <p>Next you’ll need to start up a local webserver. In a new tab, run:</p>
 
 <p><code>cd [path to your my_site codebase]<br />
-drush runserver --user=admin -l 127.0.0.1:8888 /</code></p>
+drush runserver 127.0.0.1:8888</code></p>
 
-<p>A browser window should pop up and log you in as admin. If this doesn’t happen, switch back to your original tab, then run “drush uli -l 127.0.0.1:8888”. This should generate a valid link to log you in as admin.</p>
+<p>Then switch back to your original tab, and run "drush uli -l 127.0.0.1:8888"</p>
+
+<p>A browser window should pop up and log you in as admin.</p>
 
 <p>Now you’re ready to start using Drupal to build you site. Let’s start by adding a new article. Expand “Shortcuts” in the admin toolbar, click “Add content”, then “Article”. Fill out the fields to your liking, and make sure to upload an image.</p>
 
@@ -152,7 +159,7 @@ drush runserver --user=admin -l 127.0.0.1:8888 /</code></p>
 drush en tome -y<br />
 drush tome:import -y</code></p>
 
-<p>If you visit your site again, you should see that your article and image as they originally appeared. Running these commands every install can get tedious, so you can also run “composer run-script install”</p>
+<p>If you visit your site again, you should see that your article and image as they originally appeared. Running these commands every install can get tedious, so you can also run “composer install-tome”</p>
 
 <p>Even though your site doesn't have much going on yet, let’s test the static site generation as well. Whenever you’re ready to generate static HTML for your site, run:</p>
 
