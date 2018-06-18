@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="canonical" href="/docs/module-compatibility" />
+<link rel="shortlink" href="/node/3" />
+<link rel="revision" href="/docs/module-compatibility" />
+<link rel="prev" href="/docs/using-the-command-line" />
+<link rel="up" href="/docs" />
+
+    <title>Module compatibility | Drush Site-Install</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_5Mz0wpOL20s_SQKXnhCWyA5ZJOgQQg26tUyGV0jHiCA.css?pahyhp" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_j7H7KBGZn71ew_AFB9W1J-hGKmRdwPlYbzZnlH620ts.css?pahyhp" media="all" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?pahyhp" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-book">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page page-node-book">
+
+      <header>
+        <div class="region region-header">
+    <div id="block-sitebranding" class="block block-system block-system-branding-block">
+  
+    
+        <a href="/" title="Home" rel="home" class="site-logo">
+      <img src="/themes/custom/tomefyi/logo.svg" alt="Home" />
+    </a>
+      </div>
+
+  </div>
+
+    </header>
+  
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+
+          <aside class="sidebar" role="complementary">
+          <div class="region region-sidebar">
+    <div id="block-booknavigation" class="block block-book block-book-navigation">
+  
+    
+      
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/docs/getting-started" hreflang="en">Getting started</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs/using-the-command-line" hreflang="en">Using the command line</a>
+              </li>
+                <li class="menu-item menu-item--active-trail">
+        <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+
+  </div>
+
+      </aside>
+    
+    <div class="content">
+        <div class="region region-content">
+    <div id="block-tomefyi-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Module compatibility</span>
+</h1>
+
+
+  </div>
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
+  
+    
+      
+<article role="article" class="node node--type-book node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This project has not been tested with every contributed module, but this page will categorize ones that are known to have problems</p>
+
+<ul>
+	<li><b>Image&nbsp;</b>- Field metadata like "alt" or "title" is lost in denormalization. This is almost fixed in issue <a href="https://www.drupal.org/project/drupal/issues/2935738">#2935738</a></li>
+	<li><strong>Views&nbsp;</strong>- Publicly accessible exposed forms, contextual filters (using query params), and AJAX does not work with Tome, since there is no Drupal site running to support them. Pagers on non-AJAX forms are supported, with some magic.</li>
+	<li><strong>Search, and most&nbsp;forms</strong>&nbsp;- You should not expect any publicly accessible form to work on your static site. It's static HTML, there's nowhere to POST! 😄It's recommended that these dynamic elements are moved to a PaaS service or DIY serverless function. A light-weight replacement for Search that works for small sites is in development, and will use client side fuzzy searching with Javascript.</li>
+	<li><strong>Paragraphs&nbsp;</strong>- When a Paragraph is removed from a field, it is never actually deleted. This can lead to a lot of stale entities in&nbsp; your repository, which you would normally have to manually clean up. The "Paragraphs Clean" contributed module will delete Paragraphs when they are unreferenced. I use it on this site and it seems to work OK.</li>
+</ul>
+</div>
+      
+  <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
+    
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Module compatibility</h2>
+      <ul class="book-pager">
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/docs/using-the-command-line" rel="prev" title="Go to previous page"><b>‹</b> Using the command line</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/docs" title="Go to parent page">Up</a>
+        </li>
+                </ul>
+      </nav>
+
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+    </div>
+  </main>
+
+  <footer>
+      <div class="region region-footer">
+    <div id="block-footerblock" class="block block-block-content block-block-content41a379f1-9578-43d6-9b62-977bfe857232">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="text-align-center"><img alt="" height="150px/" src="/themes/custom/tomefyi/logo.svg" width="150px" /></p>
+
+<p class="text-align-center"><a href="https://github.com/drupal-tome">Github</a>&nbsp;- <a href="https://www.drupal.org/project/tome">Drupal.org</a> - <a href="https://twitter.com/DrupalSAM">Twitter</a></p>
+
+<p class="text-align-center">Tome is in development and likely has some bugs. Please be patient and&nbsp;respectful when reporting issues!</p>
+
+<p class="text-align-center">This site is built with Tome! <a href="https://github.com/drupal-tome/drupal-tome.github.io">Check it out and build it locally from Github</a>.</p>
+</div>
+      
+  </div>
+
+  </div>
+
+  </footer>
+
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","user":{"uid":0,"permissionsHash":"0dbc135a59097daf62fdc4f74d3289abe414bd0567cc28057ac96cc057c024f3"}}</script>
+<script src="/sites/default/files/js/js_2UUISih0bsFmJk63xbc6bDHdOdiR_pm6kyMVNUYPjeM.js"></script>
+
+  </body>
+</html>
