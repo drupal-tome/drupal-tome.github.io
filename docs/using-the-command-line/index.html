@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="title" content="Using the command line | Tome" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://tome.fyi/docs/using-the-command-line" />
+<meta name="twitter:title" content="Using the command line" />
+<meta name="twitter:description" content="Learn about Tome&#039;s various command line tools." />
+<meta name="description" content="Learn about Tome&#039;s various command line tools." />
+<meta name="twitter:creator:id" content="@DrupalSAM" />
+<meta name="twitter:creator" content="@DrupalSAM" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="/docs/using-the-command-line" />
+<link rel="prev" href="/docs/getting-started" />
+<link rel="up" href="/docs" />
+<link rel="next" href="/docs/module-compatibility" />
+
+    <title>Using the command line | Tome</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_5Mz0wpOL20s_SQKXnhCWyA5ZJOgQQg26tUyGV0jHiCA.css?pauzmz" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_E94gpu-o4ITPeZGzmYuD8e0ACmRUb0Ay-XzP6wFNUY4.css?pauzmz" media="all" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?pauzmz" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-book">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page page-node-book">
+
+      <header>
+        <div class="region region-header">
+    <div id="block-sitebranding" class="block block-system block-system-branding-block">
+  
+    
+        <a href="/" title="Home" rel="home" class="site-logo">
+      <img src="/themes/custom/tomefyi/logo.svg" alt="Home" />
+    </a>
+      </div>
+
+  </div>
+
+    </header>
+  
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+
+          <aside class="sidebar" role="complementary">
+          <div class="region region-sidebar">
+    <div id="block-booknavigation" class="block block-book block-book-navigation">
+  
+    
+      
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/docs/getting-started" hreflang="en">Getting started</a>
+              </li>
+                <li class="menu-item menu-item--active-trail">
+        <a href="/docs/using-the-command-line" hreflang="en">Using the command line</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+
+  </div>
+
+      </aside>
+    
+    <div class="content">
+        <div class="region region-content">
+    <div id="block-tomefyi-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Using the command line</span>
+</h1>
+
+
+  </div>
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
+  
+    
+      
+<article role="article" class="node node--type-book node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Tome comes with a few Drush commands which export and import content, and generate static HTML.</p>
+
+<h2>tome:export</h2>
+
+<p>The export command will delete and regenerate all your config, content, and files based on what's currently on your local machine. Ideally you would only run this once when you first start using Tome, then from that point on rely on the automatic syncing feature to keep your codebase up to date. That said, if you've automatically done something like a "git reset --hard" locally and lost your changes, a fresh export will save your work.</p>
+
+<h2>tome:import</h2>
+
+<p>The import command should be run after every fresh Drupal install, or otherwise at the start of each local editing session. All your local install's config, content, and files will be replaced. While it is possible to run this command after the site has been installed, for example after a "git pull", it's recommended that you always start with a fresh install.</p>
+
+<h2>tome:static</h2>
+
+<p>The static command exports static HTML to your export directory, which is usually a root-level "html" folder. On a large site with a lot of paths this can take awhile, so a progress bar is included to keep everyone sane.</p>
+
+<h2>tome:clean-files</h2>
+
+<p>The clean-files command looks for files that appear to be unused by any other config or content entity, and prompts the user to delete them. This command exists because Drupal has some issues with old files sticking around after they stop being referenced. Traditionally this has been solved with a mechanism called file usage, but that system isn't super reliable in complex setups. In the future an automatic garbage collection mechanism for files will be built into Tome, but for now you should run this command every now and then to clean up your repository.</p>
+
+<h2>Improving performance</h2>
+
+<p>As sites grow larger and more and more entities are created, these commands will&nbsp;start to slow down pretty quick. To address that, many commands accept a "--process-count" option, which determines the maximum number of processes to invoke while doing a task. The import and export commands also include a "--entity-count" option, which determines how many entities each process should process.&nbsp;</p>
+
+<p>Every site and local environment is different, so it's up to you to tweak these values to suit your use case. I've found that SQLite has some problems with concurrency, so for import and export it may be best to bump up the entity count option before touching the process count.</p>
+
+<p>Concurrency is going to help out large sites a lot, but there are other things you can do to speed up your local environment. Some options are:</p>
+
+<ul>
+	<li>Increase PHP's memory_limit setting in your php.ini file&nbsp;to avoid running out of memory in each process.</li>
+	<li>Instead of using SQLite, try using something like MAMP or Acquia's Dev Desktop to run a more traditional stack with MySQL. This can avoid deadlocks and improve performance.</li>
+	<li>Use a container for all your development to keep the environment consistent across team members.</li>
+	<li>Create a continuous delivery job which automatically generates static HTML on commit.</li>
+</ul>
+
+<p>Good luck!</p>
+</div>
+      
+  <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
+    
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Using the command line</h2>
+      <ul class="book-pager">
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/docs/getting-started" rel="prev" title="Go to previous page"><b>‹</b> Getting started</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/docs" title="Go to parent page">Up</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--next">
+          <a href="/docs/module-compatibility" rel="next" title="Go to next page">Module compatibility <b>›</b></a>
+        </li>
+          </ul>
+      </nav>
+
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+    </div>
+  </main>
+
+  <footer>
+      <div class="region region-footer">
+    <div id="block-footerblock" class="block block-block-content block-block-content41a379f1-9578-43d6-9b62-977bfe857232">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="text-align-center"><img alt="" height="150px/" src="/themes/custom/tomefyi/logo.svg" width="150px" /></p>
+
+<p class="text-align-center"><a href="https://github.com/drupal-tome">Github</a>&nbsp;- <a href="https://www.drupal.org/project/tome">Drupal.org</a> - <a href="https://twitter.com/DrupalSAM">Twitter</a>&nbsp;- <a href="https://drupalslack.herokuapp.com">Slack (#tome)</a></p>
+
+<p class="text-align-center">Tome is in development and likely has some bugs. Please be patient and&nbsp;respectful when reporting issues!</p>
+
+<p class="text-align-center">This site is built with Tome! <a href="https://github.com/drupal-tome/drupal-tome.github.io">Check it out and build it locally from Github</a>.</p>
+</div>
+      
+  </div>
+
+  </div>
+
+  </footer>
+
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","user":{"uid":0,"permissionsHash":"23a9c98bbdeb0e9c62e4be107f4314bd868a97e3109a9c35679f7a76b5fcc101"}}</script>
+<script src="/sites/default/files/js/js_2UUISih0bsFmJk63xbc6bDHdOdiR_pm6kyMVNUYPjeM.js"></script>
+
+  </body>
+</html>

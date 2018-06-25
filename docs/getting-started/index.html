@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<meta name="title" content="Getting started | Tome" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://tome.fyi/docs/getting-started" />
+<meta name="twitter:title" content="Getting started" />
+<meta name="twitter:description" content="Get started with Tome by following this guide." />
+<meta name="description" content="Get started with Tome by following this guide." />
+<meta name="twitter:creator:id" content="@DrupalSAM" />
+<meta name="twitter:creator" content="@DrupalSAM" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="/docs/getting-started" />
+<link rel="prev" href="/docs" />
+<link rel="up" href="/docs" />
+<link rel="next" href="/docs/using-the-command-line" />
+
+    <title>Getting started | Tome</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_5Mz0wpOL20s_SQKXnhCWyA5ZJOgQQg26tUyGV0jHiCA.css?pauzmz" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_E94gpu-o4ITPeZGzmYuD8e0ACmRUb0Ay-XzP6wFNUY4.css?pauzmz" media="all" />
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?pauzmz" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-book">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page page-node-book">
+
+      <header>
+        <div class="region region-header">
+    <div id="block-sitebranding" class="block block-system block-system-branding-block">
+  
+    
+        <a href="/" title="Home" rel="home" class="site-logo">
+      <img src="/themes/custom/tomefyi/logo.svg" alt="Home" />
+    </a>
+      </div>
+
+  </div>
+
+    </header>
+  
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>
+
+          <aside class="sidebar" role="complementary">
+          <div class="region region-sidebar">
+    <div id="block-booknavigation" class="block block-book block-book-navigation">
+  
+    
+      
+              <ul class="menu">
+                    <li class="menu-item menu-item--active-trail">
+        <a href="/docs/getting-started" hreflang="en">Getting started</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs/using-the-command-line" hreflang="en">Using the command line</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
+              </li>
+        </ul>
+  
+
+
+  </div>
+
+  </div>
+
+      </aside>
+    
+    <div class="content">
+        <div class="region region-content">
+    <div id="block-tomefyi-page-title" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Getting started</span>
+</h1>
+
+
+  </div>
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
+  
+    
+      
+<article role="article" class="node node--type-book node--view-mode-full">
+
+  
+    
+
+  
+  <div class="node__content">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>While anyone can download and install Tome on a new or existing Drupal site, it works best when used with specific Drupal configurations. This guide will take you from creating a new site to making your first commit.</p>
+
+<p>Before continuing, it’s expected that your local machine has:</p>
+
+<ol>
+	<li>PHP 7 or greater installed.</li>
+	<li>Composer installed globally.</li>
+</ol>
+
+<p>A global Drush installation is not required to use Tome, but is easier to use than typing “./vendor/bin/drush” every time you want to run a command. This guide will assume that the “drush” command is available.</p>
+
+<p>To start, create a new instance of the starter project by running:</p>
+
+<p><code>composer create-project drupal-tome/tome-project my_site --stability dev --no-interaction --no-install<br />
+cd my_site<br />
+composer install<br />
+git init<br />
+git add .<br />
+git commit -m 'Initial commit of starter codebase.' </code></p>
+
+<p>The starter kit only comes with Drupal core, so you’ll probably need to install contributed themes and modules as well. Eventually the starter kit will come with a Tome-specific distribution, which will be the recommended way to make simple sites. Since Tome is still in development, things are bare-bones for now.</p>
+
+<p>Next you’ll need to install a profile and setup the base configuration of your site. To keep your site lean, I would recommend starting with the Standard profile. Run the following commands:</p>
+
+<p><code>drush si standard -y<br />
+drush pmu search history contact -y<br />
+drush en tome -y<br />
+drush tome:export -y</code></p>
+
+<p>You’ve now installed Drupal, enabled Tome, and made an initial export. The “drush pmu” command uninstalls modules that don’t make sense for a static site.</p>
+
+<p>If you run “git status” at this point, you should see that the “config” folder is full of exported configuration. You’ll want to commit those changes now so you have a base to work off of in your history. Run:</p>
+
+<p><code>git add .<br />
+git commit -am 'Installed the Standard profile.'</code></p>
+
+<p>Next you’ll need to start up a local webserver. In a new tab, run:</p>
+
+<p><code>cd [path to your my_site codebase]<br />
+drush runserver 127.0.0.1:8888</code></p>
+
+<p>Then switch back to your original tab, and run "drush uli -l 127.0.0.1:8888"</p>
+
+<p>A browser window should pop up and log you in as admin.</p>
+
+<p>Now you’re ready to start using Drupal to build you site. Let’s start by adding a new article. Expand “Shortcuts” in the admin toolbar, click “Add content”, then “Article”. Fill out the fields to your liking, and make sure to upload an image.</p>
+
+<p>Once your article has been created, go back to your command line window and run “git status”. You should see that&nbsp;two new files exist in the “content” directory, one for the article node you made, and one for the file you uploaded. There should also be a copy of your uploaded file in the “files” directory. Feel free to commit these files now if you’d like.</p>
+
+<p>Tome is always watching your site for changes, and automatically syncs modified config, content, and files as needed. Running “drush tome:export”, which exports everything currently on your site, should be pretty rare after your initial install.</p>
+
+<p>We’re going to test that your site can be fully rebuilt from scratch, to ensure that everything is working properly. Run:</p>
+
+<p><code>drush si standard -y<br />
+drush en tome -y<br />
+drush tome:import -y</code></p>
+
+<p>If you visit your site again, you should see that your article and image as they originally appeared. Running these commands every install can get tedious, so you can also run “composer install-tome”</p>
+
+<p>Even though your site doesn't have much going on yet, let’s test the static site generation as well. Whenever you’re ready to generate static HTML for your site, run:</p>
+
+<p><code>drush tome:static </code></p>
+
+<p>This should put a copy of your site in the “html” directory, which you can then upload to a host of your choosing.</p>
+
+<p>That's it for now. You're free to start making your Tome site. Make sure to check out the other documentation, and keep in mind that the project is still in development. Thanks!</p>
+
+<p>&nbsp;</p>
+</div>
+      
+  <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
+    
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Getting started</h2>
+      <ul class="book-pager">
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/docs" rel="prev" title="Go to previous page"><b>‹</b> Documentation</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/docs" title="Go to parent page">Up</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--next">
+          <a href="/docs/using-the-command-line" rel="next" title="Go to next page">Using the command line <b>›</b></a>
+        </li>
+          </ul>
+      </nav>
+
+  </div>
+
+</article>
+
+  </div>
+
+  </div>
+
+    </div>
+  </main>
+
+  <footer>
+      <div class="region region-footer">
+    <div id="block-footerblock" class="block block-block-content block-block-content41a379f1-9578-43d6-9b62-977bfe857232">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="text-align-center"><img alt="" height="150px/" src="/themes/custom/tomefyi/logo.svg" width="150px" /></p>
+
+<p class="text-align-center"><a href="https://github.com/drupal-tome">Github</a>&nbsp;- <a href="https://www.drupal.org/project/tome">Drupal.org</a> - <a href="https://twitter.com/DrupalSAM">Twitter</a>&nbsp;- <a href="https://drupalslack.herokuapp.com">Slack (#tome)</a></p>
+
+<p class="text-align-center">Tome is in development and likely has some bugs. Please be patient and&nbsp;respectful when reporting issues!</p>
+
+<p class="text-align-center">This site is built with Tome! <a href="https://github.com/drupal-tome/drupal-tome.github.io">Check it out and build it locally from Github</a>.</p>
+</div>
+      
+  </div>
+
+  </div>
+
+  </footer>
+
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","user":{"uid":0,"permissionsHash":"23a9c98bbdeb0e9c62e4be107f4314bd868a97e3109a9c35679f7a76b5fcc101"}}</script>
+<script src="/sites/default/files/js/js_2UUISih0bsFmJk63xbc6bDHdOdiR_pm6kyMVNUYPjeM.js"></script>
+
+  </body>
+</html>
