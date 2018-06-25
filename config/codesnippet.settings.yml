@@ -1,0 +1,35 @@
+style: github
+languages:
+  apache: Apache
+  bash: Bash
+  coffeescript: CoffeeScript
+  css: CSS
+  dart: Dart
+  dockerfile: Dockerfile
+  dust: Dust
+  gherkin: Gherkin
+  go: Go
+  haml: HAML
+  handlebars: Handlebars
+  ini: Ini
+  java: Java
+  javascript: JavaScript
+  json: JSON
+  less: Less
+  makefile: Makefile
+  markdown: Markdown
+  nginx: Nginx
+  php: PHP
+  perl: Perl
+  powershell: Powershell
+  puppet: Puppet
+  python: Python
+  ruby: Ruby
+  scss: SCSS
+  sql: SQL
+  twig: Twig
+  typescript: TypeScript
+  yaml: Yaml
+  xml: XML
+_core:
+  default_config_hash: BYOScUY6UGYbAs6uHijdLAhCoO4QP50v9YoHgDpz-ek

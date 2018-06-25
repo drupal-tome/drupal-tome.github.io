@@ -58,14 +58,7 @@ a:hover {
   font-style: italic;
 }
 
-code {
-  background: #292929;
-  display: block;
-  color: white;
-  padding: 1rem;
-}
-
-code,ul {
+ul {
   line-height: 1.5rem;
 }
 
