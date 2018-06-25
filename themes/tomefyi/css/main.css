@@ -5,10 +5,6 @@ html,body {
   font-family: 'Rubik', sans-serif;
 }
 
-* {
-  transition: .2s;
-}
-
 .paragraph--type--hero .field--name-field-headline,
 h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
@@ -53,12 +49,13 @@ aside {
 }
 
 a {
+  display: inline-block;
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
+  font-style: italic;
 }
 
 code {
@@ -203,6 +200,7 @@ footer {
   bottom: 2rem;
   right: 2rem;
   font-size: 2rem;
+  transition: .2s;
 }
 
 .paragraph--type--hero .field--name-field-link a {
@@ -238,13 +236,12 @@ footer {
   padding: 1rem;
 }
 
-.node--type-book {
-
-}
-
 @media screen and (max-width: 850px) {
   main {
     flex-wrap: wrap;
+  }
+  h1 {
+    font-size: 2.5rem;
   }
   .paragraph--type--hero {
     min-height: 250px;
