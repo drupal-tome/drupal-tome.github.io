@@ -1,0 +1,60 @@
+{
+    "block_content.41a379f1-9578-43d6-9b62-977bfe857232": [],
+    "file.4c5dd0d1-07d8-42e6-b2f8-7237f66d63dc": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "file.920cb13d-2f79-4cc6-ba8f-26fb1b9e7a33": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "file.add6d3e2-286d-49a2-954b-62f8ab959235": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "node.174754f4-136e-4f1e-bc4a-c72ffebc33ae": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "node.35c0a22b-5453-44a0-92c6-73f8f206d094": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "node.611ef57c-c8d1-41f2-a109-4d1a7749a0b7": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "node.947df40c-4315-4889-9580-27e57adf8b9f": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "node.48793e80-b335-4f9d-8148-f4d101f85c6d": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4",
+        "paragraph.9d4874bb-46b4-4ba9-81ae-3d3c06954cad",
+        "paragraph.3618af94-22ab-4f86-a770-9803b69f22f0",
+        "paragraph.9d01a7af-e5d6-421a-a710-467aac7d59ac",
+        "paragraph.d39b63cb-dce8-4098-a5a9-01c20602d6cd",
+        "paragraph.88e9c72f-006c-4ef9-ab78-5e529cd79c03",
+        "paragraph.9bfc2f10-419f-4f69-95d1-809bdd5b5df8",
+        "paragraph.3e488c7b-33bd-497d-bb8f-20059027751e",
+        "file.4c5dd0d1-07d8-42e6-b2f8-7237f66d63dc"
+    ],
+    "user.f7a833a1-39bd-424a-8d2a-99cec68ac1e5": [],
+    "user.ed803c7d-e897-4ebb-99a7-1de7754316c4": [],
+    "paragraph.9d4874bb-46b4-4ba9-81ae-3d3c06954cad": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "paragraph.3618af94-22ab-4f86-a770-9803b69f22f0": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "paragraph.9d01a7af-e5d6-421a-a710-467aac7d59ac": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "paragraph.88e9c72f-006c-4ef9-ab78-5e529cd79c03": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "paragraph.3e488c7b-33bd-497d-bb8f-20059027751e": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "paragraph.d39b63cb-dce8-4098-a5a9-01c20602d6cd": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4",
+        "file.920cb13d-2f79-4cc6-ba8f-26fb1b9e7a33"
+    ],
+    "paragraph.9bfc2f10-419f-4f69-95d1-809bdd5b5df8": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4",
+        "file.add6d3e2-286d-49a2-954b-62f8ab959235"
+    ]
+}

@@ -17,4 +17,6 @@ content:
     weight: 100
     region: content
 hidden:
+  field_description: true
   field_paragraphs: true
+  field_preview_image: true

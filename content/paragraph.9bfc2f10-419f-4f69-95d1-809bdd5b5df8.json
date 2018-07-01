@@ -78,11 +78,11 @@
     ],
     "field_file": [
         {
-            "display": true,
-            "description": "",
+            "display": null,
+            "description": null,
             "target_type": "file",
             "target_uuid": "add6d3e2-286d-49a2-954b-62f8ab959235",
-            "url": "http:\/\/127.0.0.1:8888\/sites\/default\/files\/2018-06\/diagram2.svg"
+            "url": "http:\/\/drupal-tome.github.io\/sites\/default\/files\/2018-06\/diagram2.svg"
         }
     ]
 }

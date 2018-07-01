@@ -36,6 +36,13 @@
             "value": true
         }
     ],
+    "metatag": {
+        "value": {
+            "title": "admin | Tome",
+            "canonical_url": "http:\/\/drupal-tome.github.io\/user\/1",
+            "description": "Tome"
+        }
+    },
     "status": [
         {
             "value": "1"

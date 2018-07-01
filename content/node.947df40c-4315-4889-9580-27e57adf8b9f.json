@@ -82,8 +82,13 @@
     "metatag": {
         "value": {
             "title": "Using the command line | Tome",
-            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/using-the-command-line",
-            "description": "Learn about Tome's various command line tools."
+            "twitter_cards_type": "summary_large_image",
+            "canonical_url": "http:\/\/drupal-tome.github.io\/docs\/using-the-command-line",
+            "twitter_cards_title": "Using the command line",
+            "twitter_cards_description": "Learn about Tome's various command line tools.",
+            "description": "Learn about Tome's various command line tools.",
+            "twitter_cards_creator_id": "@DrupalSAM",
+            "twitter_cards_creator": "@DrupalSAM"
         }
     },
     "path": [

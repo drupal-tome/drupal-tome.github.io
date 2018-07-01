@@ -48,6 +48,9 @@
             "value": true
         }
     ],
+    "metatag": {
+        "value": []
+    },
     "status": [
         {
             "value": "1"
