@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
 <meta name="title" content="Getting started | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/getting-started" />
+<link rel="canonical" href="http://drupal-tome.github.io/docs/getting-started" />
 <meta name="twitter:title" content="Getting started" />
 <meta name="twitter:description" content="Get started with Tome by following this guide." />
 <meta name="description" content="Get started with Tome by following this guide." />
@@ -21,10 +21,10 @@
 <link rel="next" href="/docs/using-the-command-line" />
 
     <title>Getting started | Tome</title>
-    <link rel="stylesheet" href="/sites/default/files/css/css_5Mz0wpOL20s_SQKXnhCWyA5ZJOgQQg26tUyGV0jHiCA.css?pauzmz" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_E94gpu-o4ITPeZGzmYuD8e0ACmRUb0Ay-XzP6wFNUY4.css?pauzmz" media="all" />
+    <link rel="stylesheet" href="/sites/default/files/css/css_g2p7Z2eoAEvJDXxOywmjX0rHkBNHWowZXrBfVVO_xY8.css?pbbut6" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_LYopHLDlJcwGsfG-oKjEhMOnRqv2CMZNvc8NYcwdaFs.css?pbbut6" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?pauzmz" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?pbbut6" media="all" />
 
     
 <!--[if lte IE 8]>
@@ -119,33 +119,37 @@
 
 <p>To start, create a new instance of the starter project by running:</p>
 
-<p><code>composer create-project drupal-tome/tome-project my_site --stability dev --no-interaction --no-install<br />
-cd my_site<br />
-composer install<br />
-git init<br />
-git add .<br />
-git commit -m 'Initial commit of starter codebase.' </code></p>
+<pre>
+<code class="language-bash">composer create-project drupal-tome/tome-project my_site --stability dev --no-interaction --no-install
+cd my_site
+composer install
+git init
+git add .
+git commit -m 'Initial commit of starter codebase.'</code></pre>
 
 <p>The starter kit only comes with Drupal core, so you’ll probably need to install contributed themes and modules as well. Eventually the starter kit will come with a Tome-specific distribution, which will be the recommended way to make simple sites. Since Tome is still in development, things are bare-bones for now.</p>
 
 <p>Next you’ll need to install a profile and setup the base configuration of your site. To keep your site lean, I would recommend starting with the Standard profile. Run the following commands:</p>
 
-<p><code>drush si standard -y<br />
-drush pmu search history contact -y<br />
-drush en tome -y<br />
-drush tome:export -y</code></p>
+<pre>
+<code class="language-bash">drush si standard -y
+drush pmu search history contact -y
+drush en tome -y
+drush tome:export -y</code></pre>
 
 <p>You’ve now installed Drupal, enabled Tome, and made an initial export. The “drush pmu” command uninstalls modules that don’t make sense for a static site.</p>
 
 <p>If you run “git status” at this point, you should see that the “config” folder is full of exported configuration. You’ll want to commit those changes now so you have a base to work off of in your history. Run:</p>
 
-<p><code>git add .<br />
-git commit -am 'Installed the Standard profile.'</code></p>
+<pre>
+<code class="language-bash">git add .
+git commit -am 'Installed the Standard profile.'</code></pre>
 
 <p>Next you’ll need to start up a local webserver. In a new tab, run:</p>
 
-<p><code>cd [path to your my_site codebase]<br />
-drush runserver 127.0.0.1:8888</code></p>
+<pre>
+<code class="language-bash">cd [path to your my_site codebase]
+drush runserver 127.0.0.1:8888</code></pre>
 
 <p>Then switch back to your original tab, and run "drush uli -l 127.0.0.1:8888"</p>
 
@@ -159,15 +163,17 @@ drush runserver 127.0.0.1:8888</code></p>
 
 <p>We’re going to test that your site can be fully rebuilt from scratch, to ensure that everything is working properly. Run:</p>
 
-<p><code>drush si standard -y<br />
-drush en tome -y<br />
-drush tome:import -y</code></p>
+<pre>
+<code class="language-bash">drush si standard -y
+drush en tome -y
+drush tome:import -y</code></pre>
 
 <p>If you visit your site again, you should see that your article and image as they originally appeared. Running these commands every install can get tedious, so you can also run “composer install-tome”</p>
 
 <p>Even though your site doesn't have much going on yet, let’s test the static site generation as well. Whenever you’re ready to generate static HTML for your site, run:</p>
 
-<p><code>drush tome:static </code></p>
+<pre>
+<code class="language-bash">drush tome:static</code></pre>
 
 <p>This should put a copy of your site in the “html” directory, which you can then upload to a host of your choosing.</p>
 
@@ -229,8 +235,8 @@ drush tome:import -y</code></p>
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","user":{"uid":0,"permissionsHash":"23a9c98bbdeb0e9c62e4be107f4314bd868a97e3109a9c35679f7a76b5fcc101"}}</script>
-<script src="/sites/default/files/js/js_2UUISih0bsFmJk63xbc6bDHdOdiR_pm6kyMVNUYPjeM.js"></script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","user":{"uid":0,"permissionsHash":"ed88dbad2669b67ef1c08703a7ce2326755ef8af651e435fe5131b2ac0d63f8a"}}</script>
+<script src="/sites/default/files/js/js_HfhN7eKEVgXeVHnEiBDErDcQ7pX16mLGOHbJuojHNVA.js"></script>
 
   </body>
 </html>
