@@ -2,12 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Documentation | Tome" />
+<meta name="title" content="Static site generation | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs" />
-<meta name="twitter:title" content="Documentation" />
-<meta name="twitter:description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
-<meta name="description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
+<link rel="canonical" href="https://tome.fyi/docs/technical/static" />
+<meta name="twitter:title" content="Static site generation" />
+<meta name="twitter:description" content="The static site generator included with Tome uses internal request handling and concurrency to ensure that pages are exported as quickly as possible.
+
+The static site generation flow works like:" />
+<meta name="description" content="The static site generator included with Tome uses internal request handling and concurrency to ensure that pages are exported as quickly as possible.
+
+The static site generation flow works like:" />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,10 +19,11 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs" />
-<link rel="next" href="/docs/getting-started" />
+<link rel="revision" href="/docs/technical/static" />
+<link rel="prev" href="/docs/technical/importer" />
+<link rel="up" href="/docs/technical" />
 
-    <title>Documentation | Tome</title>
+    <title>Static site generation | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_g2p7Z2eoAEvJDXxOywmjX0rHkBNHWowZXrBfVVO_xY8.css?pbcx3s" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css__1gXe6717XL40QFZ0qZ8t_Ru7fC1gdn8PjsvN_4kuCs.css?pbcx3s" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -72,8 +77,20 @@
                 <li class="menu-item">
         <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
               </li>
-                <li class="menu-item menu-item--collapsed">
+                <li class="menu-item menu-item--expanded menu-item--active-trail">
         <a href="/docs/technical" hreflang="en">Technical documentation</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/docs/technical/exporter" hreflang="en">Exporting</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs/technical/importer" hreflang="en">Importing</a>
+              </li>
+                <li class="menu-item menu-item--active-trail">
+        <a href="/docs/technical/static" hreflang="en">Static site generation</a>
+              </li>
+        </ul>
+  
               </li>
         </ul>
   
@@ -91,7 +108,7 @@
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Documentation</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Static site generation</span>
 </h1>
 
 
@@ -108,35 +125,36 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Thanks for checking out Tome! Use the links to your left to navigate and find what you're looking for.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>The static site generator included with Tome uses internal request handling and concurrency to ensure that pages are exported as quickly as possible.</p>
+
+<p>The static site generation flow works like:</p>
+
+<ol>
+	<li>The "drush tome:static" command is ran.</li>
+	<li>The "tome.static" service collects all paths known to Drupal. Currently this is a combination of all routes that do not use parameters, and all entity "canonical" paths (and the paths of their translations).&nbsp;If the site uses URL language negotiation, each configured language prefix is also collected. Only entities/routes that are accessible to anonymous are exported.</li>
+	<li>Paths are exported using a user-configurable concurrency, which defaults to five. This means that five paths will be processed by Drupal at a time.</li>
+	<li>For each path, the script first checks if the path is a static file that can be immediately copied. This is common for pre-generated files in the files directory.</li>
+	<li>If the path isn't a static file, a new process is invoked and Drupal handles the request. This is done using the "http.kernel" service. If a response with the status code 200 is returned, the content of that response is saved to the filesystem.</li>
+	<li>If the response was HTML, that HTMl is parsed and assets are collected. The currently recognized assets are pager links (to support Views pagers), images, responsive images (using srcset), stylesheets, scripts, and favicons.</li>
+	<li>If the response was CSS, URLs within "url(...)" are parsed as assets.</li>
+	<li>All collected asset paths are then returned to the parent process, which exports&nbsp;them starting at step 3.</li>
+	<li>Steps 3-8 repeat until there are no more assets to be exported.</li>
+</ol>
+
+<p>If a path that your site needs is not collected automatically, you can subscribe to the "Drupal\tome\Event\TomeEvents:COLLECT_PATHS" event, which allows you to add, remove, and replace collected paths. Additionally APIs for processing responses will be added as needed.</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-              <a class="burger" href="#">&#9776; Navigation</a>
-      <ul  class="menu burger-menu">
-                    <li class="menu-item">
-        <a href="/docs/getting-started" hreflang="en">Getting started</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/using-the-command-line" hreflang="en">Using the command line</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
-              </li>
-                <li class="menu-item menu-item--collapsed">
-        <a href="/docs/technical" hreflang="en">Technical documentation</a>
-              </li>
-        </ul>
-  
-
-
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Documentation</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Static site generation</h2>
       <ul class="book-pager">
-                          <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/getting-started" rel="next" title="Go to next page">Getting started <b>›</b></a>
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/docs/technical/importer" rel="prev" title="Go to previous page"><b>‹</b> Importing</a>
         </li>
-          </ul>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/docs/technical" title="Go to parent page">Up</a>
+        </li>
+                </ul>
       </nav>
 
   </div>

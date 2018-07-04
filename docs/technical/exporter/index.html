@@ -2,12 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Documentation | Tome" />
+<meta name="title" content="Exporting | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs" />
-<meta name="twitter:title" content="Documentation" />
-<meta name="twitter:description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
-<meta name="description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
+<link rel="canonical" href="https://tome.fyi/docs/technical/exporter" />
+<meta name="twitter:title" content="Exporting" />
+<meta name="twitter:description" content="One of the main features of Tome is that it stores everything about a Drupal site - its content, configuration, and files - in one place. This is accomplished in part by how data is exported and stored.
+
+The content export flow works like this:" />
+<meta name="description" content="One of the main features of Tome is that it stores everything about a Drupal site - its content, configuration, and files - in one place. This is accomplished in part by how data is exported and stored.
+
+The content export flow works like this:" />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,10 +19,12 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs" />
-<link rel="next" href="/docs/getting-started" />
+<link rel="revision" href="/docs/technical/exporter" />
+<link rel="prev" href="/docs/technical" />
+<link rel="up" href="/docs/technical" />
+<link rel="next" href="/docs/technical/importer" />
 
-    <title>Documentation | Tome</title>
+    <title>Exporting | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_g2p7Z2eoAEvJDXxOywmjX0rHkBNHWowZXrBfVVO_xY8.css?pbcx3s" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css__1gXe6717XL40QFZ0qZ8t_Ru7fC1gdn8PjsvN_4kuCs.css?pbcx3s" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -72,8 +78,20 @@
                 <li class="menu-item">
         <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
               </li>
-                <li class="menu-item menu-item--collapsed">
+                <li class="menu-item menu-item--expanded menu-item--active-trail">
         <a href="/docs/technical" hreflang="en">Technical documentation</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--active-trail">
+        <a href="/docs/technical/exporter" hreflang="en">Exporting</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs/technical/importer" hreflang="en">Importing</a>
+              </li>
+                <li class="menu-item">
+        <a href="/docs/technical/static" hreflang="en">Static site generation</a>
+              </li>
+        </ul>
+  
               </li>
         </ul>
   
@@ -91,7 +109,7 @@
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Documentation</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Exporting</span>
 </h1>
 
 
@@ -108,33 +126,36 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Thanks for checking out Tome! Use the links to your left to navigate and find what you're looking for.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>One of the main features of Tome is that it stores everything about a Drupal site - its content, configuration, and files -&nbsp;in one place. This is accomplished in part by how data is exported and stored.</p>
+
+<p>The content export flow works like this:</p>
+
+<ol>
+	<li>Content is edited in the user interface.</li>
+	<li>Hooks in tome.module are invoked which call methods on the&nbsp;"tome.exporter" service.</li>
+	<li>The exporter normalizes the entity. Tome implements custom normalizers to clean up data - for example revision and entity IDs are removed since UUIDs are used, computed fields and removed, and user fields that change every login are removed.&nbsp;</li>
+	<li>The normalized data is saved using the "tome.storage.content" service. Entities are exported in the format "entity_type:uuid:langcode". If the entity is the default translation, the langcode is omitted.&nbsp;The storage serializes data as JSON, but can be swapped out if another format is desired.</li>
+	<li>If the content being exported happens to be a file entity, the original file is copied to the export directory.</li>
+	<li>The content index file is updated or created in the "meta" directory. The index file exists to track content dependencies, so that content can be imported in order without causing errors. For now, dependencies are only calculated based on the values of entity reference fields.</li>
+</ol>
+
+<p>If content is deleted, it is also deleted from the content storage. If the content is a file, the original file is deleted. If the content is a&nbsp;default translation, all other translations will be deleted at that time.</p>
+
+<p>Configuration (config) export is much more simple - an event subscriber is used to track changes to config and config translations, and the "config.storage.sync" service is used to write the changes to the filesystem. This is equivalent to running "drush config-export" after every config change.</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-              <a class="burger" href="#">&#9776; Navigation</a>
-      <ul  class="menu burger-menu">
-                    <li class="menu-item">
-        <a href="/docs/getting-started" hreflang="en">Getting started</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/using-the-command-line" hreflang="en">Using the command line</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
-              </li>
-                <li class="menu-item menu-item--collapsed">
-        <a href="/docs/technical" hreflang="en">Technical documentation</a>
-              </li>
-        </ul>
-  
-
-
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Documentation</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Exporting</h2>
       <ul class="book-pager">
-                          <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/getting-started" rel="next" title="Go to next page">Getting started <b>›</b></a>
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/docs/technical" rel="prev" title="Go to previous page"><b>‹</b> Technical documentation</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/docs/technical" title="Go to parent page">Up</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--next">
+          <a href="/docs/technical/importer" rel="next" title="Go to next page">Importing <b>›</b></a>
         </li>
           </ul>
       </nav>
