@@ -93,6 +93,11 @@ a.site-logo:hover:before,
   text-decoration: underline;
 }
 
+.menu-item--expanded ul.menu {
+  margin-left: 1rem;
+  margin-top: .5rem;
+}
+
 ul {
   line-height: 1.5rem;
 }
@@ -129,9 +134,8 @@ footer {
   display: none;
 }
 
-.block-book-navigation ul {
+ul.menu {
   margin: 0;
-  margin-right: 1rem;
 }
 
 .block-book-navigation li {

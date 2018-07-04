@@ -25,8 +25,7 @@
     "revision_uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "revision_log": [],
@@ -43,8 +42,7 @@
     "uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "created": [
@@ -55,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2018-06-18T04:48:12+00:00",
+            "value": "2018-07-04T19:34:09+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -83,7 +81,7 @@
         "value": {
             "title": "Using the command line | Tome",
             "twitter_cards_type": "summary_large_image",
-            "canonical_url": "http:\/\/drupal-tome.github.io\/docs\/using-the-command-line",
+            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/using-the-command-line",
             "twitter_cards_title": "Using the command line",
             "twitter_cards_description": "Learn about Tome's various command line tools.",
             "description": "Learn about Tome's various command line tools.",
@@ -100,7 +98,7 @@
     ],
     "body": [
         {
-            "value": "<p>Tome comes with a few Drush commands which export and import content, and generate static HTML.<\/p>\r\n\r\n<h2>tome:export<\/h2>\r\n\r\n<p>The export command will delete and regenerate all your config, content, and files based on what's currently on your local machine. Ideally you would only run this once when you first start using Tome, then from that point on rely on the automatic syncing feature to keep your codebase up to date. That said, if you've automatically done something like a \"git reset --hard\" locally and lost your changes, a fresh export will save your work.<\/p>\r\n\r\n<h2>tome:import<\/h2>\r\n\r\n<p>The import command should be run after every fresh Drupal install, or otherwise at the start of each local editing session. All your local install's config, content, and files will be replaced. While it is possible to run this command after the site has been installed, for example after a \"git pull\", it's recommended that you always start with a fresh install.<\/p>\r\n\r\n<h2>tome:static<\/h2>\r\n\r\n<p>The static command exports static HTML to your export directory, which is usually a root-level \"html\" folder. On a large site with a lot of paths this can take awhile, so a progress bar is included to keep everyone sane.<\/p>\r\n\r\n<h2>tome:clean-files<\/h2>\r\n\r\n<p>The clean-files command looks for files that appear to be unused by any other config or content entity, and prompts the user to delete them. This command exists because Drupal has some issues with old files sticking around after they stop being referenced. Traditionally this has been solved with a mechanism called file usage, but that system isn't super reliable in complex setups. In the future an automatic garbage collection mechanism for files will be built into Tome, but for now you should run this command every now and then to clean up your repository.<\/p>\r\n\r\n<h2>Improving performance<\/h2>\r\n\r\n<p>As sites grow larger and more and more entities are created, these commands will&nbsp;start to slow down pretty quick. To address that, many commands accept a \"--process-count\" option, which determines the maximum number of processes to invoke while doing a task. The import and export commands also include a \"--entity-count\" option, which determines how many entities each process should process.&nbsp;<\/p>\r\n\r\n<p>Every site and local environment is different, so it's up to you to tweak these values to suit your use case. I've found that SQLite has some problems with concurrency, so for import and export it may be best to bump up the entity count option before touching the process count.<\/p>\r\n\r\n<p>Concurrency is going to help out large sites a lot, but there are other things you can do to speed up your local environment. Some options are:<\/p>\r\n\r\n<ul>\r\n\t<li>Increase PHP's memory_limit setting in your php.ini file&nbsp;to avoid running out of memory in each process.<\/li>\r\n\t<li>Instead of using SQLite, try using something like MAMP or Acquia's Dev Desktop to run a more traditional stack with MySQL. This can avoid deadlocks and improve performance.<\/li>\r\n\t<li>Use a container for all your development to keep the environment consistent across team members.<\/li>\r\n\t<li>Create a continuous delivery job which automatically generates static HTML on commit.<\/li>\r\n<\/ul>\r\n\r\n<p>Good luck!<\/p>\r\n",
+            "value": "<p>Tome comes with a few Drush commands which export and import content, and generate static HTML.<\/p>\r\n\r\n<h2>tome:export<\/h2>\r\n\r\n<p>The export command will delete and regenerate all your config, content, and files based on what's currently on your local machine. Ideally you would only run this once when you first start using Tome, then from that point on rely on the automatic syncing feature to keep your codebase up to date. That said, if you've automatically done something like a \"git reset --hard\" locally and lost your changes, a fresh export will save your work.<\/p>\r\n\r\n<h2>tome:import<\/h2>\r\n\r\n<p>The import command should be run after every fresh Drupal install, or otherwise at the start of each local editing session. All your local install's config, content, and files will be replaced. While it is possible to run this command after the site has been installed, for example after a \"git pull\", it's recommended that you always start with a fresh install.<\/p>\r\n\r\n<h2>tome:static<\/h2>\r\n\r\n<p>The static command exports static HTML to your export directory, which is usually a root-level \"html\" folder. On a large site with a lot of paths this can take awhile, so a progress bar is included to keep everyone sane.<\/p>\r\n\r\n<p>If you want to review your static site after running this command, you can pass the \"--run-server\" option, which will automatically open a local server and browser tab, similar to how \"drush runserver\" works.<\/p>\r\n\r\n<h2>tome:clean-files<\/h2>\r\n\r\n<p>The clean-files command looks for files that appear to be unused by any other config or content entity, and prompts the user to delete them. This command exists because Drupal has some issues with old files sticking around after they stop being referenced. Traditionally this has been solved with a mechanism called file usage, but that system isn't super reliable in complex setups. In the future an automatic garbage collection mechanism for files will be built into Tome, but for now you should run this command every now and then to clean up your repository.<\/p>\r\n\r\n<h2>Improving performance<\/h2>\r\n\r\n<p>As sites grow larger and more and more entities are created, these commands will&nbsp;start to slow down pretty quick. To address that, many commands accept a \"--process-count\" option, which determines the maximum number of processes to invoke while doing a task. The import and export commands also include a \"--entity-count\" option, which determines how many entities each process should process.&nbsp;<\/p>\r\n\r\n<p>Every site and local environment is different, so it's up to you to tweak these values to suit your use case. I've found that SQLite has some problems with concurrency, so for import and export it may be best to bump up the entity count option before touching the process count.<\/p>\r\n\r\n<p>Concurrency is going to help out large sites a lot, but there are other things you can do to speed up your local environment. Some options are:<\/p>\r\n\r\n<ul>\r\n\t<li>Increase PHP's memory_limit setting in your php.ini file&nbsp;to avoid running out of memory in each process.<\/li>\r\n\t<li>Instead of using SQLite, try using something like MAMP or Acquia's Dev Desktop to run a more traditional stack with MySQL. This can avoid deadlocks and improve performance.<\/li>\r\n\t<li>Use a container for all your development to keep the environment consistent across team members.<\/li>\r\n\t<li>Create a continuous delivery job which automatically generates static HTML on commit.<\/li>\r\n<\/ul>\r\n\r\n<p>Good luck!<\/p>\r\n",
             "format": "rich_text",
             "summary": "Learn about Tome's various command line tools."
         }

@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "51524977-d2aa-4d70-bebf-b1716255d467"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book",
+            "target_type": "node_type",
+            "target_uuid": "870f5e4b-075f-48ba-972b-7b47064b4efd"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-07-04T18:24:09+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "Technical documentation"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-04T18:23:46+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-04T18:26:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "metatag": {
+        "value": {
+            "title": "Technical documentation | Tome",
+            "twitter_cards_type": "summary_large_image",
+            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/technical",
+            "twitter_cards_title": "Technical documentation",
+            "twitter_cards_description": "This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project.",
+            "description": "This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project.",
+            "twitter_cards_creator_id": "@DrupalSAM",
+            "twitter_cards_creator": "@DrupalSAM"
+        }
+    },
+    "path": [
+        {
+            "alias": "\/docs\/technical",
+            "pid": 6,
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project.<\/p>\r\n",
+            "format": "rich_text",
+            "summary": ""
+        }
+    ]
+}
