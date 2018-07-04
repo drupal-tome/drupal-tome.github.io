@@ -32,6 +32,7 @@ h3:before {
 
 main {
   display: flex;
+  align-content: flex-start;
   min-height: 500px;
 }
 
@@ -49,7 +50,6 @@ aside {
 }
 
 a {
-  display: inline-block;
   color: #0078d4;
   text-decoration: none;
   position: relative;
@@ -84,6 +84,11 @@ a.site-logo:hover:before,
   width: 0;
 }
 
+.menu-item a {
+  display: block;
+  width: 100%;
+}
+
 .menu-item--active-trail a {
   text-decoration: underline;
 }
@@ -98,6 +103,18 @@ li {
 
 footer {
   padding: 1rem;
+}
+
+#main-content {
+  display: none;
+}
+
+.burger {
+  display: none;
+}
+
+.burger-menu {
+  display: block;
 }
 
 .page-node-book article {
@@ -267,11 +284,32 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
+  .burger {
+    display: block;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .burger-menu.expanded {
+    display: block;
+  }
+  .burger,
+  .burger-menu a {
+    padding: .5rem;
+  }
+  .block-book-navigation li {
+    margin: 0;
+  }
   main {
     flex-wrap: wrap;
   }
   h1 {
     font-size: 2.5rem;
+  }
+  aside {
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem;
   }
   .paragraph--type--hero {
     min-height: 250px;
