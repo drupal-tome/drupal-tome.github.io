@@ -41,10 +41,10 @@
         "drupal/paragraphs_clean": "1.x-dev",
         "drupal/metatag": "^1.5",
         "drupal/codesnippet": "^1.6",
-        "ckeditor/codesnippet": "4.9.2"
+        "ckeditor/codesnippet": "4.9.2",
+        "drupal-tome/tome_drush": "dev-master"
     },
     "scripts": {
-        "install-tome": "./scripts/install.sh",
         "gh-pages": "./scripts/gh-pages.sh",
         "symlink": "./scripts/symlink.sh",
         "post-install-cmd": [
@@ -67,7 +67,8 @@
             "web/libraries/{$name}": ["type:drupal-library"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"]
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/{$name}": ["type:drupal-drush"]
         }
     }
 }

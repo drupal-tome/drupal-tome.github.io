@@ -1,5 +1,6 @@
 /vendor/
 /web
 /html
+/drush
 .idea
 gh-pages

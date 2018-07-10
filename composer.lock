@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a987368162c6b140f7a0f4d7e5009df9",
+    "content-hash": "c7cdf40d780952717d75f2523045e245",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1193,6 +1193,37 @@
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
             "time": "2018-06-14T17:48:21+00:00"
+        },
+        {
+            "name": "drupal-tome/tome_drush",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-tome/tome_drush.git",
+                "reference": "c30dd183634739f0f375b3ca8867c5efa6822a3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drupal-tome/tome_drush/zipball/c30dd183634739f0f375b3ca8867c5efa6822a3d",
+                "reference": "c30dd183634739f0f375b3ca8867c5efa6822a3d",
+                "shasum": ""
+            },
+            "require": {
+                "drush/drush": "^9.0.0"
+            },
+            "type": "drupal-drush",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel Mortenson",
+                    "email": "samuel@mortenson.coffee"
+                }
+            ],
+            "description": "Contains global Drush commands for initializing and installing Tome.",
+            "time": "2018-07-10T15:56:27+00:00"
         },
         {
             "name": "drupal/codesnippet",
@@ -4920,7 +4951,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/tome": 20,
-        "drupal/paragraphs_clean": 20
+        "drupal/paragraphs_clean": 20,
+        "drupal-tome/tome_drush": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

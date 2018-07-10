@@ -8,7 +8,7 @@ if you want to see how it's made.
 
 # Use
 
-To install the site locally, run `composer install-tome`.
+To install the site locally, run `drush tome:install`.
 
 Once the site is installed, run `drush runserver`.
 
