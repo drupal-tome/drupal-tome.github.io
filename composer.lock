@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7cdf40d780952717d75f2523045e245",
+    "content-hash": "8de4478e7dfc8c32dea89d69a2aab696",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1200,12 +1200,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-tome/tome_drush.git",
-                "reference": "c30dd183634739f0f375b3ca8867c5efa6822a3d"
+                "reference": "72583173ba6594fe67a277a9d55e4b845347a2d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-tome/tome_drush/zipball/c30dd183634739f0f375b3ca8867c5efa6822a3d",
-                "reference": "c30dd183634739f0f375b3ca8867c5efa6822a3d",
+                "url": "https://api.github.com/repos/drupal-tome/tome_drush/zipball/72583173ba6594fe67a277a9d55e4b845347a2d6",
+                "reference": "72583173ba6594fe67a277a9d55e4b845347a2d6",
                 "shasum": ""
             },
             "require": {
@@ -1223,7 +1223,7 @@
                 }
             ],
             "description": "Contains global Drush commands for initializing and installing Tome.",
-            "time": "2018-07-10T15:56:27+00:00"
+            "time": "2018-07-14T19:50:03+00:00"
         },
         {
             "name": "drupal/codesnippet",
@@ -1487,6 +1487,9 @@
                     "recurse": false,
                     "replace": false,
                     "merge-extra": false
+                },
+                "patches_applied": {
+                    "Alt text lost when normalizing": "https://www.drupal.org/files/issues/2018-06-05/2935738-14.patch"
                 }
             },
             "autoload": {
@@ -1757,6 +1760,67 @@
                 "source": "http://cgit.drupalcode.org/paragraphs_clean"
             },
             "time": "2018-03-29T14:38:16+00:00"
+        },
+        {
+            "name": "drupal/simple_sitemap",
+            "version": "2.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/simple_sitemap",
+                "reference": "8.x-2.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/simple_sitemap-8.x-2.12.zip",
+                "reference": "8.x-2.12",
+                "shasum": "fe1c1a636adfba8358399a5a1ccdf20685066573"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.12",
+                    "datestamp": "1523203180",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Pawel Ginalski (gbyte.co)",
+                    "homepage": "https://www.drupal.org/u/gbyte.co",
+                    "email": "contact@gbyte.co",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sam Becker (Sam152)",
+                    "homepage": "https://www.drupal.org/u/sam152",
+                    "role": "Co-maintainer"
+                }
+            ],
+            "description": "Simple XML sitemap creates a standard conform XML sitemap of your content.",
+            "homepage": "https://drupal.org/project/simple_sitemap",
+            "support": {
+                "source": "https://cgit.drupalcode.org/simple_sitemap",
+                "issues": "https://drupal.org/project/issues/simple_sitemap",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
         },
         {
             "name": "drupal/svg_formatter",

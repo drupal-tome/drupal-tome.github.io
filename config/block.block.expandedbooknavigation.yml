@@ -1,24 +1,23 @@
-uuid: 6699f3f2-a445-4f50-92c9-bda879a6d92e
+uuid: eb824ba7-aed8-432a-a18f-15b0dbabcfe1
 langcode: en
-status: false
+status: true
 dependencies:
   module:
-    - book
     - node
+    - tfyi_book
   theme:
     - tomefyi
-id: booknavigation
+id: expandedbooknavigation
 theme: tomefyi
 region: sidebar
 weight: 0
 provider: null
-plugin: book_navigation
+plugin: expanded_book_navigation
 settings:
-  id: book_navigation
-  label: 'Book navigation'
-  provider: book
+  id: expanded_book_navigation
+  label: 'Expanded book navigation'
+  provider: tfyi_book
   label_display: '0'
-  block_mode: 'book pages'
 visibility:
   node_type:
     id: node_type

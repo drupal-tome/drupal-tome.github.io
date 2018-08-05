@@ -1,0 +1,8 @@
+name: Tome FYI Book
+type: module
+description: 'Provides tome.fyi book integration stuff.'
+package: Core
+version: VERSION
+core: 8.x
+dependencies:
+  - book

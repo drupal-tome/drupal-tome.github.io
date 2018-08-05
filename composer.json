@@ -42,7 +42,8 @@
         "drupal/metatag": "^1.5",
         "drupal/codesnippet": "^1.6",
         "ckeditor/codesnippet": "4.9.2",
-        "drupal-tome/tome_drush": "dev-master"
+        "drupal-tome/tome_drush": "dev-master",
+        "drupal/simple_sitemap": "^2.12"
     },
     "scripts": {
         "gh-pages": "./scripts/gh-pages.sh",
@@ -56,11 +57,6 @@
             "@symlink"
         ]
     },
-    "patches": {
-        "drupal/core": {
-            "Alt text lost when normalizing": "https://www.drupal.org/files/issues/2018-06-05/2935738-14.patch"
-        }
-    },
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
@@ -69,6 +65,11 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/core": {
+                "Alt text lost when normalizing": "https://www.drupal.org/files/issues/2018-06-05/2935738-14.patch"
+            }
         }
     }
 }

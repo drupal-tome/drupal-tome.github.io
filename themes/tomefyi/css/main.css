@@ -47,6 +47,7 @@ header {
 aside {
   padding: 1rem;
   min-width: 210px;
+  margin-right: 1rem;
 }
 
 a {
@@ -95,7 +96,6 @@ a.site-logo:hover:before,
 
 .menu-item--expanded ul.menu {
   margin-left: 1rem;
-  margin-top: .5rem;
 }
 
 ul {
@@ -314,6 +314,7 @@ ul.menu {
     width: 100%;
     padding: 0;
     margin-top: 1rem;
+    margin-right: 0;
   }
   .paragraph--type--hero {
     min-height: 250px;

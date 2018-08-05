@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "335d7491-d1a0-4428-b544-e317737c178f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book",
+            "target_type": "node_type",
+            "target_uuid": "870f5e4b-075f-48ba-972b-7b47064b4efd"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-08-05T15:55:28+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "Github pages"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-08-05T15:55:05+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-08-05T15:58:32+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "metatag": {
+        "value": {
+            "title": "Github pages | Tome",
+            "twitter_cards_type": "summary_large_image",
+            "canonical_url": "http:\/\/127.0.0.1:8888\/node\/11",
+            "twitter_cards_title": "Github pages",
+            "twitter_cards_description": "Github pages\u00a0is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory.\n\nUsing Tome with your github.io homepage\n\n\u00a0",
+            "description": "Github pages\u00a0is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory.\n\nUsing Tome with your github.io homepage\n\n\u00a0",
+            "twitter_cards_creator_id": "@DrupalSAM",
+            "twitter_cards_creator": "@DrupalSAM"
+        }
+    },
+    "path": [
+        {
+            "alias": "",
+            "pid": null,
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p><a href=\"https:\/\/pages.github.com\/\">Github pages<\/a>&nbsp;is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory.<\/p>\r\n\r\n<h2>Using Tome with your github.io homepage<\/h2>\r\n\r\n<p>&nbsp;<\/p>\r\n",
+            "format": "rich_text",
+            "summary": ""
+        }
+    ]
+}
