@@ -2,12 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Technical documentation | Tome" />
+<meta name="title" content="Netlify | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/technical" />
-<meta name="twitter:title" content="Technical documentation" />
-<meta name="twitter:description" content="This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project." />
-<meta name="description" content="This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project." />
+<link rel="canonical" href="https://tome.fyi/docs/hosting/netlify" />
+<meta name="twitter:title" content="Netlify" />
+<meta name="twitter:description" content="Netlify is a static site hosting company that has a powerful free offering. If you&#039;re looking to host a commercial Tome site this is a great option.
+
+Deploying the Tome template
+
+Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:" />
+<meta name="description" content="Netlify is a static site hosting company that has a powerful free offering. If you&#039;re looking to host a commercial Tome site this is a great option.
+
+Deploying the Tome template
+
+Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:" />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,12 +23,11 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/technical" />
-<link rel="prev" href="/docs/module-compatibility" />
-<link rel="up" href="/docs" />
-<link rel="next" href="/docs/technical/exporter" />
+<link rel="revision" href="/docs/hosting/netlify" />
+<link rel="prev" href="/docs/hosting/github-pages" />
+<link rel="up" href="/docs/hosting" />
 
-    <title>Technical documentation | Tome</title>
+    <title>Netlify | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_g2p7Z2eoAEvJDXxOywmjX0rHkBNHWowZXrBfVVO_xY8.css?pd0vys" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_vvvp_1xxq4sVlrJjxhk4EUMKQyw_oJdxbO40beBqvPU.css?pd0vys" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -126,7 +133,7 @@
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Technical documentation</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Netlify</span>
 </h1>
 
 
@@ -143,38 +150,49 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://www.netlify.com/">Netlify</a>&nbsp;is a static site hosting company that has a powerful free offering. If you're looking to host a commercial Tome site this is a great option.</p>
+
+<h2>Deploying the Tome template</h2>
+
+<p>Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:</p>
+
+<p><a class="button" href="https://app.netlify.com/start/deploy?repository=https://github.com/drupal-tome/netlify-template"><img alt="" src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify" /> </a></p>
+
+<p>You'll be prompted to login or create an account, then a Tome site will be automatically provisioned for you.</p>
+
+<h2>Configuring netlify.toml</h2>
+
+<p>Whether you used the template or you're connecting to Netlify manually, you should understand how to configure Netlify to properly build Tome. Netlify supports a root-level configuration file, "netlify.toml", which contains environmental variables and commands used to build your static site.</p>
+
+<p>The currently recommended netlify.toml configuration is:</p>
+
+<pre>
+<code class="language-bash">[build]
+command = "composer install &amp;&amp; ./vendor/bin/drush tome:install -y &amp;&amp; ./vendor/bin/drush tome:static -l $DEPLOY_PRIME_URL"
+publish = "html"
+
+[build.environment]
+PHP_VERSION = "7.2"
+</code></pre>
+
+<p>If you copy + paste this to netlify.toml in the root of your Tome project, you should be set to deploy to Netlify.</p>
+
+<p>There isn't a lot of secret sauce in this file, but it's worth noting that "$DEPLOY_PRIME_URL" is used to dynamically determine the base path of Drupal based on where the build will be deployed. Netlify supports multiple domains per branch, so you don't want to hard-code a URL.</p>
+
+<p>&nbsp;</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-              <a class="burger" href="#">&#9776; Navigation</a>
-      <ul  class="menu burger-menu">
-                    <li class="menu-item">
-        <a href="/docs/technical/exporter" hreflang="en">Exporting</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/importer" hreflang="en">Importing</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/static" hreflang="en">Static site generation</a>
-              </li>
-        </ul>
-  
-
-
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Technical documentation</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Netlify</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/module-compatibility" rel="prev" title="Go to previous page"><b>‹</b> Module compatibility</a>
+          <a href="/docs/hosting/github-pages" rel="prev" title="Go to previous page"><b>‹</b> Github pages</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
-          <a href="/docs" title="Go to parent page">Up</a>
+          <a href="/docs/hosting" title="Go to parent page">Up</a>
         </li>
-                    <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/technical/exporter" rel="next" title="Go to next page">Exporting <b>›</b></a>
-        </li>
-          </ul>
+                </ul>
       </nav>
 
   </div>
