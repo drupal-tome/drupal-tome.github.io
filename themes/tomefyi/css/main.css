@@ -51,6 +51,7 @@ aside {
 }
 
 a {
+  display: inline-block;
   color: #0078d4;
   text-decoration: none;
   position: relative;
@@ -77,6 +78,10 @@ a:hover {
 
 a:hover:before {
   width: calc(100% + .4rem);
+}
+
+a.button:before {
+  display: none;
 }
 
 a.site-logo:hover:before,
