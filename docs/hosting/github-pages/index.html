@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Documentation | Tome" />
+<meta name="title" content="Github pages | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs" />
-<meta name="twitter:title" content="Documentation" />
-<meta name="twitter:description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
-<meta name="description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
+<link rel="canonical" href="https://tome.fyi/docs/hosting/github-pages" />
+<meta name="twitter:title" content="Github pages" />
+<meta name="twitter:description" content="Github pages is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory." />
+<meta name="description" content="Github pages is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory." />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,10 +15,11 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs" />
-<link rel="next" href="/docs/getting-started" />
+<link rel="revision" href="/docs/hosting/github-pages" />
+<link rel="prev" href="/docs/hosting" />
+<link rel="up" href="/docs/hosting" />
 
-    <title>Documentation | Tome</title>
+    <title>Github pages | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_g2p7Z2eoAEvJDXxOywmjX0rHkBNHWowZXrBfVVO_xY8.css?pd0s0z" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_ok3lGrVzp33B0uJyrK_Ox6ri9KySrEilERjryFBH6Sc.css?pd0s0z" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -121,7 +122,7 @@
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Documentation</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Github pages</span>
 </h1>
 
 
@@ -138,38 +139,98 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Thanks for checking out Tome! Use the links to your left to navigate and find what you're looking for.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://pages.github.com/">Github pages</a>&nbsp;is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory.</p>
+
+<h2>Using Tome as your github.io homepage</h2>
+
+<p>Every Github user and organization can have a *.github.io homepage hosted with Github pages. The website you're looking at is hosted at <a href="https://drupal-tome.github.io">drupal-tome.github.io</a>&nbsp;and exists in the <a href="https://github.com/drupal-tome/drupal-tome.github.io">drupal-tome/drupal-tome.github.io</a> repository.</p>
+
+<p>To set up your own homepage, create a repository in the format [user/org name].github.io at&nbsp;<a href="https://github.com/new">https://github.com/new</a>.</p>
+
+<p>Once this is done, we'll need to initialize Tome in this repository. Run:</p>
+
+<pre>
+<code class="language-bash">composer create-project drupal-tome/tome-project &lt;repository name&gt; --stability dev --no-interaction --no-install
+cd &lt;repository name&gt;
+composer install
+git init
+git checkout -b dev
+git add .
+git commit -m 'Initial commit of starter codebase.'
+git remote add origin &lt;repository URL&gt;
+git push -u origin dev
+</code></pre>
+
+<p>You may be wondering why we're using the "dev" branch instead of "master" -&nbsp;github.io homepages are a bit different from other Github pages repositories and expect all HTML to exist in the "master" branch.</p>
+
+<p>Now you'll probably want to use Tome locally for a bit and create content. Run:</p>
+
+<pre>
+<code class="language-bash">drush tome:init
+# Follow prompts to choose a profile.
+drush runserver 127.0.0.1:8888
+drush uli -l 127.0.0.1:8888
+# Follow link to login as admin and use Drupal.
+</code></pre>
+
+<p>Once you're happy with your changes, do another git commit and push your changes up to dev again.</p>
+
+<p>Now we're ready to generate your static site! Run:</p>
+
+<pre>
+<code class="language-bash">drush tome:static -l https://&lt;github.io domain&gt;</code></pre>
+
+<p>You should now have a "html" folder in the root of your repository. Now we need to get this into the "master" branch of your repository - a lot of smart people online have done clever things with Git to make this work, but I prefer something more dumb and readable. Run:</p>
+
+<pre>
+<code class="language-bash">rm -rf gh-pages
+git clone git@github.com:drupal-tome/drupal-tome.github.io.git gh-pages
+cd gh-pages
+git checkout master || git checkout -b master
+cd ..
+rm -rf gh-pages/*
+cp -r html/* gh-pages/
+cd gh-pages
+git add .
+git commit -m 'Updating gh-pages site'
+git push -u origin master
+</code></pre>
+
+<p>For this site, I made this a script that I can run with Composer, so every time I want to generate and publish my static site, I just run "composer gh-pages". You can see what I did by visiting the <a href="https://github.com/drupal-tome/drupal-tome.github.io">drupal-tome/drupal-tome.github.io</a>&nbsp;repository. I'd recommend that most Tome sites implement a similar build and publish script.</p>
+
+<p>So now, if everything went right, you should see your Tome site on your github.io domain!</p>
+
+<h2>Using Tome for a project sub-page</h2>
+
+<p>Github pages also allows users to create sites per-repository, which are accessible as a sub-directory of your main github.io domain. If you want to use Tome for a project page, follow the instructions above, keeping in mind these changes:</p>
+
+<p>1. You can use the "master" branch instead of "dev" as your main branch.</p>
+
+<p>2. Make sure to build the static site with a base URL that includes the sub-directory:</p>
+
+<pre>
+<code class="language-bash">drush tome:static -l https://&lt;github.io domain&gt;/&lt;project-name&gt;</code></pre>
+
+<p>This will result in your index.html file existing in the "html/&lt;project-name&gt;" folder.</p>
+
+<p>3. When running the "dumb and readable" commands above, replace "master" with "gh-pages", and replace "cp -r html/* gh-pages/" with "cp -r html/&lt;project-name&gt;/* gh-pages/". While Github will serve your project page from a sub-directory, it expects your "gh-pages" branch to contain a top-level index.html file.</p>
+
+<p>If you want an example sub-page to reference, you can visit the example project at&nbsp;<a href="https://tome.fyi/subdir-test">https://tome.fyi/subdir-test</a>&nbsp;and its source at <a href="https://github.com/drupal-tome/subdir-test">drupal-tome/subdir-test</a>.</p>
+
+<p>&nbsp;</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-              <a class="burger" href="#">&#9776; Navigation</a>
-      <ul  class="menu burger-menu">
-                    <li class="menu-item">
-        <a href="/docs/getting-started" hreflang="en">Getting started</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/using-the-command-line" hreflang="en">Using the command line</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
-              </li>
-                <li class="menu-item menu-item--collapsed">
-        <a href="/docs/technical" hreflang="en">Technical documentation</a>
-              </li>
-                <li class="menu-item menu-item--collapsed">
-        <a href="/docs/hosting" hreflang="en">Hosting guides</a>
-              </li>
-        </ul>
-  
-
-
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Documentation</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Github pages</h2>
       <ul class="book-pager">
-                          <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/getting-started" rel="next" title="Go to next page">Getting started <b>›</b></a>
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/docs/hosting" rel="prev" title="Go to previous page"><b>‹</b> Hosting guides</a>
         </li>
-          </ul>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/docs/hosting" title="Go to parent page">Up</a>
+        </li>
+                </ul>
       </nav>
 
   </div>
