@@ -90,9 +90,10 @@ a.site-logo:hover:before,
   width: 0;
 }
 
-.menu-item a {
+.burger-menu .menu-item a {
   display: block;
   width: 100%;
+  padding: 0.2rem;
 }
 
 .menu-item--active-trail a {
@@ -250,7 +251,7 @@ ul.menu {
   bottom: 2rem;
   right: 2rem;
   font-size: 2rem;
-  transition: .2s;
+  transition: right .2s;
 }
 
 .paragraph--type--hero .field--name-field-link a {
@@ -261,7 +262,7 @@ ul.menu {
   content: "➡";
   display: inline-block;
   margin-left: .5rem;
-  transition: .2s;
+  transition: right .2s;
   text-decoration: none !important;
 }
 
@@ -303,7 +304,7 @@ ul.menu {
     display: block;
   }
   .burger,
-  .burger-menu a {
+  .burger-menu .menu-item a {
     padding: .5rem;
   }
   .block-book-navigation li {

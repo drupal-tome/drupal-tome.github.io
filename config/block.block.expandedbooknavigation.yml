@@ -10,7 +10,7 @@ dependencies:
 id: expandedbooknavigation
 theme: tomefyi
 region: sidebar
-weight: 0
+weight: -2
 provider: null
 plugin: expanded_book_navigation
 settings:
