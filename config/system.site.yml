@@ -5,7 +5,7 @@ slogan: 'A static site generator for Drupal'
 page:
   403: ''
   404: ''
-  front: /node/11
+  front: /home
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
