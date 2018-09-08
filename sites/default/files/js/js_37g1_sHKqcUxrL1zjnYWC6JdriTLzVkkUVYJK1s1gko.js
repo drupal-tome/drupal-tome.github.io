@@ -168,12 +168,12 @@ window.Drupal = { behaviors: {}, locale: {} };
 
   Drupal.url.isLocal = function (url) {
     var absoluteUrl = Drupal.url.toAbsolute(url);
-    var protocol = location.protocol;
+    var protocol = window.location.protocol;
 
     if (protocol === 'http:' && absoluteUrl.indexOf('https:') === 0) {
       protocol = 'https:';
     }
-    var baseUrl = protocol + '//' + location.host + drupalSettings.path.baseUrl.slice(0, -1);
+    var baseUrl = protocol + '//' + window.location.host + drupalSettings.path.baseUrl.slice(0, -1);
 
     try {
       absoluteUrl = decodeURIComponent(absoluteUrl);
@@ -241,6 +241,21 @@ document.documentElement.className += ' js';
   });
 })(domready, Drupal, window.drupalSettings);;
 (function ($, Drupal) {
+
+  // Source: https://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling
+  function isScrolledIntoView (elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+  }
+
+  $(window).on('scroll', function () {
+    $('#coworkers').each(function () {
+      $(this).toggleClass('in-view', isScrolledIntoView($(this)));
+    });
+  });
 
   Drupal.behaviors.tomeFyiBurger = {
     attach: function attach(context, settings) {
