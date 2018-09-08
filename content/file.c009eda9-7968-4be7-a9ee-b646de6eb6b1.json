@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "add6d3e2-286d-49a2-954b-62f8ab959235"
+            "value": "c009eda9-7968-4be7-a9ee-b646de6eb6b1"
         }
     ],
     "langcode": [
@@ -17,12 +17,12 @@
     ],
     "filename": [
         {
-            "value": "diagram2.svg"
+            "value": "coworkers.svg"
         }
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-06\/diagram2.svg"
+            "value": "public:\/\/2018-09\/coworkers.svg"
         }
     ],
     "filemime": [
@@ -32,17 +32,17 @@
     ],
     "filesize": [
         {
-            "value": 2179
+            "value": 6936
         }
     ],
     "status": [
         {
-            "value": false
+            "value": true
         }
     ],
     "created": [
         {
-            "value": "2018-06-17T16:05:11+00:00",
+            "value": "2018-09-08T18:12:58+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],

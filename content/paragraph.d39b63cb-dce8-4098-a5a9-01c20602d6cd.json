@@ -19,8 +19,7 @@
     "uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "status": [
@@ -37,13 +36,12 @@
     "revision_uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "parent_id": [
         {
-            "value": "5"
+            "value": "12"
         }
     ],
     "parent_type": [
@@ -78,11 +76,10 @@
     ],
     "field_file": [
         {
-            "display": null,
-            "description": null,
+            "display": true,
+            "description": "",
             "target_type": "file",
-            "target_uuid": "920cb13d-2f79-4cc6-ba8f-26fb1b9e7a33",
-            "url": "http:\/\/drupal-tome.github.io\/sites\/default\/files\/2018-06\/diagram1.svg"
+            "target_uuid": "920cb13d-2f79-4cc6-ba8f-26fb1b9e7a33"
         }
     ]
 }

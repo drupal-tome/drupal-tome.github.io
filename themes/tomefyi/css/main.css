@@ -354,3 +354,144 @@ ul.menu {
     max-width: 400px;
   }
 }
+
+@keyframes coworkers-head-bob {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes coworkers-commit {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-80px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes coworkers-git {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes coworkers-ci {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coworkers-ci {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes coworkers-block-1 {
+  0% {
+    fill: white;
+  }
+  100% {
+    fill: #FF5130;
+  }
+}
+
+@keyframes coworkers-block-2 {
+  0% {
+    fill: white;
+  }
+  100% {
+    fill: #29AFB0;
+  }
+}
+
+@keyframes coworkers-block-3 {
+  0% {
+    fill: white;
+  }
+  100% {
+    fill: #43C366;
+  }
+}
+
+#coworkers.in-view #coworkers-head-1,
+#coworkers.in-view #coworkers-head-2,
+#coworkers.in-view #coworkers-head-3 {
+  animation: coworkers-head-bob 1s ease;
+  animation-iteration-count: 5;
+}
+
+#coworkers.in-view #coworkers-head-2 {
+  animation-delay: 5s;
+}
+
+#coworkers.in-view #coworkers-head-3 {
+  animation-delay: 10s;
+}
+
+#coworkers.in-view #coworkers-commit-1,
+#coworkers.in-view #coworkers-commit-2,
+#coworkers.in-view #coworkers-commit-3 {
+  animation: coworkers-commit 1s ease;
+  animation-delay: 1s;
+}
+
+#coworkers.in-view #coworkers-commit-2 {
+  animation-delay: 6s;
+}
+
+#coworkers.in-view #coworkers-commit-3 {
+  animation-delay: 11s;
+}
+
+#coworkers.in-view #coworkers-git {
+  animation: coworkers-git 1s ease, coworkers-git 1s ease, coworkers-git 1s ease;
+  animation-delay: 2s, 7s, 12s;
+  transform-origin: 20% 20%;
+}
+
+#coworkers.in-view #coworkers-ci {
+  animation: coworkers-ci 1s linear, coworkers-ci 1s linear, coworkers-ci 1s linear;
+  transform-origin: 393px 56px;
+  animation-delay: 3s, 8s, 13s;
+}
+
+#coworkers.in-view #coworkers-block-1 {
+  animation: coworkers-block-1 .2s forwards;
+  animation-delay: 4.5s;
+  animation-direction: normal, reverse;
+}
+
+#coworkers.in-view #coworkers-block-2 {
+  animation: coworkers-block-2 .2s forwards;
+  animation-delay: 9.5s;
+  animation-direction: normal, reverse;
+}
+
+#coworkers.in-view #coworkers-block-3 {
+  animation: coworkers-block-3 .2s forwards;
+  animation-delay: 14.5s;
+  animation-direction: normal, reverse;
+}

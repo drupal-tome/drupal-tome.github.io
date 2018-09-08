@@ -19,8 +19,7 @@
     "uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "status": [
@@ -37,13 +36,12 @@
     "revision_uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "parent_id": [
         {
-            "value": "5"
+            "value": "12"
         }
     ],
     "parent_type": [
