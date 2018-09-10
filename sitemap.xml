@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://tome.fyi/docs/using-the-command-line</loc>
-  <lastmod>2018-07-04T19:34:09+00:00</lastmod>
+  <lastmod>2018-09-10T02:52:16+00:00</lastmod>
   <priority>0.5</priority>
  </url>
  <url>
@@ -43,7 +43,7 @@
  </url>
  <url>
   <loc>https://tome.fyi/docs/technical/static</loc>
-  <lastmod>2018-07-04T19:32:26+00:00</lastmod>
+  <lastmod>2018-09-10T02:27:29+00:00</lastmod>
   <priority>0.5</priority>
  </url>
  <url>
@@ -59,6 +59,11 @@
  <url>
   <loc>https://tome.fyi/docs/hosting/netlify</loc>
   <lastmod>2018-08-06T05:02:04+00:00</lastmod>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://tome.fyi/docs/site-settings</loc>
+  <lastmod>2018-09-10T02:51:27+00:00</lastmod>
   <priority>0.5</priority>
  </url>
  <url>

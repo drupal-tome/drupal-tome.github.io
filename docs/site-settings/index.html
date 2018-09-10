@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Documentation | Tome" />
+<meta name="title" content="Site specific settings | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs" />
-<meta name="twitter:title" content="Documentation" />
-<meta name="twitter:description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
-<meta name="description" content="Thanks for checking out Tome! Use the links to your left to navigate and find what you&#039;re looking for." />
+<link rel="canonical" href="https://tome.fyi/docs/site-settings" />
+<meta name="twitter:title" content="Site specific settings" />
+<meta name="twitter:description" content="Tome supports a limited number of site settings that you can define in your settings.php file." />
+<meta name="description" content="Tome supports a limited number of site settings that you can define in your settings.php file." />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,10 +15,12 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs" />
-<link rel="next" href="/docs/getting-started" />
+<link rel="revision" href="/docs/site-settings" />
+<link rel="prev" href="/docs/technical/static" />
+<link rel="up" href="/docs/technical" />
+<link rel="next" href="/docs/hosting" />
 
-    <title>Documentation | Tome</title>
+    <title>Site specific settings | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_qg46GI0ojKnyB26rZYB_1DYH8LsUqO53LDBFDqtjV-I.css?petiqf" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_mL9KHPwVYgB-bwtQ33MYhZ_BUW0DRmxrKbwdkAzJe64.css?petiqf" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -127,7 +129,7 @@
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Documentation</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Site specific settings</span>
 </h1>
 
 
@@ -144,36 +146,41 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Thanks for checking out Tome! Use the links to your left to navigate and find what you're looking for.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Tome supports a limited number of site settings that you can define in your settings.php file.</p>
+
+<ul>
+	<li><strong>tome_files_directory</strong>&nbsp;- Where files are exported. Defaults to "../files".</li>
+	<li><strong>tome_content_directory</strong>&nbsp;- Where content is exported. Defaults to "../content".</li>
+	<li><strong>tome_static_directory </strong>- Where HTML is exported. Defaults to "../html".</li>
+	<li><strong>tome_book_outline_directory </strong>-&nbsp;Where books are exported. Defaults to "../extra".</li>
+	<li><strong>tome_static_cache_exclude</strong> - An array of paths to always exclude from static cache. This is useful for pages that include Views that show recently added content.<br />
+	For example:
+	<pre>
+<code class="language-php">$settings['tome_static_cache_exclude'] = ['/'];</code></pre>
+	Would always rebuild the homepage when&nbsp;running "drush tome:static --partial".</li>
+	<li><strong>tome_static_path_exclude</strong> -&nbsp;&nbsp;An array of paths to exclude from static site generation. Useful for system paths.</li>
+</ul>
+
+<p>Config is exported to your config sync directory. It's recommended that you set this to "../config" with a settings.php line like:</p>
+
+<pre>
+<code class="language-php">$config_directories['sync'] = '../config';</code></pre>
+
+<p>&nbsp;</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-              <a class="burger" href="#">&#9776; Navigation</a>
-      <ul  class="menu burger-menu">
-                    <li class="menu-item">
-        <a href="/docs/getting-started" hreflang="en">Getting started</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/using-the-command-line" hreflang="en">Using the command line</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/module-compatibility" hreflang="en">Module compatibility</a>
-              </li>
-                <li class="menu-item menu-item--collapsed">
-        <a href="/docs/technical" hreflang="en">Technical documentation</a>
-              </li>
-                <li class="menu-item menu-item--collapsed">
-        <a href="/docs/hosting" hreflang="en">Hosting guides</a>
-              </li>
-        </ul>
-  
-
-
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Documentation</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Site specific settings</h2>
       <ul class="book-pager">
-                          <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/getting-started" rel="next" title="Go to next page">Getting started <b>›</b></a>
+              <li class="book-pager__item book-pager__item--previous">
+          <a href="/docs/technical/static" rel="prev" title="Go to previous page"><b>‹</b> Static site generation</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--center">
+          <a href="/docs/technical" title="Go to parent page">Up</a>
+        </li>
+                    <li class="book-pager__item book-pager__item--next">
+          <a href="/docs/hosting" rel="next" title="Go to next page">Hosting guides <b>›</b></a>
         </li>
           </ul>
       </nav>
