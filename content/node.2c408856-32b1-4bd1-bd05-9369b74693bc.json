@@ -1,0 +1,106 @@
+{
+    "uuid": [
+        {
+            "value": "2c408856-32b1-4bd1-bd05-9369b74693bc"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book",
+            "target_type": "node_type",
+            "target_uuid": "870f5e4b-075f-48ba-972b-7b47064b4efd"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2018-09-10T02:42:08+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "Site specific settings"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-09-10T02:42:04+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-09-10T02:51:27+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "metatag": {
+        "value": {
+            "title": "Site specific settings | Tome",
+            "twitter_cards_type": "summary_large_image",
+            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/site-settings",
+            "twitter_cards_title": "Site specific settings",
+            "twitter_cards_description": "Tome supports a limited number of site settings that you can define in your settings.php file.",
+            "description": "Tome supports a limited number of site settings that you can define in your settings.php file.",
+            "twitter_cards_creator_id": "@DrupalSAM",
+            "twitter_cards_creator": "@DrupalSAM"
+        }
+    },
+    "path": [
+        {
+            "alias": "\/docs\/site-settings",
+            "pid": 13,
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Tome supports a limited number of site settings that you can define in your settings.php file.<\/p>\r\n\r\n<ul>\r\n\t<li><strong>tome_files_directory<\/strong>&nbsp;- Where files are exported. Defaults to \"..\/files\".<\/li>\r\n\t<li><strong>tome_content_directory<\/strong>&nbsp;- Where content is exported. Defaults to \"..\/content\".<\/li>\r\n\t<li><strong>tome_static_directory <\/strong>- Where HTML is exported. Defaults to \"..\/html\".<\/li>\r\n\t<li><strong>tome_book_outline_directory <\/strong>-&nbsp;Where books are exported. Defaults to \"..\/extra\".<\/li>\r\n\t<li><strong>tome_static_cache_exclude<\/strong> - An array of paths to always exclude from static cache. This is useful for pages that include Views that show recently added content.<br \/>\r\n\tFor example:\r\n\t<pre>\r\n<code class=\"language-php\">$settings['tome_static_cache_exclude'] = ['\/'];<\/code><\/pre>\r\n\tWould always rebuild the homepage when&nbsp;running \"drush tome:static --partial\".<\/li>\r\n\t<li><strong>tome_static_path_exclude<\/strong> -&nbsp;&nbsp;An array of paths to exclude from static site generation. Useful for system paths.<\/li>\r\n<\/ul>\r\n\r\n<p>Config is exported to your config sync directory. It's recommended that you set this to \"..\/config\" with a settings.php line like:<\/p>\r\n\r\n<pre>\r\n<code class=\"language-php\">$config_directories['sync'] = '..\/config';<\/code><\/pre>\r\n\r\n<p>&nbsp;<\/p>\r\n",
+            "format": "rich_text",
+            "summary": ""
+        }
+    ]
+}

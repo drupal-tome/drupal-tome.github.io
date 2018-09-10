@@ -53,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2018-07-04T19:32:26+00:00",
+            "value": "2018-09-10T02:27:29+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -83,8 +83,8 @@
             "twitter_cards_type": "summary_large_image",
             "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/technical\/static",
             "twitter_cards_title": "Static site generation",
-            "twitter_cards_description": "The static site generator included with Tome uses internal request handling and concurrency to ensure that pages are exported as quickly as possible.\n\nThe static site generation flow works like:",
-            "description": "The static site generator included with Tome uses internal request handling and concurrency to ensure that pages are exported as quickly as possible.\n\nThe static site generation flow works like:",
+            "twitter_cards_description": "You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a\u00a0Gatsby integration.\n\nIf you want to use Drupal to generate HTML, Tome\u00a0ships with a static site generator that uses Drupal's internal request handling and concurrency to ensure that pages are exported as quickly as possible.\n\nThe static site generation flow works like:",
+            "description": "You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a\u00a0Gatsby integration.\n\nIf you want to use Drupal to generate HTML, Tome\u00a0ships with a static site generator that uses Drupal's internal request handling and concurrency to ensure that pages are exported as quickly as possible.\n\nThe static site generation flow works like:",
             "twitter_cards_creator_id": "@DrupalSAM",
             "twitter_cards_creator": "@DrupalSAM"
         }
@@ -92,13 +92,13 @@
     "path": [
         {
             "alias": "\/docs\/technical\/static",
-            "pid": 9,
+            "pid": 8,
             "langcode": "en"
         }
     ],
     "body": [
         {
-            "value": "<p>You may use any static site generator in conjunction with Tome. See <a href="https://github.com/drupal-tome/tome-gatsby">tome-gatsby</a> for an example of Gatsby integration.</p><p>If you want to use Drupal themeing to generate HTML, Tome's ships with a static site generator that uses Drupal's internal request handling and concurrency to ensure that pages are exported as quickly as possible.<\/p>\r\n\r\n<p>The static site generation flow works like:<\/p>\r\n\r\n<ol>\r\n\t<li>The \"drush tome:static\" command is ran.<\/li>\r\n\t<li>The \"tome.static\" service collects all paths known to Drupal. Currently this is a combination of all routes that do not use parameters, and all entity \"canonical\" paths (and the paths of their translations).&nbsp;If the site uses URL language negotiation, each configured language prefix is also collected. Only entities\/routes that are accessible to anonymous are exported.<\/li>\r\n\t<li>Paths are exported using a user-configurable concurrency, which defaults to five. This means that five paths will be processed by Drupal at a time.<\/li>\r\n\t<li>For each path, the script first checks if the path is a static file that can be immediately copied. This is common for pre-generated files in the files directory.<\/li>\r\n\t<li>If the path isn't a static file, a new process is invoked and Drupal handles the request. This is done using the \"http.kernel\" service. If a response with the status code 200 is returned, the content of that response is saved to the filesystem.<\/li>\r\n\t<li>If the response was HTML, that HTMl is parsed and assets are collected. The currently recognized assets are pager links (to support Views pagers), images, responsive images (using srcset), stylesheets, scripts, and favicons.<\/li>\r\n\t<li>If the response was CSS, URLs within \"url(...)\" are parsed as assets.<\/li>\r\n\t<li>All collected asset paths are then returned to the parent process, which exports&nbsp;them starting at step 3.<\/li>\r\n\t<li>Steps 3-8 repeat until there are no more assets to be exported.<\/li>\r\n<\/ol>\r\n\r\n<p>If a path that your site needs is not collected automatically, you can subscribe to the \"Drupal\\tome\\Event\\TomeEvents:COLLECT_PATHS\" event, which allows you to add, remove, and replace collected paths. Additionally APIs for processing responses will be added as needed.<\/p>\r\n",
+            "value": "<p>You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See <a href=\"https:\/\/github.com\/drupal-tome\/tome-gatsby\">tome-gatsby<\/a> for an example of a&nbsp;<a href=\"https:\/\/www.gatsbyjs.org\/\">Gatsby<\/a> integration.<\/p>\r\n\r\n<p>If you want to use Drupal to generate HTML, Tome&nbsp;ships with a static site generator that uses Drupal's internal request handling and concurrency to ensure that pages are exported as quickly as possible.<\/p>\r\n\r\n<p>The static site generation flow works like:<\/p>\r\n\r\n<ol>\r\n\t<li>The \"drush tome:static\" command is ran.<\/li>\r\n\t<li>The \"tome.static\" service collects all paths known to Drupal. Currently this is a combination of all routes that do not use parameters, and all entity \"canonical\" paths (and the paths of their translations).&nbsp;If the site uses URL language negotiation, each configured language prefix is also collected. Only entities\/routes that are accessible to anonymous are exported.<\/li>\r\n\t<li>Paths are exported using a user-configurable concurrency, which defaults to five. This means that five paths will be processed by Drupal at a time.<\/li>\r\n\t<li>For each path, the script first checks if the path is a static file that can be immediately copied. This is common for pre-generated files in the files directory.<\/li>\r\n\t<li>If the path isn't a static file, a new process is invoked and Drupal handles the request. This is done using the \"http.kernel\" service. If a response with the status code 200 is returned, the content of that response is saved to the filesystem.<\/li>\r\n\t<li>If the response was HTML, that HTMl is parsed and assets are collected. The currently recognized assets are pager links (to support Views pagers), images, responsive images (using srcset), stylesheets, scripts, and favicons.<\/li>\r\n\t<li>If the response was CSS, URLs within \"url(...)\" are parsed as assets.<\/li>\r\n\t<li>All collected asset paths are then returned to the parent process, which exports&nbsp;them starting at step 3.<\/li>\r\n\t<li>Steps 3-8 repeat until there are no more assets to be exported.<\/li>\r\n<\/ol>\r\n\r\n<p>If a path that your site needs is not collected automatically, you can subscribe to the \"Drupal\\tome\\Event\\TomeEvents:COLLECT_PATHS\" event, which allows you to add, remove, and replace collected paths. Additionally APIs for processing responses will be added as needed.<\/p>\r\n",
             "format": "rich_text",
             "summary": ""
         }
