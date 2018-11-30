@@ -2,12 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Technical documentation | Tome" />
+<meta name="title" content="Using Tome Static and Tome Sync | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/technical" />
-<meta name="twitter:title" content="Technical documentation" />
-<meta name="twitter:description" content="This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project." />
-<meta name="description" content="This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project." />
+<link rel="canonical" href="https://tome.fyi/docs/sub-modules" />
+<meta name="twitter:title" content="Using Tome Static and Tome Sync" />
+<meta name="twitter:description" content="Tome includes two sub-modules, Tome Static and Tome Sync, which can be used separately for specific use cases. This document will try to cover why you may want to only use one half of Tome.
+
+Tome Static
+
+The Tome Static sub-module handles static site (HTML) generation, and is useful if you are comfortable with you existing Drupal stack, but still want to run a static site on production." />
+<meta name="description" content="Tome includes two sub-modules, Tome Static and Tome Sync, which can be used separately for specific use cases. This document will try to cover why you may want to only use one half of Tome.
+
+Tome Static
+
+The Tome Static sub-module handles static site (HTML) generation, and is useful if you are comfortable with you existing Drupal stack, but still want to run a static site on production." />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,12 +23,11 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/technical" />
-<link rel="prev" href="/docs/module-compatibility" />
+<link rel="revision" href="/docs/sub-modules" />
+<link rel="prev" href="/docs/hosting/netlify" />
 <link rel="up" href="/docs" />
-<link rel="next" href="/docs/technical/exporter" />
 
-    <title>Technical documentation | Tome</title>
+    <title>Using Tome Static and Tome Sync | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_qg46GI0ojKnyB26rZYB_1DYH8LsUqO53LDBFDqtjV-I.css?pj13gl" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_mL9KHPwVYgB-bwtQ33MYhZ_BUW0DRmxrKbwdkAzJe64.css?pj13gl" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -59,7 +66,7 @@
 
           <aside class="sidebar" role="complementary">
           <div class="region region-sidebar">
-    <div id="block-expandedbooknavigation--4" class="block block-tfyi-book block-expanded-book-navigation">
+    <div id="block-expandedbooknavigation--2" class="block block-tfyi-book block-expanded-book-navigation">
   
     
         <nav id="book-block-menu-1" class="book-block-menu" role="navigation" aria-label="Book outline for Documentation">
@@ -128,16 +135,16 @@
     
     <div class="content">
         <div class="region region-content">
-    <div id="block-tomefyi-page-title--4" class="block block-core block-page-title-block">
+    <div id="block-tomefyi-page-title--2" class="block block-core block-page-title-block">
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Technical documentation</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Using Tome Static and Tome Sync</span>
 </h1>
 
 
   </div>
-<div id="block-mainpagecontent--4" class="block block-system block-system-main-block">
+<div id="block-mainpagecontent--3" class="block block-system block-system-main-block">
   
     
       
@@ -149,41 +156,34 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Tome includes two sub-modules, Tome Static and Tome Sync, which can be used separately for specific use cases. This document will try to cover why you may want to only use one half of Tome.</p>
+
+<h2>Tome Static</h2>
+
+<p>The Tome Static sub-module handles static site (HTML) generation, and is useful if you are comfortable with you existing Drupal stack, but still want to run a static site on production.</p>
+
+<p>When just running Tome Static, you'll need to decide how and when to kick off the static site generation process. In the future a "tome:static:watch" command may be added which you can run as a persistent background process, but for now you'll probably want to run "tome:static" in a cron job, which can also push the export directory to your hosting provider.</p>
+
+<p>To get the same security benefit of running traditional Tome, you should lock down your editing environment so that only authorized users can access it. This can be accomplished by adding simple basic authentication to your site, or by requiring a VPN to access your editing environment.</p>
+
+<h2>Tome Sync</h2>
+
+<p>The Tome Sync sub-module handles static content export and import, and is useful if you want to build your site from scratch, or prefer to work with your content as JSON.</p>
+
+<p>The use-cases for Tome Sync as a standalone module aren't completely clear right now, but there are a lot of possibilities for this sub-module without generating a static site. Maybe you want to migrate away from Drupal and JSON would make that easier, or you're using GatsbyJS which is lightning fast when using JSON files, or you want to archive a site's content and de-commission it from production. Tome Sync is powerful, so I encourage users to try it out and let me know if you find where it fits into your workflow.</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-              <a class="burger" href="#">&#9776; Navigation</a>
-      <ul  class="menu burger-menu">
-                    <li class="menu-item">
-        <a href="/docs/technical/exporter" hreflang="en">Exporting</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/importer" hreflang="en">Importing</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/static" hreflang="en">Static site generation</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/site-settings" hreflang="en">Site specific settings</a>
-              </li>
-        </ul>
-  
-
-
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Technical documentation</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Using Tome Static and Tome Sync</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/module-compatibility" rel="prev" title="Go to previous page"><b>‹</b> Module compatibility</a>
+          <a href="/docs/hosting/netlify" rel="prev" title="Go to previous page"><b>‹</b> Netlify</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
           <a href="/docs" title="Go to parent page">Up</a>
         </li>
-                    <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/technical/exporter" rel="next" title="Go to next page">Exporting <b>›</b></a>
-        </li>
-          </ul>
+                </ul>
       </nav>
 
   </div>
