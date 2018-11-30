@@ -77,22 +77,9 @@
             "value": true
         }
     ],
-    "metatag": {
-        "value": {
-            "title": "Site specific settings | Tome",
-            "twitter_cards_type": "summary_large_image",
-            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/site-settings",
-            "twitter_cards_title": "Site specific settings",
-            "twitter_cards_description": "Tome supports a limited number of site settings that you can define in your settings.php file.",
-            "description": "Tome supports a limited number of site settings that you can define in your settings.php file.",
-            "twitter_cards_creator_id": "@DrupalSAM",
-            "twitter_cards_creator": "@DrupalSAM"
-        }
-    },
     "path": [
         {
             "alias": "\/docs\/site-settings",
-            "pid": 13,
             "langcode": "en"
         }
     ],

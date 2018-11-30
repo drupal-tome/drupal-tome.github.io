@@ -12,8 +12,7 @@
     "uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "filename": [
@@ -23,8 +22,7 @@
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-06\/diagram1.svg",
-            "url": "\/sites\/default\/files\/2018-06\/diagram1.svg"
+            "value": "public:\/\/2018-06\/diagram1.svg"
         }
     ],
     "filemime": [
@@ -34,7 +32,7 @@
     ],
     "filesize": [
         {
-            "value": 4293
+            "value": 4317
         }
     ],
     "status": [

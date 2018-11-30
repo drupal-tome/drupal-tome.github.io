@@ -77,22 +77,9 @@
             "value": true
         }
     ],
-    "metatag": {
-        "value": {
-            "title": "Exporting | Tome",
-            "twitter_cards_type": "summary_large_image",
-            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/technical\/exporter",
-            "twitter_cards_title": "Exporting",
-            "twitter_cards_description": "One of the main features of Tome is that it stores everything about a Drupal site - its content, configuration, and files -\u00a0in one place. This is accomplished in part by how data is exported and stored.\n\nThe content export flow works like this:",
-            "description": "One of the main features of Tome is that it stores everything about a Drupal site - its content, configuration, and files -\u00a0in one place. This is accomplished in part by how data is exported and stored.\n\nThe content export flow works like this:",
-            "twitter_cards_creator_id": "@DrupalSAM",
-            "twitter_cards_creator": "@DrupalSAM"
-        }
-    },
     "path": [
         {
             "alias": "\/docs\/technical\/exporter",
-            "pid": 7,
             "langcode": "en"
         }
     ],

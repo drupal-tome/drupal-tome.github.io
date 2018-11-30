@@ -12,8 +12,7 @@
     "uid": [
         {
             "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4",
-            "url": "\/user\/1"
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
     "filename": [
@@ -23,8 +22,7 @@
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-06\/home-preview.png",
-            "url": "\/sites\/default\/files\/2018-06\/home-preview.png"
+            "value": "public:\/\/2018-06\/home-preview.png"
         }
     ],
     "filemime": [

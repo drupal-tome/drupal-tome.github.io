@@ -77,22 +77,9 @@
             "value": true
         }
     ],
-    "metatag": {
-        "value": {
-            "title": "Github pages | Tome",
-            "twitter_cards_type": "summary_large_image",
-            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/hosting\/github-pages",
-            "twitter_cards_title": "Github pages",
-            "twitter_cards_description": "Github pages\u00a0is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory.",
-            "description": "Github pages\u00a0is a free hosting service provided by Github, intended to be used for open source project documentation and simple, non-commercial sites. This document will go over the basics of using Tome for your (github.io) homepage, or in a sub-directory.",
-            "twitter_cards_creator_id": "@DrupalSAM",
-            "twitter_cards_creator": "@DrupalSAM"
-        }
-    },
     "path": [
         {
             "alias": "\/docs\/hosting\/github-pages",
-            "pid": 11,
             "langcode": "en"
         }
     ],

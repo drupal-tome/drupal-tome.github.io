@@ -77,22 +77,9 @@
             "value": true
         }
     ],
-    "metatag": {
-        "value": {
-            "title": "Static site generation | Tome",
-            "twitter_cards_type": "summary_large_image",
-            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/technical\/static",
-            "twitter_cards_title": "Static site generation",
-            "twitter_cards_description": "You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a\u00a0Gatsby integration.\n\nIf you want to use Drupal to generate HTML, Tome\u00a0ships with a static site generator that uses Drupal's internal request handling and concurrency to ensure that pages are exported as quickly as possible.\n\nThe static site generation flow works like:",
-            "description": "You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a\u00a0Gatsby integration.\n\nIf you want to use Drupal to generate HTML, Tome\u00a0ships with a static site generator that uses Drupal's internal request handling and concurrency to ensure that pages are exported as quickly as possible.\n\nThe static site generation flow works like:",
-            "twitter_cards_creator_id": "@DrupalSAM",
-            "twitter_cards_creator": "@DrupalSAM"
-        }
-    },
     "path": [
         {
             "alias": "\/docs\/technical\/static",
-            "pid": 8,
             "langcode": "en"
         }
     ],

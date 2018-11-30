@@ -77,25 +77,9 @@
             "value": true
         }
     ],
-    "metatag": {
-        "value": {
-            "title": "Home | Tome",
-            "twitter_cards_type": "summary_large_image",
-            "canonical_url": "http:\/\/127.0.0.1:8888\/home",
-            "twitter_cards_title": "Home",
-            "twitter_cards_description": "Tome is a static site generator lovingly crafted with Drupal 8. Work locally and sync your changes with Git.",
-            "description": "Tome is a static site generator lovingly crafted with Drupal 8. Work locally and sync your changes with Git.",
-            "twitter_cards_creator_id": "@DrupalSAM",
-            "twitter_cards_creator": "@DrupalSAM",
-            "image_src": "",
-            "twitter_cards_image_alt": "A diagram of how Tome works",
-            "twitter_cards_image": "http:\/\/127.0.0.1:8888"
-        }
-    },
     "path": [
         {
             "alias": "\/home",
-            "pid": 12,
             "langcode": "en"
         }
     ],

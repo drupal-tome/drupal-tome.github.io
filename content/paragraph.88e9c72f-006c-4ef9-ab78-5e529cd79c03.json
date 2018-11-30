@@ -39,21 +39,6 @@
             "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
         }
     ],
-    "parent_id": [
-        {
-            "value": "12"
-        }
-    ],
-    "parent_type": [
-        {
-            "value": "node"
-        }
-    ],
-    "parent_field_name": [
-        {
-            "value": "field_paragraphs"
-        }
-    ],
     "behavior_settings": [
         {
             "value": "a:0:{}"

@@ -77,22 +77,9 @@
             "value": true
         }
     ],
-    "metatag": {
-        "value": {
-            "title": "Importing | Tome",
-            "twitter_cards_type": "summary_large_image",
-            "canonical_url": "http:\/\/127.0.0.1:8888\/docs\/technical\/importer",
-            "twitter_cards_title": "Importing",
-            "twitter_cards_description": "When an editing session is started with Tome, work is done from an initial state of content and config based on what was previously exported. This is accomplished by the importer service and related commands.\n\nThe content import flow works like this:",
-            "description": "When an editing session is started with Tome, work is done from an initial state of content and config based on what was previously exported. This is accomplished by the importer service and related commands.\n\nThe content import flow works like this:",
-            "twitter_cards_creator_id": "@DrupalSAM",
-            "twitter_cards_creator": "@DrupalSAM"
-        }
-    },
     "path": [
         {
             "alias": "\/docs\/technical\/importer",
-            "pid": 8,
             "langcode": "en"
         }
     ],

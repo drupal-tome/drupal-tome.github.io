@@ -14,9 +14,26 @@
             "value": "en"
         }
     ],
+    "preferred_langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "preferred_admin_langcode": [],
     "name": [
         {
             "value": "admin"
+        }
+    ],
+    "mail": [],
+    "timezone": [
+        {
+            "value": "UTC"
+        }
+    ],
+    "status": [
+        {
+            "value": true
         }
     ],
     "created": [
@@ -31,21 +48,10 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "roles": [],
     "default_langcode": [
         {
             "value": true
-        }
-    ],
-    "metatag": {
-        "value": {
-            "title": "admin | Tome",
-            "canonical_url": "http:\/\/drupal-tome.github.io\/user\/1",
-            "description": "Tome"
-        }
-    },
-    "status": [
-        {
-            "value": "1"
         }
     ]
 }
