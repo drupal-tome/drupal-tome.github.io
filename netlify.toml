@@ -1,0 +1,6 @@
+[build]
+command = "composer install && ./vendor/bin/drush tome:install -y && ./vendor/bin/drush tome:static -l $DEPLOY_PRIME_URL"
+publish = "html"
+
+[build.environment]
+PHP_VERSION="7.2"
