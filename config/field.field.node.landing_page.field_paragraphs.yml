@@ -7,6 +7,7 @@ dependencies:
     - node.type.landing_page
     - paragraphs.paragraphs_type.diagram
     - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.heroes
     - paragraphs.paragraphs_type.rich_text
   module:
     - entity_reference_revisions
@@ -28,6 +29,7 @@ settings:
       hero: hero
       rich_text: rich_text
       diagram: diagram
+      heroes: heroes
     target_bundles_drag_drop:
       hero:
         enabled: true
@@ -38,4 +40,7 @@ settings:
       diagram:
         enabled: true
         weight: 4
+      heroes:
+        enabled: true
+        weight: 7
 field_type: entity_reference_revisions

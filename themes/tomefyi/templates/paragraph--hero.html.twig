@@ -44,18 +44,20 @@
     'paragraph--type--' ~ paragraph.bundle|clean_class,
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
-    'hero-alignment-' ~ paragraph.field_alignment.value|clean_class
+    'hero-alignment-' ~ paragraph.field_alignment.value|clean_class,
+    paragraph.field_class.value ? paragraph.field_class.value|clean_class : ''
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }} style="background-color: #{{ paragraph.field_background_color.value|default('000000') }};color: #{{ paragraph.field_text_color.value|default('FFFFFF') }}">
+  <div{{ attributes.addClass(classes) }}>
     {% block content %}
-      {{ content.field_image }}
-      {{ content.field_file }}
-      <div class="hero-inner">
-        {{ content | without('field_link') }}
+      <div class="hero-text">
+        <h2>{{ content.field_headline }}</h2>
+        {{ content.field_text }}
       </div>
-      {{ content.field_link }}
+      <div class="hero-image">
+        {{ content.field_file }}
+      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}

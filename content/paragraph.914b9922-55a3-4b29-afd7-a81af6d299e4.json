@@ -1,0 +1,82 @@
+{
+    "uuid": [
+        {
+            "value": "914b9922-55a3-4b29-afd7-a81af6d299e4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "hero",
+            "target_type": "paragraphs_type",
+            "target_uuid": "1678f17b-44eb-4043-9a6f-296bf6294737"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-01-13T18:11:08+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_alignment": [
+        {
+            "value": "left"
+        }
+    ],
+    "field_class": [],
+    "field_file": [
+        {
+            "display": true,
+            "description": "",
+            "target_type": "file",
+            "target_uuid": "36d81390-1196-41ab-b8eb-6ccd337533e6"
+        }
+    ],
+    "field_headline": [
+        {
+            "value": "Use tools you love"
+        }
+    ],
+    "field_text": [
+        {
+            "value": "<p>Making a static site with Tome is as easy as making any Drupal site. Create a theme, create content, and push static HTML to production.<\/p>\r\n",
+            "format": "rich_text"
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "c009eda9-7968-4be7-a9ee-b646de6eb6b1"
+            "value": "50c49b4f-85b1-48c6-8016-41c48cab882b"
         }
     ],
     "langcode": [
@@ -17,12 +17,12 @@
     ],
     "filename": [
         {
-            "value": "coworkers.svg"
+            "value": "tomenetlify.svg"
         }
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-09\/coworkers.svg"
+            "value": "public:\/\/2019-01\/tomenetlify.svg"
         }
     ],
     "filemime": [
@@ -32,7 +32,7 @@
     ],
     "filesize": [
         {
-            "value": 7341
+            "value": 851
         }
     ],
     "status": [
@@ -42,13 +42,13 @@
     ],
     "created": [
         {
-            "value": "2018-09-08T18:12:58+00:00",
+            "value": "2019-01-13T19:03:31+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-09-08T18:14:33+00:00",
+            "value": "2019-01-13T19:04:19+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ]

@@ -1,15 +1,15 @@
-uuid: beca6324-89a0-41fc-969d-47d8a361e90e
+uuid: d9ed6afa-9af9-4f42-8fbd-8b73f69139ab
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text_color
+    - field.storage.paragraph.field_class
     - paragraphs.paragraphs_type.hero
-id: paragraph.hero.field_text_color
-field_name: field_text_color
+id: paragraph.hero.field_class
+field_name: field_class
 entity_type: paragraph
 bundle: hero
-label: 'Text color'
+label: Class
 description: ''
 required: false
 translatable: false

@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "ebf8df3e-a010-49af-97b0-ee9e9e9e126f"
+            "value": "50028a63-200d-49b9-bc45-9ad1124e7caa"
         }
     ],
     "langcode": [
@@ -11,9 +11,9 @@
     ],
     "type": [
         {
-            "target_id": "diagram",
+            "target_id": "hero",
             "target_type": "paragraphs_type",
-            "target_uuid": "0a4a0da5-80f0-4692-88fa-7298914f41a7"
+            "target_uuid": "1678f17b-44eb-4043-9a6f-296bf6294737"
         }
     ],
     "uid": [
@@ -29,7 +29,7 @@
     ],
     "created": [
         {
-            "value": "2018-09-08T18:12:53+00:00",
+            "value": "2019-01-13T18:12:53+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -54,17 +54,26 @@
             "value": true
         }
     ],
-    "field_description": [
+    "field_alignment": [
         {
-            "value": "Re-think your editorial workflow. Track content changes in Git and use CI to build your static site."
+            "value": "center"
         }
     ],
-    "field_file": [
+    "field_class": [
         {
-            "display": true,
-            "description": "",
-            "target_type": "file",
-            "target_uuid": "c009eda9-7968-4be7-a9ee-b646de6eb6b1"
+            "value": "module-list-header"
+        }
+    ],
+    "field_file": [],
+    "field_headline": [
+        {
+            "value": "Build your way"
+        }
+    ],
+    "field_text": [
+        {
+            "value": "<p>Tome is designed to be extended and customized, letting you use only what you need to build your site.<\/p>\r\n",
+            "format": "rich_text"
         }
     ]
 }

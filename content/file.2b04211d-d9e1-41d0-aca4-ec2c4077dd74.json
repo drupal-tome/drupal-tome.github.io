@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "4c5dd0d1-07d8-42e6-b2f8-7237f66d63dc"
+            "value": "2b04211d-d9e1-41d0-aca4-ec2c4077dd74"
         }
     ],
     "langcode": [
@@ -17,22 +17,22 @@
     ],
     "filename": [
         {
-            "value": "home-preview.png"
+            "value": "lunr.svg"
         }
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-06\/home-preview.png"
+            "value": "public:\/\/2019-01\/lunr.svg"
         }
     ],
     "filemime": [
         {
-            "value": "image\/png"
+            "value": "image\/svg+xml"
         }
     ],
     "filesize": [
         {
-            "value": 72053
+            "value": 946
         }
     ],
     "status": [
@@ -42,13 +42,13 @@
     ],
     "created": [
         {
-            "value": "2018-06-18T14:03:59+00:00",
+            "value": "2019-01-13T19:03:46+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-18T14:04:03+00:00",
+            "value": "2019-01-13T19:04:19+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ]

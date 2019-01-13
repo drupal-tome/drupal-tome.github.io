@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "d39b63cb-dce8-4098-a5a9-01c20602d6cd"
+            "value": "93015bda-ecb0-4227-b061-9db51c12cd69"
         }
     ],
     "langcode": [
@@ -11,9 +11,9 @@
     ],
     "type": [
         {
-            "target_id": "diagram",
+            "target_id": "rich_text",
             "target_type": "paragraphs_type",
-            "target_uuid": "0a4a0da5-80f0-4692-88fa-7298914f41a7"
+            "target_uuid": "5203281b-3de4-4795-ba16-4ea0c62aa531"
         }
     ],
     "uid": [
@@ -29,7 +29,7 @@
     ],
     "created": [
         {
-            "value": "2018-06-17T15:33:02+00:00",
+            "value": "2019-01-13T18:29:20+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -54,17 +54,10 @@
             "value": true
         }
     ],
-    "field_description": [
+    "field_text": [
         {
-            "value": "Build Drupal from source, sync changes back, and export static HTML."
-        }
-    ],
-    "field_file": [
-        {
-            "display": true,
-            "description": "",
-            "target_type": "file",
-            "target_uuid": "920cb13d-2f79-4cc6-ba8f-26fb1b9e7a33"
+            "value": "<div class=\"module-list\">\r\n<div>\r\n<h3>Tome Static<\/h3>\r\n\r\n<p>Generate static HTML from your Drupal site.<\/p>\r\n<\/div>\r\n\r\n<div>\r\n<h3>Tome Sync<\/h3>\r\n\r\n<p>Store your content and config as files in Git.<\/p>\r\n<\/div>\r\n\r\n<div>\r\n<h3>Tome Netlify<\/h3>\r\n\r\n<p>Make use of Netlify's static hosting with Tome.<\/p>\r\n<\/div>\r\n\r\n<div>\r\n<h3>Lunr<\/h3>\r\n\r\n<p>Perform static, client side searches with Lunr.js.<\/p>\r\n<\/div>\r\n<\/div>\r\n",
+            "format": "rich_text"
         }
     ]
 }

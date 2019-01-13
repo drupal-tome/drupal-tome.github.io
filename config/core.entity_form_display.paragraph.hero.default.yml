@@ -4,14 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.hero.field_alignment
-    - field.field.paragraph.hero.field_background_color
+    - field.field.paragraph.hero.field_class
+    - field.field.paragraph.hero.field_file
     - field.field.paragraph.hero.field_headline
-    - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_text
-    - field.field.paragraph.hero.field_text_color
     - paragraphs.paragraphs_type.hero
   module:
-    - link
+    - file
     - text
 id: paragraph.hero.default
 targetEntityType: paragraph
@@ -24,13 +23,20 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_background_color:
-    weight: 6
+  field_class:
+    weight: 8
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_file:
+    weight: 9
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_headline:
     weight: 0
@@ -40,14 +46,6 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_link:
-    weight: 2
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_text:
     weight: 1
     settings:
@@ -55,14 +53,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_text_color:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
 hidden:
   created: true

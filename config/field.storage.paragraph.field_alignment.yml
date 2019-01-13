@@ -15,29 +15,11 @@ settings:
       value: left
       label: Left
     -
-      value: center
-      label: Center
-    -
       value: right
       label: Right
     -
-      value: left-bottom
-      label: 'Left bottom'
-    -
-      value: left-top
-      label: 'Left top'
-    -
-      value: center-bottom
-      label: 'Center bottom'
-    -
-      value: center-top
-      label: 'Center top'
-    -
-      value: right-bottom
-      label: 'Right bottom'
-    -
-      value: right-top
-      label: 'Right top'
+      value: center
+      label: Center
   allowed_values_function: ''
 module: options
 locked: false

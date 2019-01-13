@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "3618af94-22ab-4f86-a770-9803b69f22f0"
+            "value": "93c14f0e-82cd-45ab-aaa6-e4f173b99473"
         }
     ],
     "langcode": [
@@ -11,9 +11,9 @@
     ],
     "type": [
         {
-            "target_id": "rich_text",
+            "target_id": "hero",
             "target_type": "paragraphs_type",
-            "target_uuid": "5203281b-3de4-4795-ba16-4ea0c62aa531"
+            "target_uuid": "1678f17b-44eb-4043-9a6f-296bf6294737"
         }
     ],
     "uid": [
@@ -29,7 +29,7 @@
     ],
     "created": [
         {
-            "value": "2018-06-16T17:28:17+00:00",
+            "value": "2019-01-13T19:03:15+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -54,9 +54,32 @@
             "value": true
         }
     ],
+    "field_alignment": [
+        {
+            "value": "center"
+        }
+    ],
+    "field_class": [
+        {
+            "value": "module-icon"
+        }
+    ],
+    "field_file": [
+        {
+            "display": true,
+            "description": "",
+            "target_type": "file",
+            "target_uuid": "50c49b4f-85b1-48c6-8016-41c48cab882b"
+        }
+    ],
+    "field_headline": [
+        {
+            "value": "Tome Netlify"
+        }
+    ],
     "field_text": [
         {
-            "value": "<div class=\"flex\">\r\n<div class=\"small-callout\">\r\n<h3>AGILE<\/h3>\r\n\r\n<p>Brings your ideas to life faster. Deploying is as easy as sending HTML to production.<\/p>\r\n<\/div>\r\n\r\n<div class=\"small-callout\">\r\n<h3>SECURE<\/h3>\r\n\r\n<p>Remove the risk of running an insecure site. Working locally keeps your public site safe.<\/p>\r\n<\/div>\r\n\r\n<div class=\"small-callout\">\r\n<h3>SIMPLE<\/h3>\r\n\r\n<p>Collaborate on code and content in one place, and contribute with tools you already know.<\/p>\r\n<\/div>\r\n<\/div>\r\n",
+            "value": "<p>Make use of Netlify's static hosting with Tome.<\/p>\r\n",
             "format": "rich_text"
         }
     ]

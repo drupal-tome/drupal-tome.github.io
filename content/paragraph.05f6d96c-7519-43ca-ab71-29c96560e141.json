@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "88e9c72f-006c-4ef9-ab78-5e529cd79c03"
+            "value": "05f6d96c-7519-43ca-ab71-29c96560e141"
         }
     ],
     "langcode": [
@@ -29,7 +29,7 @@
     ],
     "created": [
         {
-            "value": "2018-06-17T16:08:07+00:00",
+            "value": "2019-01-13T19:03:33+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -56,29 +56,31 @@
     ],
     "field_alignment": [
         {
-            "value": "right"
+            "value": "center"
         }
     ],
-    "field_background_color": [
+    "field_class": [
         {
-            "value": "43C366"
+            "value": "module-icon"
+        }
+    ],
+    "field_file": [
+        {
+            "display": true,
+            "description": "",
+            "target_type": "file",
+            "target_uuid": "2b04211d-d9e1-41d0-aca4-ec2c4077dd74"
         }
     ],
     "field_headline": [
         {
-            "value": "EXPERIMENT"
+            "value": "Lunr"
         }
     ],
-    "field_link": [],
     "field_text": [
         {
-            "value": "<p>Play with a vast library of modules and themes, without having to worry about destroying production.<\/p>\r\n",
+            "value": "<p>Perform static, client side searches with Lunr.js.<\/p>\r\n",
             "format": "rich_text"
-        }
-    ],
-    "field_text_color": [
-        {
-            "value": "FFFFFF"
         }
     ]
 }

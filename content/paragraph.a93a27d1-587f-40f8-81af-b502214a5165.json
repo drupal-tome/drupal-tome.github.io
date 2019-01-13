@@ -1,0 +1,86 @@
+{
+    "uuid": [
+        {
+            "value": "a93a27d1-587f-40f8-81af-b502214a5165"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "hero",
+            "target_type": "paragraphs_type",
+            "target_uuid": "1678f17b-44eb-4043-9a6f-296bf6294737"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-01-13T19:03:00+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "behavior_settings": [
+        {
+            "value": "a:0:{}"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "field_alignment": [
+        {
+            "value": "center"
+        }
+    ],
+    "field_class": [
+        {
+            "value": "module-icon"
+        }
+    ],
+    "field_file": [
+        {
+            "display": true,
+            "description": "",
+            "target_type": "file",
+            "target_uuid": "a0a42277-1738-4d89-8c11-5c8bcde8c06c"
+        }
+    ],
+    "field_headline": [
+        {
+            "value": "Tome Sync"
+        }
+    ],
+    "field_text": [
+        {
+            "value": "<p>Store your content and config as files in Git.<\/p>\r\n",
+            "format": "rich_text"
+        }
+    ]
+}

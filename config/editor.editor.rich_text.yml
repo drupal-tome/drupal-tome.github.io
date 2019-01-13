@@ -32,6 +32,7 @@ settings:
           name: Media
           items:
             - Blockquote
+            - DrupalImage
         -
           name: Tools
           items:
@@ -82,7 +83,7 @@ settings:
         xml: xml
         yaml: yaml
 image_upload:
-  status: false
+  status: true
   scheme: public
   directory: inline-images
   max_size: ''

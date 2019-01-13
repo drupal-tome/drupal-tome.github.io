@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "9d4874bb-46b4-4ba9-81ae-3d3c06954cad"
+            "value": "78b3effa-9f0f-4229-93e2-4ef5b006ffb8"
         }
     ],
     "langcode": [
@@ -29,7 +29,7 @@
     ],
     "created": [
         {
-            "value": "2018-06-16T16:46:24+00:00",
+            "value": "2019-01-13T18:09:16+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -56,35 +56,24 @@
     ],
     "field_alignment": [
         {
-            "value": "left-top"
+            "value": "left"
         }
     ],
-    "field_background_color": [
+    "field_class": [
         {
-            "value": "FF5130"
+            "value": "home-header"
         }
     ],
+    "field_file": [],
     "field_headline": [
         {
-            "value": "TOME"
-        }
-    ],
-    "field_link": [
-        {
-            "uri": "internal:\/docs\/getting-started",
-            "title": "Get started",
-            "options": []
+            "value": "Tome"
         }
     ],
     "field_text": [
         {
-            "value": "<p>A static site generator lovingly crafted with Drupal 8<\/p>\r\n",
+            "value": "<p>A static site generator for Drupal 8<\/p>\r\n",
             "format": "rich_text"
-        }
-    ],
-    "field_text_color": [
-        {
-            "value": "FFFFFF"
         }
     ]
 }

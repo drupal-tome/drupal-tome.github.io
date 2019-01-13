@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "920cb13d-2f79-4cc6-ba8f-26fb1b9e7a33"
+            "value": "36d81390-1196-41ab-b8eb-6ccd337533e6"
         }
     ],
     "langcode": [
@@ -17,12 +17,12 @@
     ],
     "filename": [
         {
-            "value": "diagram1.svg"
+            "value": "droop.svg"
         }
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-06\/diagram1.svg"
+            "value": "public:\/\/2019-01\/droop.svg"
         }
     ],
     "filemime": [
@@ -32,7 +32,7 @@
     ],
     "filesize": [
         {
-            "value": 4317
+            "value": 886
         }
     ],
     "status": [
@@ -42,13 +42,13 @@
     ],
     "created": [
         {
-            "value": "2018-06-17T15:33:08+00:00",
+            "value": "2019-01-13T18:11:47+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-06-17T15:33:11+00:00",
+            "value": "2019-01-13T18:13:17+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ]

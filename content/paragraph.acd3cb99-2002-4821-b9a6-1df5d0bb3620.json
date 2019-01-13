@@ -1,7 +1,7 @@
 {
     "uuid": [
         {
-            "value": "9d01a7af-e5d6-421a-a710-467aac7d59ac"
+            "value": "acd3cb99-2002-4821-b9a6-1df5d0bb3620"
         }
     ],
     "langcode": [
@@ -29,7 +29,7 @@
     ],
     "created": [
         {
-            "value": "2018-06-16T17:56:26+00:00",
+            "value": "2019-01-13T19:02:29+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -59,26 +59,28 @@
             "value": "center"
         }
     ],
-    "field_background_color": [
+    "field_class": [
         {
-            "value": "29AFB0"
+            "value": "module-icon"
+        }
+    ],
+    "field_file": [
+        {
+            "display": true,
+            "description": "",
+            "target_type": "file",
+            "target_uuid": "ce2dcc04-6aca-41f4-9eb5-a18d886c88ad"
         }
     ],
     "field_headline": [
         {
-            "value": "IN SYNC"
+            "value": "Tome Static"
         }
     ],
-    "field_link": [],
     "field_text": [
         {
-            "value": "<p>Say goodbye to&nbsp;lost edits.<\/p>\r\n\r\n<p>Tome watches for changes and always keeps your local repository up to date<\/p>\r\n",
+            "value": "<p>Generate static HTML from your Drupal site.<\/p>\r\n",
             "format": "rich_text"
-        }
-    ],
-    "field_text_color": [
-        {
-            "value": "FFFFFF"
         }
     ]
 }
