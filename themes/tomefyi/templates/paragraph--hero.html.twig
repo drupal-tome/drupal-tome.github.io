@@ -49,14 +49,23 @@
   ]
 %}
 {% block paragraph %}
-  <div{{ attributes.addClass(classes) }}>
+  <div{{ attributes.addClass(classes) }} {% if paragraph.field_link[0].value.uri %} data-proxy-click {% endif %}>
     {% block content %}
+      <div class="visually-hidden" data-proxy-click-target>
+        {{ content.field_link }}
+      </div>
       <div class="hero-text">
-        <h2>{{ content.field_headline }}</h2>
-        {{ content.field_text }}
+        {% if paragraph.field_headline.value %}
+          <h2>{{ content.field_headline }}</h2>
+        {% endif %}
+        {% if paragraph.field_text.value %}
+          {{ content.field_text }}
+        {% endif %}
       </div>
       <div class="hero-image">
-        {{ content.field_file }}
+        {% if paragraph.field_file.value %}
+          {{ content.field_file }}
+        {% endif %}
       </div>
     {% endblock %}
   </div>

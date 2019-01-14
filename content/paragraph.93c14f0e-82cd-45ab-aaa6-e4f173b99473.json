@@ -77,9 +77,16 @@
             "value": "Tome Netlify"
         }
     ],
+    "field_link": [
+        {
+            "uri": "https:\/\/www.drupal.org\/project\/tome_netlify",
+            "title": "Learn more",
+            "options": []
+        }
+    ],
     "field_text": [
         {
-            "value": "<p>Make use of Netlify's static hosting with Tome.<\/p>\r\n",
+            "value": "<p>Make use of Netlify's static hosting with Tome.&nbsp;<\/p>\r\n",
             "format": "rich_text"
         }
     ]

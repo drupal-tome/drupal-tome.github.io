@@ -73,6 +73,7 @@
             "value": "Commit your content"
         }
     ],
+    "field_link": [],
     "field_text": [
         {
             "value": "<p>With Tome, your content is stored as static JSON files. Make a change, commit it, and spin down Drupal.<\/p>\r\n",

@@ -70,6 +70,7 @@
             "value": "Tome"
         }
     ],
+    "field_link": [],
     "field_text": [
         {
             "value": "<p>A static site generator for Drupal 8<\/p>\r\n",

@@ -7,10 +7,12 @@ dependencies:
     - field.field.paragraph.hero.field_class
     - field.field.paragraph.hero.field_file
     - field.field.paragraph.hero.field_headline
+    - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_text
     - paragraphs.paragraphs_type.hero
   module:
     - file
+    - link
     - text
 id: paragraph.hero.default
 targetEntityType: paragraph
@@ -45,6 +47,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_link:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_text:
     weight: 1

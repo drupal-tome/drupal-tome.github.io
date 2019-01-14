@@ -77,9 +77,16 @@
             "value": "Tome Static"
         }
     ],
+    "field_link": [
+        {
+            "uri": "internal:\/docs\/sub-modules",
+            "title": "Learn more",
+            "options": []
+        }
+    ],
     "field_text": [
         {
-            "value": "<p>Generate static HTML from your Drupal site.<\/p>\r\n",
+            "value": "<p>Generate static HTML from your Drupal site.&nbsp;<\/p>\r\n",
             "format": "rich_text"
         }
     ]

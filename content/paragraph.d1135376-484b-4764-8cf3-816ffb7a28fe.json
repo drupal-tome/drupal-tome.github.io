@@ -65,11 +65,17 @@
         }
     ],
     "field_file": [],
-    "field_headline": [],
-    "field_text": [
+    "field_headline": [
         {
-            "value": "<h2><a href=\"\/docs\/getting-started\">Get started now!<\/a><\/h2>\r\n",
-            "format": "rich_text"
+            "value": "Get started now"
         }
-    ]
+    ],
+    "field_link": [
+        {
+            "uri": "internal:\/docs\/getting-started",
+            "title": "Learn more",
+            "options": []
+        }
+    ],
+    "field_text": []
 }

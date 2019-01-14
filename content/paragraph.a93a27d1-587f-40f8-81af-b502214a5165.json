@@ -77,9 +77,16 @@
             "value": "Tome Sync"
         }
     ],
+    "field_link": [
+        {
+            "uri": "internal:\/docs\/sub-modules",
+            "title": "Learn more",
+            "options": []
+        }
+    ],
     "field_text": [
         {
-            "value": "<p>Store your content and config as files in Git.<\/p>\r\n",
+            "value": "<p>Store your content and config as files in Git.&nbsp;<\/p>\r\n",
             "format": "rich_text"
         }
     ]

@@ -7,9 +7,11 @@ dependencies:
     - field.field.paragraph.hero.field_class
     - field.field.paragraph.hero.field_file
     - field.field.paragraph.hero.field_headline
+    - field.field.paragraph.hero.field_link
     - field.field.paragraph.hero.field_text
     - paragraphs.paragraphs_type.hero
   module:
+    - link
     - svg_formatter
     - text
 id: paragraph.hero.default
@@ -39,6 +41,18 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_link:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_text:
     weight: 1
     label: hidden

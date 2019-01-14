@@ -5,12 +5,6 @@ html,body {
   font-family: 'Rubik', sans-serif;
 }
 
-.region-content {
-  padding: 0 50px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 .region-footer {
   background: #e4eef1;
   padding: 50px 0;
@@ -20,9 +14,30 @@ h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  color: #1971b3;
+  text-decoration: none;
+}
+
+a,
+[data-proxy-click] {
+  transition: color .2s;
+}
+
+a:hover,
+[data-proxy-click]:hover {
+  color: #44A1E7;
+}
+
+[data-proxy-click] {
+  cursor: pointer;
+}
+
 /* Paragraph type styling */
 
 .paragraph {
+  max-width: 1000px;
+  margin: 0 auto;
   margin-bottom: 75px;
 }
 
@@ -120,4 +135,21 @@ h1, h2, h3, h4, h5 {
 
 .module-icon .hero-image svg {
   height: 80px;
+}
+
+.home-get-started {
+  background-image: url(../assets/pattern.svg);
+  background-size: 160px 311px;
+  max-width: none;
+  width: 100%;
+  height: 311px;
+  display: flex;
+  justify-content: center;
+}
+
+.home-get-started h2 {
+  display: inline-block;
+  background: white;
+  padding: 15px 30px;
+  margin: 0;
 }
