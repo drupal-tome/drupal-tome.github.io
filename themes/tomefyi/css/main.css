@@ -29,6 +29,27 @@ a:hover,
   color: #44A1E7;
 }
 
+[data-proxy-click] [style*="fill:#ff5130;"],
+[data-proxy-click] [style*="stroke:#ff5130;"] {
+  transition: fill .2s, stroke .2s;
+}
+
+[data-proxy-click] [style*="fill:#ff5130;"] {
+  fill: #ff5130 !important;
+}
+
+[data-proxy-click] [style*="stroke:#ff5130;"] {
+  stroke: #ff5130 !important;
+}
+
+[data-proxy-click]:hover [style*="fill:#ff5130;"] {
+  fill: #44A1E7 !important;
+}
+
+[data-proxy-click]:hover [style*="stroke:#ff5130;"] {
+  stroke: #44A1E7 !important;
+}
+
 [data-proxy-click] {
   cursor: pointer;
 }
@@ -38,7 +59,8 @@ a:hover,
 .paragraph {
   max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: 75px;
+  margin-bottom: 100px;
+  padding: 0 20px;
 }
 
 .paragraph--type--hero h2 {
@@ -71,6 +93,10 @@ a:hover,
 
 .paragraph--type--hero .hero-text {
   max-width: 60%;
+}
+
+.paragraph--type--heroes {
+  padding: 0;
 }
 
 .paragraph--type--heroes .field--name-field-paragraph {
@@ -137,9 +163,15 @@ a:hover,
   height: 80px;
 }
 
+.home-get-started::before {
+  content: " ";
+  background-image: url(../assets/calloutbg_hover.svg);
+}
+
 .home-get-started {
-  background-image: url(../assets/pattern.svg);
+  background-image: url(../assets/calloutbg.svg);
   background-size: 160px 311px;
+  padding: 0;
   max-width: none;
   width: 100%;
   height: 311px;
@@ -152,4 +184,53 @@ a:hover,
   background: white;
   padding: 15px 30px;
   margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .paragraph {
+    margin-bottom: 75px;
+  }
+  .paragraph--type--heroes .paragraph {
+    margin-bottom: 50px;
+  }
+  .paragraph--type--hero .hero-text {
+    max-width: none;
+  }
+  .paragraph--type--hero:not(.home-header),
+  .paragraph--type--hero.hero-alignment-right:not(.home-header) {
+    flex-direction: column-reverse;
+  }
+  .paragraph--type--hero.hero-alignment-right:not(.home-header) {
+    text-align: left;
+  }
+  .paragraph--type--hero svg {
+    max-height: 200px;
+    margin-bottom: 30px;
+  }
+  .paragraph--type--heroes svg {
+    margin-bottom: 25px;
+  }
+  .paragraph--type--heroes .field--name-field-paragraph > .field__item {
+    width: 100%;
+  }
+  .paragraph--type--hero h2 {
+    font-size: 35px;
+  }
+  .paragraph--type--hero p {
+    font-size: 25px;
+  }
+  .module-icon h2 {
+    font-size: 30px;
+  }
+  .module-icon p {
+    font-size: 20px;
+  }
+  .home-header h2 {
+    font-size: 100px;
+  }
+  .home-header h2::before {
+    top: calc(50% - 3rem);
+    left: 0;
+    height: calc(100% - 4rem);
+  }
 }
