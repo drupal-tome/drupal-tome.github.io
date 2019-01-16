@@ -183,11 +183,6 @@ a:hover,
   height: 80px;
 }
 
-.home-get-started::before {
-  content: " ";
-  background-image: url(../assets/calloutbg_hover.svg);
-}
-
 .home-get-started {
   background-image: url(../assets/calloutbg.svg);
   background-size: 160px 311px;
@@ -214,7 +209,7 @@ a:hover,
 /* Docs */
 
 .page-node-book aside {
-  min-width: 210px;
+  width: 210px;
   margin-right: 50px;
 }
 
