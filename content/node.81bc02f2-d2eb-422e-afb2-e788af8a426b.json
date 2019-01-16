@@ -53,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2019-01-14T00:33:15+00:00",
+            "value": "2019-01-16T16:10:20+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -114,5 +114,14 @@
             "target_uuid": "d1135376-484b-4764-8cf3-816ffb7a28fe"
         }
     ],
-    "field_preview_image": []
+    "field_preview_image": [
+        {
+            "alt": "A homepage preview",
+            "title": "",
+            "width": 1148,
+            "height": 542,
+            "target_type": "file",
+            "target_uuid": "5dea6c0c-0ba7-45f8-a9a3-fe8a9f84516b"
+        }
+    ]
 }

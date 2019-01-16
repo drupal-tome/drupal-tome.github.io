@@ -1,0 +1,33 @@
+uuid: 15c4c6c4-d0d2-462c-acc2-2be16f30fe50
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:rich_text:2db80bdd-cd46-41d9-b7b3-410644d9177f'
+  module:
+    - block_content
+    - node
+  theme:
+    - tomefyi
+id: documentationtitle
+theme: tomefyi
+region: header
+weight: 0
+provider: null
+plugin: 'block_content:2db80bdd-cd46-41d9-b7b3-410644d9177f'
+settings:
+  id: 'block_content:2db80bdd-cd46-41d9-b7b3-410644d9177f'
+  label: 'Documentation title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,65 @@
+{
+    "uuid": [
+        {
+            "value": "2db80bdd-cd46-41d9-b7b3-410644d9177f"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "rich_text",
+            "target_type": "block_content_type",
+            "target_uuid": "56c1c7e7-d8e5-4ff4-a8ba-02aa4609556d"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": "2019-01-16T15:57:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_user": [],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "info": [
+        {
+            "value": "Documentation title"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-01-16T16:06:12+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "reusable": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "body": [
+        {
+            "value": "<div class=\"documentation-title\">\r\n<h1><a href=\"\/\">Tome<\/a><\/h1>\r\n<\/div>\r\n",
+            "format": "rich_text",
+            "summary": ""
+        }
+    ]
+}

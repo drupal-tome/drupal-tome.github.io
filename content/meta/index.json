@@ -68,7 +68,8 @@
         "paragraph.e779c430-6e92-4b73-ba05-140520f8efa8",
         "paragraph.50028a63-200d-49b9-bc45-9ad1124e7caa",
         "paragraph.42c86c25-d490-4b95-9244-7414096ca0e8",
-        "paragraph.d1135376-484b-4764-8cf3-816ffb7a28fe"
+        "paragraph.d1135376-484b-4764-8cf3-816ffb7a28fe",
+        "file.5dea6c0c-0ba7-45f8-a9a3-fe8a9f84516b"
     ],
     "paragraph.93015bda-ecb0-4227-b061-9db51c12cd69": [
         "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
@@ -109,6 +110,11 @@
         "paragraph.05f6d96c-7519-43ca-ab71-29c96560e141"
     ],
     "paragraph.d1135376-484b-4764-8cf3-816ffb7a28fe": [
+        "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
+    ],
+    "block_content.5e7498fd-45bc-4b54-a65d-f0f091d2096e": [],
+    "block_content.2db80bdd-cd46-41d9-b7b3-410644d9177f": [],
+    "file.5dea6c0c-0ba7-45f8-a9a3-fe8a9f84516b": [
         "user.ed803c7d-e897-4ebb-99a7-1de7754316c4"
     ]
 }
