@@ -29,10 +29,10 @@ The static site generation flow works like:" />
 <link rel="next" href="/docs/site-settings" />
 
     <title>Static site generation | Tome</title>
-    <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?plfn4w" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_Zzgr4j57M61gMHadTyGfLWYjDYlp80UoZcH9uFOk4NQ.css?plfn4w" media="all" />
+    <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?pmvf8b" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_eiV7BZFSaBNMbZLhA-0DnVpCRVak_LAGdCGuU0NOkrs.css?pmvf8b" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?plfn4w" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?pmvf8b" media="all" />
 
     
 <!--[if lte IE 8]>
@@ -126,6 +126,9 @@ The static site generation flow works like:" />
                 <li class="menu-item">
         <a href="/docs/hosting/netlify" hreflang="en">Netlify</a>
               </li>
+                <li class="menu-item">
+        <a href="/docs/hosting/hosted-drupal-netlify" hreflang="en">Hosted Drupal + Netlify</a>
+              </li>
         </ul>
   
               </li>
@@ -179,6 +182,7 @@ The static site generation flow works like:" />
 <ol>
 	<li>The "drush tome:static" command is ran.</li>
 	<li>The "tome.static" service collects all paths known to Drupal. Currently this is a combination of all routes that do not use parameters, and all entity "canonical" paths (and the paths of their translations).&nbsp;If the site uses URL language negotiation, each configured language prefix is also collected. Only entities/routes that are accessible to anonymous are exported.</li>
+	<li>The "cache.tome_static" service removes all paths that already cached and in the static build. The cache uses core cache tags to determine cacheability of paths.</li>
 	<li>Paths are exported using a user-configurable concurrency, which defaults to five. This means that five paths will be processed by Drupal at a time.</li>
 	<li>For each path, the script first checks if the path is a static file that can be immediately copied. This is common for pre-generated files in the files directory.</li>
 	<li>If the path isn't a static file, a new process is invoked and Drupal handles the request. This is done using the "http.kernel" service. If a response with the status code 200 is returned, the content of that response is saved to the filesystem.</li>
