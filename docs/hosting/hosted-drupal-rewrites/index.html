@@ -2,16 +2,20 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Hosted Drupal + Netlify | Tome" />
+<meta name="title" content="Hosted Drupal + Rewrites | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/hosting/hosted-drupal-netlify" />
-<meta name="twitter:title" content="Hosted Drupal + Netlify" />
-<meta name="twitter:description" content="This guide will describe how you can use traditional Drupal hosting, Tome Static, and Netlify to have a normal content editing experience while still running static html on your public-facing site.
+<link rel="canonical" href="https://tome.fyi/docs/hosting/hosted-drupal-rewrites" />
+<meta name="twitter:title" content="Hosted Drupal + Rewrites" />
+<meta name="twitter:description" content="Some Tome users may find it useful to use Tome Static only as a caching layer for their Drupal site, serving some requests from the static export directory and others from Drupal. This is similar to how the Boost module worked, the main difference being that Tome generates all static pages before hand and Boost did so on-demand.
 
-First, you&#039;ll need to host a Drupal 8 site somewhere. For my testing, I&#039;ve used Pantheon, which provides a free-tier and the ability to lock down environments, which is important for keeping people away from your content editing domain." />
-<meta name="description" content="This guide will describe how you can use traditional Drupal hosting, Tome Static, and Netlify to have a normal content editing experience while still running static html on your public-facing site.
+PHP
 
-First, you&#039;ll need to host a Drupal 8 site somewhere. For my testing, I&#039;ve used Pantheon, which provides a free-tier and the ability to lock down environments, which is important for keeping people away from your content editing domain." />
+Here&#039;s a snippet you could add to settings.php to conditionally serve pages from your static export directory." />
+<meta name="description" content="Some Tome users may find it useful to use Tome Static only as a caching layer for their Drupal site, serving some requests from the static export directory and others from Drupal. This is similar to how the Boost module worked, the main difference being that Tome generates all static pages before hand and Boost did so on-demand.
+
+PHP
+
+Here&#039;s a snippet you could add to settings.php to conditionally serve pages from your static export directory." />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -19,12 +23,12 @@ First, you&#039;ll need to host a Drupal 8 site somewhere. For my testing, I&#03
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/hosting/hosted-drupal-netlify" />
-<link rel="prev" href="/docs/hosting/netlify" />
+<link rel="revision" href="/docs/hosting/hosted-drupal-rewrites" />
+<link rel="prev" href="/docs/hosting/hosted-drupal-netlify" />
 <link rel="up" href="/docs/hosting" />
-<link rel="next" href="/docs/hosting/hosted-drupal-rewrites" />
+<link rel="next" href="/docs/sub-modules" />
 
-    <title>Hosted Drupal + Netlify | Tome</title>
+    <title>Hosted Drupal + Rewrites | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?po3wbo" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_eiV7BZFSaBNMbZLhA-0DnVpCRVak_LAGdCGuU0NOkrs.css?po3wbo" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -76,7 +80,7 @@ First, you&#039;ll need to host a Drupal 8 site somewhere. For my testing, I&#03
 
           <aside class="sidebar" role="complementary">
           <div class="region region-sidebar">
-    <div id="block-expandedbooknavigation--3" class="block block-tfyi-book block-expanded-book-navigation">
+    <div id="block-expandedbooknavigation" class="block block-tfyi-book block-expanded-book-navigation">
   
     
         <nav id="book-block-menu-1" class="book-block-menu" role="navigation" aria-label="Book outline for Documentation">
@@ -157,16 +161,16 @@ First, you&#039;ll need to host a Drupal 8 site somewhere. For my testing, I&#03
     
     <div class="content">
         <div class="region region-content">
-    <div id="block-tomefyi-page-title--3" class="block block-core block-page-title-block">
+    <div id="block-tomefyi-page-title" class="block block-core block-page-title-block">
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Hosted Drupal + Netlify</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Hosted Drupal + Rewrites</span>
 </h1>
 
 
   </div>
-<div id="block-mainpagecontent--3" class="block block-system block-system-main-block">
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
   
     
       
@@ -178,85 +182,65 @@ First, you&#039;ll need to host a Drupal 8 site somewhere. For my testing, I&#03
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This guide will describe how you can use traditional Drupal hosting, Tome Static, and Netlify to have a normal content editing experience while still running static html on your public-facing site.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Some Tome users may find it useful to use Tome Static only as a caching layer for their Drupal site, serving some requests from the static export directory and others from Drupal. This is similar to how the <a href="https://drupal.org/project/boost">Boost</a> module worked, the main difference being that Tome generates all static pages before hand and Boost did so on-demand.</p>
 
-<p>First, you'll need to host a Drupal 8 site somewhere. For my testing, I've used&nbsp;<a href="https://pantheon.io/">Pantheon</a>, which provides a free-tier and the ability to lock down environments, which is important for keeping people away from your content editing domain.</p>
+<h2>PHP</h2>
 
-<ol>
-	<li>
-	<p>Assuming you have a basic Drupal 8 installation, run this command&nbsp;from where your site's "composer.json" file lives: "composer require drupal/tome drupal/tome_netlify".</p>
-	</li>
-	<li>
-	<p>Edit your site "settings.php" file and set the "tome_static_directory" setting to a writeable directory on your hosting provider. For Pantheon, I add this block of code:<br />
-	&nbsp;</p>
+<p>Here's a snippet you could add to settings.php to conditionally serve pages from your static export directory.</p>
 
-	<pre>
-<code class="language-php">if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $settings['tome_static_directory'] = 'sites/default/files/private/tome_static';
+<p>Note that this code is just an example and needs to be reviewed and tested before production use:</p>
+
+<pre>
+<code class="language-php">// Add this code to the bottom of settings.php
+$path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+// Check if the incoming path is for a user-facing path.
+if (strpos($path, '/admin') !== 0 &amp;&amp; !preg_match('|^/node/.*/edit$|', $path)) {
+  $path = realpath('../html' . $path);
+  if (is_dir($path)) {
+    $path .= '/index.html';
+  }
+  // HTML pages are updated often and should have an expiry.
+  if (pathinfo($path, PATHINFO_EXTENSION) === 'html') {
+    header('Cache-Control: public, max-age=600');
+  }
+  // If the file exists and is safe to serve, do so.
+  if (strpos($path, realpath('../html')) === 0 &amp;&amp; file_exists($path)) {
+    echo file_get_contents($path);
+    die;
+  }
+  // Fallback to a simple 404.
+  header('HTTP/1.0 404 Not Found');
+  echo 'File not found.';
+  die;
 }
 </code></pre>
 
-	<p>&nbsp;</p>
-	</li>
-	<li>
-	<p>Commit the changes and push to your remote repository if you're using version control.</p>
-	</li>
-	<li>
-	<p>Create a Netlify account at&nbsp;<a href="https://app.netlify.com/signup">https://app.netlify.com/signup</a></p>
-	</li>
-	<li>
-	<p>Login to&nbsp; your Drupal site as an administrator. Ensure you are using the HTTPS URL of your Drupal site, as Netlify pushes will fail when using HTTP.</p>
-	</li>
-	<li>
-	<p>Enable Tome Static and Tome Netlify at /admin/modules. You're enabling Tome Static&nbsp;and not Tome&nbsp;since you don't need any of the "store your content in Git" features that Tome Sync provides.</p>
-	</li>
-	<li>
-	<p>Visit /admin/config/tome/static/generate and generate your first static site.</p>
-	</li>
-	<li>
-	<p>Visit /admin/config/tome/static/download and download the static build. Extract the generated .tar.gz file.</p>
-	</li>
-	<li>
-	<p>Visit&nbsp;<a href="https://app.netlify.com/account/sites">https://app.netlify.com/account/sites</a>&nbsp;and drag+drop your static build folder to the dropzone at the bottom of the screen. This will create a new Netlify site that isn't tracked in Git.</p>
-	</li>
-	<li>
-	<p>Click into your new site in the Netlify UI, then click "Settings". Copy your site-specific&nbsp;"API ID" from there.</p>
-	</li>
-	<li>
-	<p>Visit&nbsp;<a href="https://app.netlify.com/account/applications">https://app.netlify.com/account/applications</a>&nbsp;and generate a new personal access token. Copy your token as it can not be retrieved after viewing it the first time.</p>
-	</li>
-	<li>
-	<p>Visit /admin/config/services/tome_netlify/settings and enter your token and site ID, then save the form.</p>
-	</li>
-	<li>
-	<p>Visit /admin/config/tome/netlify/send and click Deploy.</p>
-	</li>
-	<li>
-	<p>Wait a few minutes after a deploy is complete for Netlify to pick up the new build, then preview it using the link provided. Builds sent to Netlify only include files that have changed since the last build, which should make them super-duper fast.</p>
-	</li>
-	<li>
-	<p>When satisfied with the deploy, publish the draft on Netlify at "Deploys" when viewing your site in the UI.</p>
-	</li>
-	<li>
-	<p>You're done!</p>
-	</li>
-</ol>
+<h2>Apache</h2>
 
-<p>While this guide may seem daunting, I think this hosting setup is the most reasonable for Drupal users who don't want to change the way content editors use Drupal, but still want to run a static site on the frontend.</p>
+<p>Here's a snippet that should work with .htaccess files. The "html" folder needs to be in the same directory level as your Apache document root as rewrites to parent directories (i.e. ../html) are not allowed.</p>
+
+<p>Note that this code is just an example and needs to be reviewed and tested before production use:</p>
+
+<pre>
+<code class="language-apache">RewriteEngine On
+RewriteRule !^(admin.*|node/.*/edit) /html/$1
+</code></pre>
+
+<p>If you find bugs in these examples, or want to add more, please file an issue at <a href="https://github.com/drupal-tome/drupal-tome.github.io">drupal-tome/drupal-tome.github.io</a>&nbsp;and let me know!</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Hosted Drupal + Netlify</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Hosted Drupal + Rewrites</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/hosting/netlify" rel="prev" title="Go to previous page"><b>‹</b> Netlify</a>
+          <a href="/docs/hosting/hosted-drupal-netlify" rel="prev" title="Go to previous page"><b>‹</b> Hosted Drupal + Netlify</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
           <a href="/docs/hosting" title="Go to parent page">Up</a>
         </li>
                     <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/hosting/hosted-drupal-rewrites" rel="next" title="Go to next page">Hosted Drupal + Rewrites <b>›</b></a>
+          <a href="/docs/sub-modules" rel="next" title="Go to next page">Using Tome Static and Tome Sync <b>›</b></a>
         </li>
           </ul>
       </nav>
