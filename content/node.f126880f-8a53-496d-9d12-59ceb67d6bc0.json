@@ -1,0 +1,93 @@
+{
+    "uuid": [
+        {
+            "value": "f126880f-8a53-496d-9d12-59ceb67d6bc0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book",
+            "target_type": "node_type",
+            "target_uuid": "870f5e4b-075f-48ba-972b-7b47064b4efd"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2019-03-09T04:32:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "Multilingual"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-03-09T04:13:35+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-03-09T04:33:51+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/docs\/multilingual",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Tome supports multilingual Drupal setups, which allows you to create a static Drupal site in multiple languages.<\/p>\r\n\r\n<p>For Tome Sync, content exports for non-default languages will contain their langcode, for example a Spanish translation of a node may have the filename \"node.bca9f964-19e3-4624-8c67-491fb01986fb.<strong>es<\/strong>.json\". As a user, translations of entities should just work without any extra work or configuration on your part.<\/p>\r\n\r\n<p>In Tome Static, URL language negotiation is supported with the following notes:<\/p>\r\n\r\n<ol>\r\n\t<li>If you use path prefixes like \"\/en\" or \"\/es\", all paths returned by the static generator will be prefixed unless they are already language-specific, like entity paths.<\/li>\r\n\t<li>When using domain negotiation, you will need to re-run \"drush tome:static\" for each of your multilingual domains, with the domain passed with the \"--uri\" option. One caveat of domain negotiation is that default entity URLs like \"\/node\/1\"&nbsp;will not be&nbsp;generated for every language. To work around this, make sure to add URL aliases for all your entities.<\/li>\r\n<\/ol>\r\n\r\n<p>In general, multilingual support in Tome is meant to be seamless for end users. If you know how to make a multilingual site in Drupal, that should work without any extra configuration. That said, some edge cases for translation may still have issues, so please file bugs as you find them.<\/p>\r\n",
+            "format": "rich_text",
+            "summary": ""
+        }
+    ]
+}
