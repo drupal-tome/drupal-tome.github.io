@@ -79,6 +79,10 @@ a:hover,
   font-size: 30px;
 }
 
+.paragraph--type--hero p:last-child {
+  margin-bottom: 0;
+}
+
 .paragraph--type--hero {
   display: flex;
   flex-wrap: wrap;
@@ -205,6 +209,28 @@ a:hover,
 .header-menu {
   text-align: right;
   padding: 20px;
+}
+
+.screencast-hero {
+  color: white;
+  background: #ff502f;
+  max-width: 50%;
+  padding: 40px;
+  transition: background .2s;
+}
+
+.screencast-hero h2 {
+  font-size: 30px;
+}
+
+.screencast-hero p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.screencast-hero:hover {
+  background: #44a1e7;
+  color: white;
 }
 
 /* Docs */
@@ -371,5 +397,8 @@ ul.menu {
   }
   .page-node-book main > .content {
     max-width: 100%;
+  }
+  .screencast-hero {
+    max-width: none;
   }
 }
