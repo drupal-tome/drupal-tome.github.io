@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://tome.fyi/docs/using-the-command-line</loc>
-  <lastmod>2019-02-13T14:57:19+00:00</lastmod>
+  <lastmod>2019-05-13T06:10:51+00:00</lastmod>
   <priority>0.5</priority>
  </url>
  <url>
@@ -43,7 +43,7 @@
  </url>
  <url>
   <loc>https://tome.fyi/docs/technical/static</loc>
-  <lastmod>2019-02-13T15:08:30+00:00</lastmod>
+  <lastmod>2019-05-13T06:11:44+00:00</lastmod>
   <priority>0.5</priority>
  </url>
  <url>
@@ -89,6 +89,16 @@
  <url>
   <loc>https://tome.fyi/docs/hosting/hosted-drupal-rewrites</loc>
   <lastmod>2019-03-09T07:37:08+00:00</lastmod>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://tome.fyi/docs/technical/api</loc>
+  <lastmod>2019-05-13T15:49:11+00:00</lastmod>
+  <priority>0.5</priority>
+ </url>
+ <url>
+  <loc>https://tome.fyi/node/20</loc>
+  <lastmod>2019-05-14T01:40:30+00:00</lastmod>
   <priority>0.5</priority>
  </url>
  <url>

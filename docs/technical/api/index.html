@@ -2,20 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Using Tome Static and Tome Sync | Tome" />
+<meta name="title" content="API reference | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/sub-modules" />
-<meta name="twitter:title" content="Using Tome Static and Tome Sync" />
-<meta name="twitter:description" content="Tome includes two sub-modules, Tome Static and Tome Sync, which can be used separately for specific use cases. This document will try to cover why you may want to only use one half of Tome.
-
-Tome Static
-
-The Tome Static sub-module handles static site (HTML) generation, and is useful if you are comfortable with your existing Drupal stack, but still want to run a static site on production." />
-<meta name="description" content="Tome includes two sub-modules, Tome Static and Tome Sync, which can be used separately for specific use cases. This document will try to cover why you may want to only use one half of Tome.
-
-Tome Static
-
-The Tome Static sub-module handles static site (HTML) generation, and is useful if you are comfortable with your existing Drupal stack, but still want to run a static site on production." />
+<link rel="canonical" href="https://tome.fyi/docs/technical/api" />
+<meta name="twitter:title" content="API reference" />
+<meta name="twitter:description" content="This document covers different APIs that Tome provides." />
+<meta name="description" content="This document covers different APIs that Tome provides." />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -23,12 +15,12 @@ The Tome Static sub-module handles static site (HTML) generation, and is useful 
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/sub-modules" />
-<link rel="prev" href="/docs/hosting/hosted-drupal-rewrites" />
-<link rel="up" href="/docs" />
-<link rel="next" href="/node/20" />
+<link rel="revision" href="/docs/technical/api" />
+<link rel="prev" href="/docs/technical" />
+<link rel="up" href="/docs/technical" />
+<link rel="next" href="/docs/technical/exporter" />
 
-    <title>Using Tome Static and Tome Sync | Tome</title>
+    <title>API reference | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?ppjqjn" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_TdJqSuGl2JIxFvtHx6SQD4nxj_kI9SIPcyiQL089Dnw.css?ppjqjn" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -171,12 +163,12 @@ The Tome Static sub-module handles static site (HTML) generation, and is useful 
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Using Tome Static and Tome Sync</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">API reference</span>
 </h1>
 
 
   </div>
-<div id="block-mainpagecontent--2" class="block block-system block-system-main-block">
+<div id="block-mainpagecontent--3" class="block block-system block-system-main-block">
   
     
       
@@ -188,35 +180,88 @@ The Tome Static sub-module handles static site (HTML) generation, and is useful 
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Tome includes two sub-modules, Tome Static and Tome Sync, which can be used separately for specific use cases. This document will try to cover why you may want to only use one half of Tome.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This document covers different APIs that Tome provides.</p>
 
-<h2>Tome Static</h2>
+<h2>Events</h2>
 
-<p>The Tome Static sub-module handles static site (HTML) generation, and is useful if you are comfortable with your existing Drupal stack, but still want to run a static site on production.</p>
+<ul>
+	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::COLLECT_PATHS (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/EntityPathSubscriber.php">example</a>)</em><br />
+	This event is fired when collecting paths for the static generator. It can be used to provide or modify paths, which is useful if there are specific paths you want to be included that Tome may have missed. If you want to exclude a path, consider setting the <a href="/docs/site-settings/">"tome_static_path_exclude" setting.</a></li>
+	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::PATH_PLACEHOLDER (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/EntityPathSubscriber.php">example</a>)</em><br />
+	This event is&nbsp;fired when replacing a path placeholder. This is useful if you implemented the "TomeStaticEvents::COLLECT_PATHS" event and wanted to provide an entity specific route that is expensive to load, so instead you provided a placeholder. This is how Tome can process so many entity paths without running out of memory.</li>
+	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::REQUEST_PREPARE (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/PageCacheRequestPrepareSubscriber.php">example</a>)</em><br />
+	This event is fired&nbsp;when preparing for a new request. Drupal isn't really designed to handle multiple requests in one bootstrap, but Tome tries to get around this by resetting the global and container state to avoid any request specific behavior. This would be useful if you needed to reset a&nbsp;request specific cache for your own services.</li>
+	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::MODIFY_HTML (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/PagerPathSubscriber.php">example</a>)</em><br />
+	This event is fired when finding paths related to an HTML document. You can use it to make any modifications to HTML, ideally related to finding paths to transform and add to the list of paths to invoke. Specifically, this is used for transforming links that include query parameters to paths that will work with the static site (i.e. ?page=1 -&gt; /page/1).</li>
+	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::MODIFY_DESTINATION (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/PagerPathSubscriber.php">example</a>)</em><br />
+	This event is fired when determining the destination for a path. If you've transformed a path in HTML with the "TomeStaticEvents::MODIFY_HTML" event, you'll also want to make sure the destination for that path matches your modifications. This event is fired before "index.html" is appended to paths without an extension.</li>
+	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::FILE_SAVED</em><br />
+	This event is fired anytime a file is saved by the static generator, including static assets that are copied from the filesystem like images or stylesheets. This is the only unused event in Tome, and exists to enable other modules to sync the static export to an external service when they're saved.</li>
+	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::EXPORT_CONTENT (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/BookEventSubscriber.php">example</a>)</em><br />
+	This event is fired&nbsp;after a single content entity is exported. This <strong>should not be be used</strong> to modify the JSON&nbsp;output of the exporter (use normalizers for that), but can be used to export assets &nbsp;related to the content.</li>
+	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::DELETE_CONTENT (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/ContentHasherEventSubscriber.php">example</a>)</em><br />
+	This event is fired after&nbsp;a single content entity is deleted.</li>
+	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::IMPORT_CONTENT (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/ContentHasherEventSubscriber.php">example</a>)</em><br />
+	This event is fired&nbsp;after a single content entity is imported (created or updated).</li>
+	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::EXPORT_ALL (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/BookEventSubscriber.php">example</a>)</em><br />
+	This event is fired after&nbsp;the entire export process is complete.</li>
+	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::IMPORT_ALL (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/BookEventSubscriber.php">example</a>)</em><br />
+	This event is fired after the entire import process is complete. Note that this event is also fired after partial imports are complete.</li>
+</ul>
 
-<p>When just running Tome Static, you'll need to decide how and when to kick off the static site generation process. In the future a "tome:static:watch" command may be added which you can run as a persistent background process, but for now you'll probably want to run "tome:static" in a cron job, which can also push the export directory to your hosting provider.</p>
+<h2>Using the tome_static.generator service</h2>
 
-<p>To get the same security benefit of running traditional Tome, you should lock down your editing environment so that only authorized users can access it. This can be accomplished by adding simple basic authentication to your site, or by requiring a VPN to access your editing environment.</p>
+<p>Beyond what's documented in the <a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/StaticGeneratorInterface.php">static generator's interface</a>, it can be hard to know how to accurately generate static pages manually. Here's a documented code snippet that goes over almost everything the static command and form does:</p>
 
-<h2>Tome Sync</h2>
+<pre>
+<code class="language-php">&lt;?php
 
-<p>The Tome Sync sub-module handles static content export and import, and is useful if you want to build your site from scratch, or prefer to work with your content as JSON.</p>
+/** @var \Drupal\tome_static\StaticGeneratorInterface $static */
+$static = \Drupal::service('tome_static.generator');
 
-<p>The use-cases for Tome Sync as a standalone module aren't completely clear right now, but there are a lot of possibilities for this sub-module without generating a static site. Maybe you want to migrate away from Drupal and JSON would make that easier, or you're using GatsbyJS which is lightning fast when using JSON files, or you want to archive a site's content and de-commission it from production. Tome Sync is powerful, so I encourage users to try it out and let me know if you find where it fits into your workflow.</p>
+/** @var \Drupal\tome_static\RequestPreparer $request_preparer */
+$request_preparer = \Drupal::service('tome_static.request_preparer');
+
+// Prepare for a new request. This is necessary so that static caches in Drupal
+// can be reset between multiple requests in one bootstrap.
+$request_preparer-&gt;prepareForRequest();
+
+// Request an arbitrary path. "$invoke_paths" at this point is anything that
+// needs to be copied (an existing file) or requested (an image derivative,
+// other paths, etc.)
+$invoke_paths = $static-&gt;requestPath('/foo');
+
+// Export paths will try to copy or remove as many paths as possible without
+// making a new internal request.
+$invoke_paths = $static-&gt;exportPaths($invoke_paths);
+
+// The remaining invoke paths need to be handled in new requests.
+foreach ($invoke_paths as $path) {
+  // Since we are only trying to export one path, restrict new requests to
+  // paths with extensions, which are probably RSS feeds and image derivatives.
+  if (pathinfo($path, PATHINFO_EXTENSION)) {
+    $request_preparer-&gt;prepareForRequest();
+    // This could return more paths, but we're ignoring that for simplicity.
+    $static-&gt;requestPath($path);
+  }
+}
+</code></pre>
+
+<p>&nbsp;</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Using Tome Static and Tome Sync</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for API reference</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/hosting/hosted-drupal-rewrites" rel="prev" title="Go to previous page"><b>‹</b> Hosted Drupal + Rewrites</a>
+          <a href="/docs/technical" rel="prev" title="Go to previous page"><b>‹</b> Technical documentation</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
-          <a href="/docs" title="Go to parent page">Up</a>
+          <a href="/docs/technical" title="Go to parent page">Up</a>
         </li>
                     <li class="book-pager__item book-pager__item--next">
-          <a href="/node/20" rel="next" title="Go to next page">FAQ <b>›</b></a>
+          <a href="/docs/technical/exporter" rel="next" title="Go to next page">Exporting <b>›</b></a>
         </li>
           </ul>
       </nav>

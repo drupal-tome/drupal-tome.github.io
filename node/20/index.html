@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Technical documentation | Tome" />
+<meta name="title" content="FAQ | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/technical" />
-<meta name="twitter:title" content="Technical documentation" />
-<meta name="twitter:description" content="This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project." />
-<meta name="description" content="This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project." />
+<link rel="canonical" href="https://tome.fyi/node/20" />
+<meta name="twitter:title" content="FAQ" />
+<meta name="twitter:description" content="Here are some frequently asked questions about Tome:" />
+<meta name="description" content="Here are some frequently asked questions about Tome:" />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,12 +15,11 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/technical" />
-<link rel="prev" href="/docs/multilingual" />
+<link rel="revision" href="/node/20" />
+<link rel="prev" href="/docs/sub-modules" />
 <link rel="up" href="/docs" />
-<link rel="next" href="/docs/technical/api" />
 
-    <title>Technical documentation | Tome</title>
+    <title>FAQ | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?ppjqjn" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_TdJqSuGl2JIxFvtHx6SQD4nxj_kI9SIPcyiQL089Dnw.css?ppjqjn" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -72,7 +71,7 @@
 
           <aside class="sidebar" role="complementary">
           <div class="region region-sidebar">
-    <div id="block-expandedbooknavigation--4" class="block block-tfyi-book block-expanded-book-navigation">
+    <div id="block-expandedbooknavigation--3" class="block block-tfyi-book block-expanded-book-navigation">
   
     
         <nav id="book-block-menu-1" class="book-block-menu" role="navigation" aria-label="Book outline for Documentation">
@@ -159,11 +158,11 @@
     
     <div class="content">
         <div class="region region-content">
-    <div id="block-tomefyi-page-title--4" class="block block-core block-page-title-block">
+    <div id="block-tomefyi-page-title--3" class="block block-core block-page-title-block">
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Technical documentation</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">FAQ</span>
 </h1>
 
 
@@ -180,47 +179,75 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This section of the documentation covers how each part of Tome works, and is only relevant for users who want to deep dive into the project.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Here are some frequently asked questions about Tome:</p>
+
+<ul>
+	<li><em>"Why was Tome made?"</em><br />
+	Tome was and is a hobby project that was created as a response to extremely complex Drupal sites and relatively complex static site generators. If a Drupal site can be static, it should be, and that's why Tome exists.</li>
+	<li><em>"How is Tome different than wget --recursive?"</em>
+	<ul>
+		<li>wget&nbsp;cannot determine what pages have been changed, deleted, or added since the last run. Tome uses Drupal cache tags to filter out paths that should not be generated, which (if cache is "warm"), makes it faster than&nbsp;wget.</li>
+		<li>wget&nbsp;requires an HTTP server to run. Tome uses internal Drupal requests to generate HTML, which has a few benefits:
+		<ul>
+			<li>Multiple pages can be generated in one Drupal bootstrap. This is a performance boost that can have some interesting side-effects (see&nbsp;\Drupal\tome_static\RequestPreparer), but is efficient.</li>
+			<li>You can generate pages for another HTTP host by simply passing "--uri" or inputting one in the user interface. Usually the hostname you're using Drupal on is not going to be the same as the one you host HTML on, so this is a common need.</li>
+			<li>You can generate HTML on a CI environment without configuring a web server. This is done today on Netlify at&nbsp;<a href="https://github.com/drupal-tome/netlify-template">https://github.com/drupal-tome/netlify-template</a>.</li>
+		</ul>
+		</li>
+		<li>wget&nbsp;cannot make concurrent requests. Tome can! Not much more to say there.</li>
+		<li>Tome converts Views pagers to work on static hosting, by converting URLs like&nbsp;/my-view?page=1to&nbsp;/my-view/page/1. Media oEmbed URLs are also converted.&nbsp;This would be really difficult with&nbsp;wget.</li>
+		<li>Tome copies static assets (CSS, JS, images) with a file copy instead of an HTTP request. This is faster than&nbsp;a new HTTP request with wget.</li>
+	</ul>
+	</li>
+	<li><em>"Can you really rebuild a Drupal site from scratch?"</em><br />
+	Yes.</li>
+	<li><em>"Are you building a Tome product?"</em><br />
+	No.</li>
+	<li><em>"Do you want to?"</em><br />
+	Probably not, but let me know if you have a convincing argument!&nbsp;I think the audience for Tome is really specific (small), and the whole point is to be able to use Drupal for free, with no worries about maintenance cost or risk. If a Tome product existed it would have to be so low cost that it may not be worth my time to build. If you're reading this and want to build a Tome product, I'd be happy to talk about a donation model to support the project.</li>
+	<li><em>"Who is paying for Tome?"</em><br />
+	No one, it's just free software.</li>
+	<li><em>"Does anyone use Tome in production?"</em><br />
+	Yes, mostly personal blogs and some enterprise users. Here are some sites I know of:
+	<ul>
+		<li><a href="https://tome.fyi/">https://tome.fyi/</a>&nbsp;(duh)</li>
+		<li>
+		<p><a href="https://jpoesen.com/">https://jpoesen.com</a></p>
+		</li>
+		<li>
+		<p><a href="https://www.hikewithgravity.com/">https://www.hikewithgravity.com</a></p>
+		</li>
+		<li>
+		<p><a href="http://gnuschichten.de/blog">http://gnuschichten.de/blog</a></p>
+		</li>
+		<li>
+		<p><a href="http://badzilla.co.uk/">http://badzilla.co.uk</a></p>
+		</li>
+		<li>
+		<p><a href="http://aikidojo.net/">http://aikidojo.net</a></p>
+		</li>
+		<li>
+		<p><a href="https://www.ovh.co.uk/dedicated_servers">https://www.ovh.co.uk/dedicated_servers</a></p>
+		</li>
+		<li>
+		<p><a href="https://abzats.com/">https://abzats.com</a></p>
+		</li>
+	</ul>
+	</li>
+</ul>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-              <a class="burger" href="#">&#9776; Navigation</a>
-      <ul  class="menu burger-menu">
-                    <li class="menu-item">
-        <a href="/docs/technical/api" hreflang="en">API reference</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/exporter" hreflang="en">Exporting</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/importer" hreflang="en">Importing</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/static" hreflang="en">Static site generation</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/site-settings" hreflang="en">Site specific settings</a>
-              </li>
-                <li class="menu-item">
-        <a href="/docs/technical/docker" hreflang="en">Docker</a>
-              </li>
-        </ul>
-  
-
-
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Technical documentation</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for FAQ</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/multilingual" rel="prev" title="Go to previous page"><b>‹</b> Multilingual</a>
+          <a href="/docs/sub-modules" rel="prev" title="Go to previous page"><b>‹</b> Using Tome Static and Tome Sync</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
           <a href="/docs" title="Go to parent page">Up</a>
         </li>
-                    <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/technical/api" rel="next" title="Go to next page">API reference <b>›</b></a>
-        </li>
-          </ul>
+                </ul>
       </nav>
 
   </div>
