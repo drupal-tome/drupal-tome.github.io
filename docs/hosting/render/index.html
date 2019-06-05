@@ -242,6 +242,7 @@
 
 <ul>
 	<li>Your "editing" service's container is&nbsp;ephemeral, which means that any unpushed changes in the container will be lost when it's suspended. Tome Git is going to improve and make syncing easier, but if someone forgets to sync their changes and the container is suspended or restarted there's no getting that data back. Once Render gets a persistent filesystem offering you could checkout the repository there to prevent this, but then you wouldn't get all the advantages of prorating. I think this is less scary than it seems, but it's worth calling out.</li>
+	<li>As an add-on to the previous note, when you resume a suspended container, it loses any writes that previously occurred. So if you edit/push changes, suspend, and resume, you'll also need to trigger a manual build so that the latest commit is used when building the container.</li>
 	<li>Render's in-browser console does not allow writing to the container, so if Tome Git fails to push there's not a lot you can do to remedy that. A solution to this could be to allow SSH to your container so you can manually run Git commands if needed. Tome Git is also going to add options for handling merge conflicts in the future which should help too.</li>
 </ul>
 
