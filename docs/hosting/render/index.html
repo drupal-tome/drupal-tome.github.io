@@ -2,12 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Module compatibility | Tome" />
+<meta name="title" content="Render | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/module-compatibility" />
-<meta name="twitter:title" content="Module compatibility" />
-<meta name="twitter:description" content="Find out what modules are compatible with Tome." />
-<meta name="description" content="Find out what modules are compatible with Tome." />
+<link rel="canonical" href="https://tome.fyi/docs/hosting/render" />
+<meta name="twitter:title" content="Render" />
+<meta name="twitter:description" content="Render is a newer general purpose cloud that offers free static hosting and transparent prorated pricing for services, databases, and cron jobs. This hosting guide will show how you could use Render to edit content in a container, commit and push it with Git, and then host a static site." />
+<meta name="description" content="Render is a newer general purpose cloud that offers free static hosting and transparent prorated pricing for services, databases, and cron jobs. This hosting guide will show how you could use Render to edit content in a container, commit and push it with Git, and then host a static site." />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -15,12 +15,12 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/module-compatibility" />
-<link rel="prev" href="/docs/using-the-command-line" />
-<link rel="up" href="/docs" />
-<link rel="next" href="/docs/multilingual" />
+<link rel="revision" href="/docs/hosting/render" />
+<link rel="prev" href="/docs/hosting/netlify" />
+<link rel="up" href="/docs/hosting" />
+<link rel="next" href="/docs/hosting/hosted-drupal-netlify" />
 
-    <title>Module compatibility | Tome</title>
+    <title>Render | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?psmo0k" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_TdJqSuGl2JIxFvtHx6SQD4nxj_kI9SIPcyiQL089Dnw.css?psmo0k" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -72,7 +72,7 @@
 
           <aside class="sidebar" role="complementary">
           <div class="region region-sidebar">
-    <div id="block-expandedbooknavigation--2" class="block block-tfyi-book block-expanded-book-navigation">
+    <div id="block-expandedbooknavigation--4" class="block block-tfyi-book block-expanded-book-navigation">
   
     
         <nav id="book-block-menu-1" class="book-block-menu" role="navigation" aria-label="Book outline for Documentation">
@@ -162,16 +162,16 @@
     
     <div class="content">
         <div class="region region-content">
-    <div id="block-tomefyi-page-title--2" class="block block-core block-page-title-block">
+    <div id="block-tomefyi-page-title--4" class="block block-core block-page-title-block">
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Module compatibility</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Render</span>
 </h1>
 
 
   </div>
-<div id="block-mainpagecontent--2" class="block block-system block-system-main-block">
+<div id="block-mainpagecontent--4" class="block block-system block-system-main-block">
   
     
       
@@ -183,28 +183,83 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This project has not been tested with every contributed module, but this page will categorize ones that are known to have problems</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://render.com/">Render</a>&nbsp;is a newer general purpose cloud that offers free static hosting and&nbsp;transparent prorated pricing for services, databases, and cron jobs. This hosting guide will show how you could use Render to edit content in a container, commit and push it with Git, and then host a static site.</p>
+
+<h2>Creating a Tome static site on Render</h2>
+
+<ol>
+	<li>Visit&nbsp;<a href="https://dashboard.render.com/services">https://dashboard.render.com/services</a>&nbsp;and create a new web service.</li>
+	<li>Select a Tome site's repository</li>
+	<li>For "Environment", select "Static Site"</li>
+	<li>For "Build Command", enter something like:
+	<pre>
+<code class="language-bash">php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" &amp;&amp; php composer-setup.php &amp;&amp; php composer.phar install &amp;&amp; ./vendor/bin/drush tome:install -y &amp;&amp; ./vendor/bin/drush tome:static -l https://your-site.onrender.com</code></pre>
+
+	<p>Where "your-site" is the name of your new Render service</p>
+	</li>
+	<li>
+	<p>For "Publish directory", enter "html"</p>
+	</li>
+	<li>
+	<p>Save the form</p>
+	</li>
+</ol>
+
+<p>That should be it - now your repository will be checked out and your static site will be built. If you're not interested in editing content in Render you can stop reading now!</p>
+
+<h2>Created an editing service on Render</h2>
+
+<p>Now we're going to create a service on Render that exists to be spun up, have content edited on it, then spun down so that you only pay for what you need. This is still new and experimental&nbsp;so make sure to read the notes at the bottom of the guide!</p>
+
+<ol>
+	<li>Copy this <a href="https://gist.github.com/mortenson/eb8b96cebfceea8595573ff68f1ce8d2">example Dockerfile</a>&nbsp;into the root of your repository</li>
+	<li>Change the placeholders in the Dockerfile's "Set up Git" section to match your Git settings</li>
+	<li>Commit and push the Dockerfile</li>
+	<li>Install Tome Git on your Tome site (i.e. with "composer require drupal/tome_git &amp;&amp; drush en tome_git")</li>
+	<li>Generate an SSH key on your computer for this service, do not use a password</li>
+	<li>Add the new SSH public key to your repository and give it write access. The <a href="https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys">documentation on Github</a> is good if you use Github</li>
+	<li>Visit&nbsp;<a href="https://dashboard.render.com/services">https://dashboard.render.com/services</a>&nbsp;and create a new web service</li>
+	<li>Select a Tome site's repository</li>
+	<li>For "Environment", select "Docker"</li>
+	<li>Save the form</li>
+	<li>When your service is ready, go into its settings</li>
+	<li>Disable&nbsp;"Auto Deploy"</li>
+	<li>Go to the service's "Environment" settings</li>
+	<li>Add a "Secret File" with the filename "tome_id_rsa" that has the contents of your SSH private key</li>
+	<li>Add a "Secret File" with the filename "tome_pass" that has a password for the administrative user of this site. Alternatively, you could use something like SSO here to login, or allow SSH to your service so that you could use "drush uli"</li>
+	<li>Trigger a manual deploy for your service</li>
+	<li>Visit the URL for your service and login</li>
+	<li>Make a change to content, config, or files</li>
+	<li>Visit "/admin/config/tome/git" and click "Sync changes"</li>
+	<li>Ensure that your edits were properly synced - the Tome Git&nbsp;module is still in development and could have bugs</li>
+	<li>Go back to the settings for your service and suspend it</li>
+	<li>See that your static service for this site is already rebuilding. Yay!</li>
+</ol>
+
+<p>This kind of functionality - being able to spin up containers on demand to make changes to content then completely spin them down - is really exciting and also really new for Drupal. Tome allows a kind of statelessness with Drupal that would otherwise not be possible.</p>
+
+<p>However, there are some things to consider when using Render:</p>
 
 <ul>
-	<li><strong>Views&nbsp;</strong>- Publicly accessible exposed forms, contextual filters (using query params), and AJAX does not work with Tome, since there is no Drupal site running to support them. Pagers on non-AJAX forms are supported, with some magic.</li>
-	<li><strong>Search</strong>&nbsp;- Search API and most search modules rely on a Drupal backend to find a deliver results, and as such they are not compatible with Tome. For basic, free&nbsp;search functionality it's recommended that you use <a href="https://www.drupal.org/project/lunr">Lunr search</a>, a Drupal module that creates a JSON index of your content based on a View, and does search client-side.</li>
-	<li><strong>Most forms</strong>&nbsp;- You should not expect any publicly accessible form to work on your static site. It's static HTML, there's nowhere to POST! 😄It's recommended that these dynamic elements are moved to a PaaS service or DIY serverless function. If you use Netlify, the <a href="https://www.drupal.org/project/tome_netlify">Tome Netlify</a>&nbsp;module will let you submit core Contact Forms to Netlify with minimal setup.</li>
-	<li><strong>Paragraphs&nbsp;</strong>- When a Paragraph is removed from a field, it is never actually deleted. This can lead to a lot of stale entities in&nbsp; your repository, which you would normally have to manually clean up. The "Paragraphs Clean" contributed module will delete Paragraphs when they are unreferenced. I use it on this site and it seems to work OK.</li>
+	<li>Your "editing" service's container is&nbsp;ephemeral, which means that any unpushed changes in the container will be lost when it's suspended. Tome Git is going to improve and make syncing easier, but if someone forgets to sync their changes and the container is suspended or restarted there's no getting that data back. Once Render gets a persistent filesystem offering you could checkout the repository there to prevent this, but then you wouldn't get all the advantages of prorating. I think this is less scary than it seems, but it's worth calling out.</li>
+	<li>Render's in-browser console does not allow writing to the container, so if Tome Git fails to push there's not a lot you can do to remedy that. A solution to this could be to allow SSH to your container so you can manually run Git commands if needed. Tome Git is also going to add options for handling merge conflicts in the future which should help too.</li>
 </ul>
+
+<p>If you end up using Render please blog about it! Thanks for making it through this relatively complex guide.</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Module compatibility</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Render</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/using-the-command-line" rel="prev" title="Go to previous page"><b>‹</b> Using the command line</a>
+          <a href="/docs/hosting/netlify" rel="prev" title="Go to previous page"><b>‹</b> Netlify</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
-          <a href="/docs" title="Go to parent page">Up</a>
+          <a href="/docs/hosting" title="Go to parent page">Up</a>
         </li>
                     <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/multilingual" rel="next" title="Go to next page">Multilingual <b>›</b></a>
+          <a href="/docs/hosting/hosted-drupal-netlify" rel="next" title="Go to next page">Hosted Drupal + Netlify <b>›</b></a>
         </li>
           </ul>
       </nav>
