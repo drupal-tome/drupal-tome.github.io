@@ -3,7 +3,7 @@
 set -e
 
 drush cron -l https://tome.fyi
-drush tome:static -l https://tome.fyi
+drush tome:static -y -l https://tome.fyi
 rm -rf gh-pages
 git clone git@github.com:drupal-tome/drupal-tome.github.io.git gh-pages
 cd gh-pages
