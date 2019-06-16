@@ -1,0 +1,93 @@
+{
+    "uuid": [
+        {
+            "value": "73c229a9-2979-4a36-a6ba-32c81080bd58"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "book",
+            "target_type": "node_type",
+            "target_uuid": "870f5e4b-075f-48ba-972b-7b47064b4efd"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": "2019-06-16T20:43:03+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "revision_log": [],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "title": [
+        {
+            "value": "Use cases"
+        }
+    ],
+    "uid": [
+        {
+            "target_type": "user",
+            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "created": [
+        {
+            "value": "2019-06-16T20:34:53+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2019-06-16T20:55:38+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/docs\/use-cases",
+            "langcode": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>This document will go over the main use cases for Tome and its submodules. This might be a good reference if you are evaluating Tome and seeing if it'd be a good fit for your new or existing Drupal site.<\/p>\r\n\r\n<h2>Running a static site in production<\/h2>\r\n\r\n<p>Having a performant, secure Drupal site is hard. It requires careful maintenance, a proper use of caching, and hosting add-ons like Varnish, Memcached, Redis, and a CDN to get the most out of your site. It also means that production deploys need to not take your site down, and be easy to revert. For a large organization or an enterprise hosting company these may seem like solved problems, but for many Drupal users this is still hard to pull off.<\/p>\r\n\r\n<p>This is where Tome can come in. Using a sub-module of Tome, Tome Static, any Drupal 8 site can become a static site. You can still make full use of Drupal's backend, and continue to use your traditional Drupal theme, but have a static site running in production. The performance and security benefits for this are huge, for small and large sites&nbsp;alike.<\/p>\r\n\r\n<h2>Storing everything in version control<\/h2>\r\n\r\n<p>This is the main use case for Tome, and comes with a lot of benefits. As you may know, if you use Tome all your content, config, and files are stored in version control. This enables you to have a Drupal site that isn't persistent, and in some ways is not stateful. Drupal maintenance is hard, and hosting can be expensive and complicated for hobbyists&nbsp;and small organizations. With Tome, you can use Drupal locally or temporarily in the cloud, then spin it down when you don't need it. Think of how many Drupal sites are out there that are rarely updated - blogs, microsites, and other simple sites can gain a lot from using Tome. Why pay a monthly fee for something you actively use for a few hours a week?<\/p>\r\n\r\n<p>From a technical perspective, storing everything in something like Git allows you to take advantage of everything version control has to offer. Check&nbsp;out any commit and see exactly what your site looked like on that day. Make a pull request that edits the homepage content and updates the theme at the same time. Build previews of your static site for every branch to review work before a merge. The Git workflow you may already use for code and config can have many interesting applications to content and files.<\/p>\r\n\r\n<h2>Building Drupal demos<\/h2>\r\n\r\n<p>If you find yourself in the position of giving a Drupal demo, you have probably spun up a quick site, built out a custom theme, and configured it to your liking to present Drupal in the best way possible. Doing this once or twice by hand is fine - but what happens when you have a Sales staff that needs to quickly spin up demos, or you want to release a demo to the public?<\/p>\r\n\r\n<p>Tome makes this extremely easy - if you build your site from scratch with Tome, all your presenters need is a way to get a copy of your Tome site and the ability to install it locally, then they're ready to deliver a great demo. No more worrying about default content coming from modules, modifying config in install hooks, or migrations - Tome can handle everything for you and let even novice Drupal users create demos.<\/p>\r\n\r\n<h2>Archiving a site<\/h2>\r\n\r\n<p>If you have an older Drupal 8 site that's no longer updated, or updated very rarely, migrating to Tome may be a good option. You can follow the existing documentation for installing Tome to an existing site, then turn the production site off or point the production domain to your static site.<\/p>\r\n\r\n<h2>Migrating away from Drupal or to a new Drupal site<\/h2>\r\n\r\n<p>Tome's content exports are basically normalized JSON representations of entities - meaning any language can easily consume everything about your Drupal site and use that content for a migration. While I wouldn't want to see anyone leave Drupal, sometimes you need to move to a new CMS and getting content out of Drupal can be quite difficult. Alternatively, if you want to share content between two sites, or migrate from one Drupal site to another, consuming JSON with the migrate module should be straightforward. If you end up using Tome for this, please write about it! I'm very interested to see it applied in this way.<\/p>\r\n",
+            "format": "rich_text",
+            "summary": ""
+        }
+    ]
+}
