@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5645d5480e85237ca4f53628db3a8e6",
+    "content-hash": "8fb43dfe320a93f2cef26c267b6b3281",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1696,7 +1696,7 @@
             "version": "1.6.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/codesnippet",
+                "url": "https://git.drupalcode.org/project/codesnippet.git",
                 "reference": "8.x-1.6"
             },
             "dist": {
@@ -1745,16 +1745,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.6.9",
+            "version": "8.6.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "cac12e0ec19d5c6fa53778522b3ff4c542f86c8d"
+                "reference": "59568ac02948cf075ee8543e6c6d4386ad8daec1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/cac12e0ec19d5c6fa53778522b3ff4c542f86c8d",
-                "reference": "cac12e0ec19d5c6fa53778522b3ff4c542f86c8d",
+                "url": "https://api.github.com/repos/drupal/core/zipball/59568ac02948cf075ee8543e6c6d4386ad8daec1",
+                "reference": "59568ac02948cf075ee8543e6c6d4386ad8daec1",
                 "shasum": ""
             },
             "require": {
@@ -1980,14 +1980,14 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-02-08T12:21:40+00:00"
+            "time": "2019-02-20T18:35:01+00:00"
         },
         {
             "name": "drupal/entity_reference_revisions",
             "version": "1.6.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/entity_reference_revisions",
+                "url": "https://git.drupalcode.org/project/entity_reference_revisions.git",
                 "reference": "8.x-1.6"
             },
             "dist": {
@@ -2045,7 +2045,7 @@
             "version": "1.7.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/metatag",
+                "url": "https://git.drupalcode.org/project/metatag.git",
                 "reference": "8.x-1.7"
             },
             "dist": {
@@ -2113,7 +2113,7 @@
             "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/paragraphs",
+                "url": "https://git.drupalcode.org/project/paragraphs.git",
                 "reference": "8.x-1.5"
             },
             "dist": {
@@ -2193,7 +2193,7 @@
             "version": "dev-1.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/paragraphs_clean",
+                "url": "https://git.drupalcode.org/project/paragraphs_clean.git",
                 "reference": "e3a1dc4e3727e3fa70534a41bbb24e7c6b07fec1"
             },
             "require": {
@@ -2236,7 +2236,7 @@
             "version": "2.12.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/simple_sitemap",
+                "url": "https://git.drupalcode.org/project/simple_sitemap.git",
                 "reference": "8.x-2.12"
             },
             "dist": {
@@ -2297,7 +2297,7 @@
             "version": "1.8.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/svg_formatter",
+                "url": "https://git.drupalcode.org/project/svg_formatter.git",
                 "reference": "8.x-1.08"
             },
             "dist": {
@@ -2349,7 +2349,7 @@
             "version": "1.5.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/token",
+                "url": "https://git.drupalcode.org/project/token.git",
                 "reference": "8.x-1.5"
             },
             "dist": {
@@ -2413,17 +2413,11 @@
         },
         {
             "name": "drupal/tome",
-            "version": "1.0.0-beta3",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/tome",
-                "reference": "8.x-1.0-beta3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tome-8.x-1.0-beta3.zip",
-                "reference": "8.x-1.0-beta3",
-                "shasum": "f0aecd5832a7385165669c4e6e647fcbef6acefd"
+                "url": "https://git.drupalcode.org/project/tome.git",
+                "reference": "f78d9a55165ca74121a03149143e9fa1b445e566"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -2432,7 +2426,8 @@
             },
             "require-dev": {
                 "drupal/redirect": "*",
-                "drupal/tome_base": "*"
+                "drupal/tome_base": "*",
+                "drupal/tome_static": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -2440,11 +2435,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta3",
-                    "datestamp": "1549898880",
+                    "version": "8.x-1.0-rc2+10-dev",
+                    "datestamp": "1560664385",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2461,12 +2456,13 @@
             "description": "Everything you need to do everything statically.",
             "homepage": "https://www.drupal.org/project/tome",
             "support": {
-                "source": "http://cgit.drupalcode.org/tome"
-            }
+                "source": "https://git.drupalcode.org/project/tome"
+            },
+            "time": "2019-06-16T06:31:19+00:00"
         },
         {
             "name": "drupal/tome_base",
-            "version": "1.0.0-beta3",
+            "version": "dev-1.x",
             "require": {
                 "drupal/core": "~8.0",
                 "drupal/tome": "self.version"
@@ -2477,11 +2473,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta3",
-                    "datestamp": "1549898880",
+                    "version": "8.x-1.0-rc2+10-dev",
+                    "datestamp": "1560664385",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2498,12 +2494,12 @@
             "description": "Contains shared services and traits between Tome Sync and Tome Static.",
             "homepage": "https://www.drupal.org/project/tome",
             "support": {
-                "source": "http://cgit.drupalcode.org/tome"
+                "source": "https://git.drupalcode.org/project/tome"
             }
         },
         {
             "name": "drupal/tome_static",
-            "version": "1.0.0-beta3",
+            "version": "dev-1.x",
             "require": {
                 "drupal/core": "^8.6",
                 "drupal/tome": "self.version",
@@ -2515,11 +2511,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta3",
-                    "datestamp": "1549898880",
+                    "version": "8.x-1.0-rc2+10-dev",
+                    "datestamp": "1560664385",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2536,12 +2532,12 @@
             "description": "Exports an entire Drupal site to static HTML.",
             "homepage": "https://www.drupal.org/project/tome",
             "support": {
-                "source": "http://cgit.drupalcode.org/tome"
+                "source": "https://git.drupalcode.org/project/tome"
             }
         },
         {
             "name": "drupal/tome_sync",
-            "version": "1.0.0-beta3",
+            "version": "dev-1.x",
             "require": {
                 "drupal/core": "*",
                 "drupal/tome": "self.version",
@@ -2553,11 +2549,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta3",
-                    "datestamp": "1549898880",
+                    "version": "8.x-1.0-rc2+10-dev",
+                    "datestamp": "1560664385",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2574,7 +2570,7 @@
             "description": "Allows Drupal to installed from flat files and keeps content in sync.",
             "homepage": "https://www.drupal.org/project/tome",
             "support": {
-                "source": "http://cgit.drupalcode.org/tome"
+                "source": "https://git.drupalcode.org/project/tome"
             }
         },
         {
@@ -5698,6 +5694,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "drupal/tome": 20,
         "drupal/paragraphs_clean": 20,
         "drupal-tome/tome_drush": 20
     },
