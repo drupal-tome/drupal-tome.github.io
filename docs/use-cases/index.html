@@ -2,20 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Netlify | Tome" />
+<meta name="title" content="Use cases | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/hosting/netlify" />
-<meta name="twitter:title" content="Netlify" />
-<meta name="twitter:description" content="Netlify is a static site hosting company that has a powerful free offering. If you&#039;re looking to host a commercial Tome site this is a great option.
-
-Deploying the Tome template
-
-Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:" />
-<meta name="description" content="Netlify is a static site hosting company that has a powerful free offering. If you&#039;re looking to host a commercial Tome site this is a great option.
-
-Deploying the Tome template
-
-Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:" />
+<link rel="canonical" href="https://tome.fyi/docs/use-cases" />
+<meta name="twitter:title" content="Use cases" />
+<meta name="twitter:description" content="This document will go over the main use cases for Tome and its submodules. This might be a good reference if you are evaluating Tome and seeing if it&#039;d be a good fit for your new or existing Drupal site." />
+<meta name="description" content="This document will go over the main use cases for Tome and its submodules. This might be a good reference if you are evaluating Tome and seeing if it&#039;d be a good fit for your new or existing Drupal site." />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -23,12 +15,12 @@ Netlify supports template projects, which are the fastest way to get started on 
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/hosting/netlify" />
-<link rel="prev" href="/docs/hosting/github-pages" />
-<link rel="up" href="/docs/hosting" />
-<link rel="next" href="/docs/hosting/render" />
+<link rel="revision" href="/docs/use-cases" />
+<link rel="prev" href="/docs/installing-existing-site" />
+<link rel="up" href="/docs" />
+<link rel="next" href="/docs/using-the-command-line" />
 
-    <title>Netlify | Tome</title>
+    <title>Use cases | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?pt78v0" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_TdJqSuGl2JIxFvtHx6SQD4nxj_kI9SIPcyiQL089Dnw.css?pt78v0" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -80,7 +72,7 @@ Netlify supports template projects, which are the fastest way to get started on 
 
           <aside class="sidebar" role="complementary">
           <div class="region region-sidebar">
-    <div id="block-expandedbooknavigation--5" class="block block-tfyi-book block-expanded-book-navigation">
+    <div id="block-expandedbooknavigation--2" class="block block-tfyi-book block-expanded-book-navigation">
   
     
         <nav id="book-block-menu-1" class="book-block-menu" role="navigation" aria-label="Book outline for Documentation">
@@ -176,16 +168,16 @@ Netlify supports template projects, which are the fastest way to get started on 
     
     <div class="content">
         <div class="region region-content">
-    <div id="block-tomefyi-page-title--5" class="block block-core block-page-title-block">
+    <div id="block-tomefyi-page-title--2" class="block block-core block-page-title-block">
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Netlify</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Use cases</span>
 </h1>
 
 
   </div>
-<div id="block-mainpagecontent--5" class="block block-system block-system-main-block">
+<div id="block-mainpagecontent--2" class="block block-system block-system-main-block">
   
     
       
@@ -197,50 +189,47 @@ Netlify supports template projects, which are the fastest way to get started on 
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://www.netlify.com/">Netlify</a>&nbsp;is a static site hosting company that has a powerful free offering. If you're looking to host a commercial Tome site this is a great option.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>This document will go over the main use cases for Tome and its submodules. This might be a good reference if you are evaluating Tome and seeing if it'd be a good fit for your new or existing Drupal site.</p>
 
-<h2>Deploying the Tome template</h2>
+<h2>Running a static site in production</h2>
 
-<p>Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:</p>
+<p>Having a performant, secure Drupal site is hard. It requires careful maintenance, a proper use of caching, and hosting add-ons like Varnish, Memcached, Redis, and a CDN to get the most out of your site. It also means that production deploys need to not take your site down, and be easy to revert. For a large organization or an enterprise hosting company these may seem like solved problems, but for many Drupal users this is still hard to pull off.</p>
 
-<p><a class="button" href="https://app.netlify.com/start/deploy?repository=https://github.com/drupal-tome/netlify-template"><img alt="" src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify" /> </a></p>
+<p>This is where Tome can come in. Using a sub-module of Tome, Tome Static, any Drupal 8 site can become a static site. You can still make full use of Drupal's backend, and continue to use your traditional Drupal theme, but have a static site running in production. The performance and security benefits for this are huge, for small and large sites&nbsp;alike.</p>
 
-<p>You'll be prompted to login or create an account, then a Tome site will be automatically provisioned for you.</p>
+<h2>Storing everything in version control</h2>
 
-<h2>Configuring netlify.toml</h2>
+<p>This is the main use case for Tome, and comes with a lot of benefits. As you may know, if you use Tome all your content, config, and files are stored in version control. This enables you to have a Drupal site that isn't persistent, and in some ways is not stateful. Drupal maintenance is hard, and hosting can be expensive and complicated for hobbyists&nbsp;and small organizations. With Tome, you can use Drupal locally or temporarily in the cloud, then spin it down when you don't need it. Think of how many Drupal sites are out there that are rarely updated - blogs, microsites, and other simple sites can gain a lot from using Tome. Why pay a monthly fee for something you actively use for a few hours a week?</p>
 
-<p>Whether you used the template or you're connecting to Netlify manually, you should understand how to configure Netlify to properly build Tome. Netlify supports a root-level configuration file, "netlify.toml", which contains environmental variables and commands used to build your static site.</p>
+<p>From a technical perspective, storing everything in something like Git allows you to take advantage of everything version control has to offer. Check&nbsp;out any commit and see exactly what your site looked like on that day. Make a pull request that edits the homepage content and updates the theme at the same time. Build previews of your static site for every branch to review work before a merge. The Git workflow you may already use for code and config can have many interesting applications to content and files.</p>
 
-<p>The currently recommended netlify.toml configuration is:</p>
+<h2>Building Drupal demos</h2>
 
-<pre>
-<code class="language-bash">[build]
-command = "composer install &amp;&amp; ./vendor/bin/drush tome:install -y &amp;&amp; ./vendor/bin/drush tome:static -l $DEPLOY_PRIME_URL"
-publish = "html"
+<p>If you find yourself in the position of giving a Drupal demo, you have probably spun up a quick site, built out a custom theme, and configured it to your liking to present Drupal in the best way possible. Doing this once or twice by hand is fine - but what happens when you have a Sales staff that needs to quickly spin up demos, or you want to release a demo to the public?</p>
 
-[build.environment]
-PHP_VERSION = "7.2"
-</code></pre>
+<p>Tome makes this extremely easy - if you build your site from scratch with Tome, all your presenters need is a way to get a copy of your Tome site and the ability to install it locally, then they're ready to deliver a great demo. No more worrying about default content coming from modules, modifying config in install hooks, or migrations - Tome can handle everything for you and let even novice Drupal users create demos.</p>
 
-<p>If you copy + paste this to netlify.toml in the root of your Tome project, you should be set to deploy to Netlify.</p>
+<h2>Archiving a site</h2>
 
-<p>There isn't a lot of secret sauce in this file, but it's worth noting that "$DEPLOY_PRIME_URL" is used to dynamically determine the base path of Drupal based on where the build will be deployed. Netlify supports multiple domains per branch, so you don't want to hard-code a URL.</p>
+<p>If you have an older Drupal 8 site that's no longer updated, or updated very rarely, migrating to Tome may be a good option. You can follow the existing documentation for installing Tome to an existing site, then turn the production site off or point the production domain to your static site.</p>
 
-<p>&nbsp;</p>
+<h2>Migrating away from Drupal or to a new Drupal site</h2>
+
+<p>Tome's content exports are basically normalized JSON representations of entities - meaning any language can easily consume everything about your Drupal site and use that content for a migration. While I wouldn't want to see anyone leave Drupal, sometimes you need to move to a new CMS and getting content out of Drupal can be quite difficult. Alternatively, if you want to share content between two sites, or migrate from one Drupal site to another, consuming JSON with the migrate module should be straightforward. If you end up using Tome for this, please write about it! I'm very interested to see it applied in this way.</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Netlify</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Use cases</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/hosting/github-pages" rel="prev" title="Go to previous page"><b>‹</b> Github pages</a>
+          <a href="/docs/installing-existing-site" rel="prev" title="Go to previous page"><b>‹</b> Installing to an existing site</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
-          <a href="/docs/hosting" title="Go to parent page">Up</a>
+          <a href="/docs" title="Go to parent page">Up</a>
         </li>
                     <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/hosting/render" rel="next" title="Go to next page">Render <b>›</b></a>
+          <a href="/docs/using-the-command-line" rel="next" title="Go to next page">Using the command line <b>›</b></a>
         </li>
           </ul>
       </nav>

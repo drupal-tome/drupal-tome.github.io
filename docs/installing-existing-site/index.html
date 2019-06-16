@@ -2,20 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Netlify | Tome" />
+<meta name="title" content="Installing to an existing site | Tome" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="canonical" href="https://tome.fyi/docs/hosting/netlify" />
-<meta name="twitter:title" content="Netlify" />
-<meta name="twitter:description" content="Netlify is a static site hosting company that has a powerful free offering. If you&#039;re looking to host a commercial Tome site this is a great option.
+<link rel="canonical" href="https://tome.fyi/docs/installing-existing-site" />
+<meta name="twitter:title" content="Installing to an existing site" />
+<meta name="twitter:description" content="If you have an existing Drupal 8 site, installing Tome is fairly straightforward. This guide will take you through the process of installing Tome or Tome Static.
 
-Deploying the Tome template
+Installing Tome Static
 
-Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:" />
-<meta name="description" content="Netlify is a static site hosting company that has a powerful free offering. If you&#039;re looking to host a commercial Tome site this is a great option.
+If you want to keep your current Drupal hosting setup and just want to generate a static site, this guide is for you.
 
-Deploying the Tome template
+First, you&#039;ll need to add  Tome as a dependency to your site and install Tome Static:" />
+<meta name="description" content="If you have an existing Drupal 8 site, installing Tome is fairly straightforward. This guide will take you through the process of installing Tome or Tome Static.
 
-Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:" />
+Installing Tome Static
+
+If you want to keep your current Drupal hosting setup and just want to generate a static site, this guide is for you.
+
+First, you&#039;ll need to add  Tome as a dependency to your site and install Tome Static:" />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
@@ -23,12 +27,12 @@ Netlify supports template projects, which are the fastest way to get started on 
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/hosting/netlify" />
-<link rel="prev" href="/docs/hosting/github-pages" />
-<link rel="up" href="/docs/hosting" />
-<link rel="next" href="/docs/hosting/render" />
+<link rel="revision" href="/docs/installing-existing-site" />
+<link rel="prev" href="/docs/getting-started" />
+<link rel="up" href="/docs" />
+<link rel="next" href="/docs/use-cases" />
 
-    <title>Netlify | Tome</title>
+    <title>Installing to an existing site | Tome</title>
     <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?pt78v0" media="all" />
 <link rel="stylesheet" href="/sites/default/files/css/css_TdJqSuGl2JIxFvtHx6SQD4nxj_kI9SIPcyiQL089Dnw.css?pt78v0" media="all" />
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
@@ -80,7 +84,7 @@ Netlify supports template projects, which are the fastest way to get started on 
 
           <aside class="sidebar" role="complementary">
           <div class="region region-sidebar">
-    <div id="block-expandedbooknavigation--5" class="block block-tfyi-book block-expanded-book-navigation">
+    <div id="block-expandedbooknavigation" class="block block-tfyi-book block-expanded-book-navigation">
   
     
         <nav id="book-block-menu-1" class="book-block-menu" role="navigation" aria-label="Book outline for Documentation">
@@ -176,16 +180,16 @@ Netlify supports template projects, which are the fastest way to get started on 
     
     <div class="content">
         <div class="region region-content">
-    <div id="block-tomefyi-page-title--5" class="block block-core block-page-title-block">
+    <div id="block-tomefyi-page-title" class="block block-core block-page-title-block">
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Netlify</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Installing to an existing site</span>
 </h1>
 
 
   </div>
-<div id="block-mainpagecontent--5" class="block block-system block-system-main-block">
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
   
     
       
@@ -197,50 +201,91 @@ Netlify supports template projects, which are the fastest way to get started on 
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p><a href="https://www.netlify.com/">Netlify</a>&nbsp;is a static site hosting company that has a powerful free offering. If you're looking to host a commercial Tome site this is a great option.</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>If you have an existing Drupal 8 site, installing Tome is fairly straightforward. This guide will take you through the process of installing Tome or Tome Static.</p>
 
-<h2>Deploying the Tome template</h2>
+<h2>Installing Tome Static</h2>
 
-<p>Netlify supports template projects, which are the fastest way to get started on their platform. To use the Tome template, click the button below:</p>
+<p>If you want to keep your current Drupal hosting setup and just want to generate a static site, this guide is for you.</p>
 
-<p><a class="button" href="https://app.netlify.com/start/deploy?repository=https://github.com/drupal-tome/netlify-template"><img alt="" src="https://www.netlify.com/img/deploy/button.svg" title="Deploy to Netlify" /> </a></p>
-
-<p>You'll be prompted to login or create an account, then a Tome site will be automatically provisioned for you.</p>
-
-<h2>Configuring netlify.toml</h2>
-
-<p>Whether you used the template or you're connecting to Netlify manually, you should understand how to configure Netlify to properly build Tome. Netlify supports a root-level configuration file, "netlify.toml", which contains environmental variables and commands used to build your static site.</p>
-
-<p>The currently recommended netlify.toml configuration is:</p>
+<p>First, you'll need to add&nbsp; Tome as a dependency to your site and install Tome Static:</p>
 
 <pre>
-<code class="language-bash">[build]
-command = "composer install &amp;&amp; ./vendor/bin/drush tome:install -y &amp;&amp; ./vendor/bin/drush tome:static -l $DEPLOY_PRIME_URL"
-publish = "html"
+<code class="language-bash">$ composer require drupal/tome
+$ drush en tome_static -y</code></pre>
 
-[build.environment]
-PHP_VERSION = "7.2"
+<p>You'll also need to have Drush 9 installed locally if you want to use the command line. This can be required like so:</p>
+
+<pre>
+<code class="language-bash">$ composer require drush/drush:^9</code></pre>
+
+<p>Then, ensure that the Tome Static export directory is writeable. This defaults to "../html", which would be the "html" folder above your web root. If you want to change this directory, add a line like this to settings.php:</p>
+
+<pre>
+<code class="language-php">$settings['tome_static_directory'] = '../html';</code></pre>
+
+<p>Now you're ready to generate static HTML. If you want to use the command line, you can run this command:</p>
+
+<pre>
+<code class="language-bash">$ drush tome:static --uri=http://mysite.com</code></pre>
+
+<p>Where "mysite.com" is the domain of your production site. If you prefer to use the user interface, login as a user with the "use tome static" permission and submit the form at "/admin/config/tome/static/generate".</p>
+
+<p>Once the static site is generated, you can upload the contents of your static export directory to your preferred hosting provider.</p>
+
+<h2>Migrating to Tome</h2>
+
+<p>If you want the full Tome experience, where content, config, and files are stored in Git, you can follow this guide. This may not be a fit for sites with many concurrent editors or if you want to stay with your traditional hosting provider for other reasons.</p>
+
+<p>First, require Tome's dependencies and enable Tome:</p>
+
+<pre>
+<code class="language-bash">$ composer require drupal/tome drupal-tome/tome_drush drush/drush:^9
+$ drush en tome -y
 </code></pre>
 
-<p>If you copy + paste this to netlify.toml in the root of your Tome project, you should be set to deploy to Netlify.</p>
+<p>Then, ensure that the Tome Static export directory (defaults to "../html") and Tome Sync export directories (defaults to "../content" and "../files") are writeable. You'll also want to make sure your config sync directory is writeable and in a location that's tracked by Git. Here's what a settings.php file with all these configured looks like:</p>
 
-<p>There isn't a lot of secret sauce in this file, but it's worth noting that "$DEPLOY_PRIME_URL" is used to dynamically determine the base path of Drupal based on where the build will be deployed. Netlify supports multiple domains per branch, so you don't want to hard-code a URL.</p>
+<pre>
+<code class="language-php">$settings['tome_files_directory'] = '../files';
+$settings['tome_content_directory'] = '../content';
+$settings['tome_static_directory'] = '../html';
+$config_directories['sync'] = '../config';
+</code></pre>
 
-<p>&nbsp;</p>
+<p>Once that configuration is done, you will need to run an initial export. This could take a long time if you have a lot of entities on your site, so be patient:</p>
+
+<pre>
+<code class="language-bash">$ drush tome:export -y</code></pre>
+
+<p>Now you can test that a fresh Tome install works correctly by running:</p>
+
+<pre>
+<code>$ drush tome:install -y</code></pre>
+
+<p>If the process finishes successfully and your site looks right, then the migration worked! If not there could be an incompatibility&nbsp;with a custom or contrib module, or a bug in Tome. Please report bugs with replication steps if you find any.</p>
+
+<p>At this point, you now have a Drupal site managed by Tome where all the configuration, content, and files on your site can be tracked in Git (assuming you add/commit the changes you just made). This means you can use Tome completely locally, without hosting Drupal anywhere. Alternatively you can spin up your site temporarily for editing, then spin it down when you're finished. Check out the "Render" hosting guide for a good example of this.</p>
+
+<p>To generate static HTML at this point, you can run:</p>
+
+<pre>
+<code class="language-bash">$ drush tome:static --uri=http://mysite.com</code></pre>
+
+<p>Where "mysite.com" is the domain of your production site. Make sure to check out the hosting guides for Github Pages, Render, and Netlify to see how a CI can automatically deploy your static site when you commit a content, config, or file change.</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Netlify</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Installing to an existing site</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/hosting/github-pages" rel="prev" title="Go to previous page"><b>‹</b> Github pages</a>
+          <a href="/docs/getting-started" rel="prev" title="Go to previous page"><b>‹</b> Getting started</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
-          <a href="/docs/hosting" title="Go to parent page">Up</a>
+          <a href="/docs" title="Go to parent page">Up</a>
         </li>
                     <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/hosting/render" rel="next" title="Go to next page">Render <b>›</b></a>
+          <a href="/docs/use-cases" rel="next" title="Go to next page">Use cases <b>›</b></a>
         </li>
           </ul>
       </nav>
