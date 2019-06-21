@@ -791,6 +791,6 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\sqlite',
   'driver' => 'sqlite',
 );
-$settings['tome_git_ssh_key'] = '~/.ssh/php_id_rsa';
+$settings['tome_git_ssh_key'] = '~/.ssh/tome_git_rsa';
 $settings['install_profile'] = 'minimal';
 $config_directories['sync'] = '../config';
