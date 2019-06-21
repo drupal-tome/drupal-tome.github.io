@@ -33,6 +33,7 @@ module:
   token: 0
   tome: 0
   tome_base: 0
+  tome_git: 0
   tome_static: 0
   tome_sync: 0
   toolbar: 0

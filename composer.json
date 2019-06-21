@@ -43,7 +43,8 @@
         "drupal/codesnippet": "^1.6",
         "ckeditor/codesnippet": "4.9.2",
         "drupal-tome/tome_drush": "dev-master",
-        "drupal/simple_sitemap": "^2.12"
+        "drupal/simple_sitemap": "^2.12",
+        "drupal/tome_git": "1.x-dev"
     },
     "scripts": {
         "gh-pages": "./scripts/gh-pages.sh",

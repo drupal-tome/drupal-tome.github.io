@@ -53,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2018-11-30T23:08:42+00:00",
+            "value": "2019-06-21T15:01:19+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -87,7 +87,7 @@
         {
             "value": "<p>Thanks for checking out Tome! Use the navigation links to find what you're looking for.<\/p>\r\n",
             "format": "rich_text",
-            "summary": "Thanks for checking out Tome! Use the navigation links to find what you're looking for."
+            "summary": "Thanks for checking out Tome! Use the navigation links to find what you're looking for. Or not."
         }
     ]
 }

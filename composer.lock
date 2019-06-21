@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8fb43dfe320a93f2cef26c267b6b3281",
+    "content-hash": "55e4753a3621371e8fa4f1b58c2b9805",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2496,6 +2496,49 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/tome"
             }
+        },
+        {
+            "name": "drupal/tome_git",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/tome_git.git",
+                "reference": "2b9b24bb39d1321318b15ef2ce68f54440804162"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/tome_sync": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1561046585",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "samuel.mortenson",
+                    "homepage": "https://www.drupal.org/user/2582268"
+                }
+            ],
+            "description": "Allows you to commit your Tome changes on the command line.",
+            "homepage": "https://www.drupal.org/project/tome_git",
+            "support": {
+                "source": "https://git.drupalcode.org/project/tome_git"
+            },
+            "time": "2019-06-21T05:43:26+00:00"
         },
         {
             "name": "drupal/tome_static",
@@ -5696,7 +5739,8 @@
     "stability-flags": {
         "drupal/tome": 20,
         "drupal/paragraphs_clean": 20,
-        "drupal-tome/tome_drush": 20
+        "drupal-tome/tome_drush": 20,
+        "drupal/tome_git": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
