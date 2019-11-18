@@ -108,9 +108,7 @@
             "version": "4.9.2",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/codesnippet/releases/codesnippet_4.9.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://download.ckeditor.com/codesnippet/releases/codesnippet_4.9.2.zip"
             },
             "type": "drupal-library"
         },
@@ -2009,7 +2007,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.6",
-                    "datestamp": "1539588781",
+                    "datestamp": "1570284187",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2021,6 +2019,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
                 {
                     "name": "Frans",
                     "homepage": "https://www.drupal.org/user/514222"
@@ -2037,7 +2039,7 @@
             "description": "Adds a Entity Reference field type with revision support.",
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
-                "source": "http://cgit.drupalcode.org/entity_reference_revisions"
+                "source": "https://git.drupalcode.org/project/entity_reference_revisions"
             }
         },
         {
@@ -2075,7 +2077,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.7",
-                    "datestamp": "1535726393",
+                    "datestamp": "1550692511",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2149,7 +2151,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.5",
-                    "datestamp": "1541009695",
+                    "datestamp": "1550692525",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2178,6 +2180,10 @@
                     "homepage": "https://www.drupal.org/user/1853532"
                 },
                 {
+                    "name": "jstoller",
+                    "homepage": "https://www.drupal.org/user/99012"
+                },
+                {
                     "name": "miro_dietiker",
                     "homepage": "https://www.drupal.org/user/227761"
                 }
@@ -2185,7 +2191,7 @@
             "description": "Enables the creation of Paragraphs entities.",
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
-                "source": "http://cgit.drupalcode.org/paragraphs"
+                "source": "https://git.drupalcode.org/project/paragraphs"
             }
         },
         {
@@ -2194,7 +2200,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs_clean.git",
-                "reference": "e3a1dc4e3727e3fa70534a41bbb24e7c6b07fec1"
+                "reference": "d31db424dfbeafb740c667912b858f9366275b23"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -2220,16 +2226,16 @@
             ],
             "authors": [
                 {
-                    "name": "aaronbauman",
+                    "name": "AaronBauman",
                     "homepage": "https://www.drupal.org/user/384578"
                 }
             ],
             "description": "Delete paragraph entities when they're removed from their parent",
             "homepage": "https://www.drupal.org/project/paragraphs_clean",
             "support": {
-                "source": "http://cgit.drupalcode.org/paragraphs_clean"
+                "source": "https://git.drupalcode.org/project/paragraphs_clean"
             },
-            "time": "2018-11-19T18:03:25+00:00"
+            "time": "2019-05-22T15:14:12+00:00"
         },
         {
             "name": "drupal/simple_sitemap",
@@ -2317,7 +2323,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.08",
-                    "datestamp": "1536572880",
+                    "datestamp": "1570222384",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2339,7 +2345,7 @@
             "description": "SVG Formatter provides support for using SVG images on your website.",
             "homepage": "https://www.drupal.org/project/svg_formatter",
             "support": {
-                "source": "http://cgit.drupalcode.org/svg_formatter",
+                "source": "https://git.drupalcode.org/project/svg_formatter",
                 "issues": "https://www.drupal.org/node/add/project-issue/svg_formatter",
                 "email": "nikolovski84@gmail.com"
             }
@@ -2408,7 +2414,7 @@
             "description": "Provides a user interface for the Token API and some missing core tokens.",
             "homepage": "https://www.drupal.org/project/token",
             "support": {
-                "source": "http://cgit.drupalcode.org/token"
+                "source": "https://git.drupalcode.org/project/token"
             }
         },
         {
@@ -2417,7 +2423,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tome.git",
-                "reference": "f78d9a55165ca74121a03149143e9fa1b445e566"
+                "reference": "4d9c31b36fe8e99bafc75a9d0962f4a63746bcf2"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -2435,8 +2441,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc2+10-dev",
-                    "datestamp": "1560664385",
+                    "version": "8.x-1.2+0-dev",
+                    "datestamp": "1563336784",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2458,7 +2464,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/tome"
             },
-            "time": "2019-06-16T06:31:19+00:00"
+            "time": "2019-07-17T05:53:47+00:00"
         },
         {
             "name": "drupal/tome_base",
@@ -2473,8 +2479,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc2+10-dev",
-                    "datestamp": "1560664385",
+                    "version": "8.x-1.2+0-dev",
+                    "datestamp": "1563336784",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2511,8 +2517,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc2+10-dev",
-                    "datestamp": "1560664385",
+                    "version": "8.x-1.2+0-dev",
+                    "datestamp": "1563336784",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -2549,8 +2555,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc2+10-dev",
-                    "datestamp": "1560664385",
+                    "version": "8.x-1.2+0-dev",
+                    "datestamp": "1563336784",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4075,16 +4081,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.22",
+            "version": "v3.4.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "b514f5b765cf3e4a56e9d8ebacf14b117f7a0ee1"
+                "reference": "0ea4d39ca82409a25a43b61ce828048a90000920"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/b514f5b765cf3e4a56e9d8ebacf14b117f7a0ee1",
-                "reference": "b514f5b765cf3e4a56e9d8ebacf14b117f7a0ee1",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/0ea4d39ca82409a25a43b61ce828048a90000920",
+                "reference": "0ea4d39ca82409a25a43b61ce828048a90000920",
                 "shasum": ""
             },
             "require": {
@@ -4142,7 +4148,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-30T17:48:51+00:00"
+            "time": "2019-11-08T16:18:30+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
