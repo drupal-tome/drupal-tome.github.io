@@ -16,12 +16,6 @@
             "target_uuid": "1678f17b-44eb-4043-9a6f-296bf6294737"
         }
     ],
-    "uid": [
-        {
-            "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
-        }
-    ],
     "status": [
         {
             "value": true
@@ -31,17 +25,6 @@
         {
             "value": "2019-01-13T18:11:54+00:00",
             "format": "Y-m-d\\TH:i:sP"
-        }
-    ],
-    "revision_uid": [
-        {
-            "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
-        }
-    ],
-    "behavior_settings": [
-        {
-            "value": "a:0:{}"
         }
     ],
     "default_langcode": [
@@ -76,7 +59,7 @@
     "field_link": [],
     "field_text": [
         {
-            "value": "<p>With Tome, your content is stored as static JSON files. Make a change, commit it, and spin down Drupal.<\/p>\r\n",
+            "value": "<p>With Tome, your content is stored as static JSON files. Make a change, commit it, and spin down Drupal.</p>\r\n",
             "format": "rich_text"
         }
     ]

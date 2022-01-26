@@ -62,11 +62,11 @@
           {{ content.field_text }}
         {% endif %}
       </div>
-      <div class="hero-image">
         {% if paragraph.field_file.value %}
-          {{ content.field_file }}
+          <div class="hero-image">
+              {{ content.field_file }}
+          </div>
         {% endif %}
-      </div>
     {% endblock %}
   </div>
 {% endblock paragraph %}

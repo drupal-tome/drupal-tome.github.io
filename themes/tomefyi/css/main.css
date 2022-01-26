@@ -73,10 +73,12 @@ a:hover,
 .paragraph--type--hero h2 {
   font-size: 48px;
   margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.paragraph--type--hero p {
-  font-size: 30px;
+.paragraph--type--hero p,
+.module-icon p {
+  font-size: 1.5rem;
 }
 
 .paragraph--type--hero p:last-child {
@@ -180,12 +182,16 @@ a:hover,
 }
 
 .module-icon p {
-  font-size: 25px;
   padding: 0 50px;
 }
 
 .module-icon .hero-image svg {
   height: 80px;
+}
+
+.hero-alignment-left .hero-image,
+.hero-alignment-right .hero-image {
+  flex-basis: 300px;
 }
 
 .home-get-started {
@@ -212,11 +218,12 @@ a:hover,
 }
 
 .screencast-hero {
-  color: white;
-  background: #ff502f;
+  color: black;
+  border: 2px solid #ff502f;
+  border-radius: 5px;
   max-width: 50%;
   padding: 40px;
-  transition: background .2s;
+  transition: border-color .2s, color .2s;
 }
 
 .screencast-hero h2 {
@@ -229,8 +236,8 @@ a:hover,
 }
 
 .screencast-hero:hover {
-  background: #44a1e7;
-  color: white;
+  border-color: #44a1e7;
+  color: #44a1e7;
 }
 
 /* Docs */

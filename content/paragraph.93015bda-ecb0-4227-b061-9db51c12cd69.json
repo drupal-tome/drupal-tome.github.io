@@ -16,12 +16,6 @@
             "target_uuid": "5203281b-3de4-4795-ba16-4ea0c62aa531"
         }
     ],
-    "uid": [
-        {
-            "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
-        }
-    ],
     "status": [
         {
             "value": true
@@ -31,17 +25,6 @@
         {
             "value": "2019-01-13T18:29:20+00:00",
             "format": "Y-m-d\\TH:i:sP"
-        }
-    ],
-    "revision_uid": [
-        {
-            "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
-        }
-    ],
-    "behavior_settings": [
-        {
-            "value": "a:0:{}"
         }
     ],
     "default_langcode": [
@@ -56,7 +39,7 @@
     ],
     "field_text": [
         {
-            "value": "<div class=\"module-list\">\r\n<div>\r\n<h3>Tome Static<\/h3>\r\n\r\n<p>Generate static HTML from your Drupal site.<\/p>\r\n<\/div>\r\n\r\n<div>\r\n<h3>Tome Sync<\/h3>\r\n\r\n<p>Store your content and config as files in Git.<\/p>\r\n<\/div>\r\n\r\n<div>\r\n<h3>Tome Netlify<\/h3>\r\n\r\n<p>Make use of Netlify's static hosting with Tome.<\/p>\r\n<\/div>\r\n\r\n<div>\r\n<h3>Lunr<\/h3>\r\n\r\n<p>Perform static, client side searches with Lunr.js.<\/p>\r\n<\/div>\r\n<\/div>\r\n",
+            "value": "<div class=\"module-list\">\r\n<div>\r\n<h3>Tome Static</h3>\r\n\r\n<p>Generate static HTML from your Drupal site.</p>\r\n</div>\r\n\r\n<div>\r\n<h3>Tome Sync</h3>\r\n\r\n<p>Store your content and config as files in Git.</p>\r\n</div>\r\n\r\n<div>\r\n<h3>Tome Netlify</h3>\r\n\r\n<p>Make use of Netlify's static hosting with Tome.</p>\r\n</div>\r\n\r\n<div>\r\n<h3>Lunr</h3>\r\n\r\n<p>Perform static, client side searches with Lunr.js.</p>\r\n</div>\r\n</div>\r\n",
             "format": "rich_text"
         }
     ]
