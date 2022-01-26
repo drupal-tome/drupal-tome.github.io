@@ -16,12 +16,6 @@
             "target_uuid": "1678f17b-44eb-4043-9a6f-296bf6294737"
         }
     ],
-    "uid": [
-        {
-            "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
-        }
-    ],
     "status": [
         {
             "value": true
@@ -31,17 +25,6 @@
         {
             "value": "2019-03-09T23:04:15+00:00",
             "format": "Y-m-d\\TH:i:sP"
-        }
-    ],
-    "revision_uid": [
-        {
-            "target_type": "user",
-            "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
-        }
-    ],
-    "behavior_settings": [
-        {
-            "value": "a:0:{}"
         }
     ],
     "default_langcode": [
@@ -72,14 +55,14 @@
     ],
     "field_link": [
         {
-            "uri": "https:\/\/www.youtube.com\/watch?v=uqmq5FBP_T0",
+            "uri": "https://www.youtube.com/watch?v=uqmq5FBP_T0",
             "title": "Click here to watch the screencast!",
             "options": []
         }
     ],
     "field_text": [
         {
-            "value": "<p>Click here to watch the latest screencast!<\/p>\r\n",
+            "value": "<p>Click here to watch the latest screencast!</p>\r\n",
             "format": "rich_text"
         }
     ]

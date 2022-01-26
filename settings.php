@@ -792,4 +792,4 @@ $databases['default']['default'] = array (
   'driver' => 'sqlite',
 );
 $settings['install_profile'] = 'minimal';
-$config_directories['sync'] = '../config';
+$settings['config_sync_directory'] = '../config';

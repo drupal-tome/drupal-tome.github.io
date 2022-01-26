@@ -4,3 +4,5 @@
 /drush
 .idea
 gh-pages
+/.editorconfig
+/.gitattributes
