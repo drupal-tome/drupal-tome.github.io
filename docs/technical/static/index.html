@@ -2,43 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<meta name="title" content="Static site generation | Tome" />
-<meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://tome.fyi/docs/technical/static" />
+<meta name="description" content="You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a Gatsby integration. If you want to use Drupal to generate HTML, Tome ships with a static site generator that uses Drupal&#039;s internal request handling and concurrency to ensure that pages are exported as quickly as possible. The static site generation flow works like:" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a Gatsby integration. If you want to use Drupal to generate HTML, Tome ships with a static site generator that uses Drupal&#039;s internal request handling and concurrency to ensure that pages are exported as quickly as possible. The static site generation flow works like:" />
 <meta name="twitter:title" content="Static site generation" />
-<meta name="twitter:description" content="You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a Gatsby integration.
-
-If you want to use Drupal to generate HTML, Tome ships with a static site generator that uses Drupal&#039;s internal request handling and concurrency to ensure that pages are exported as quickly as possible.
-
-The static site generation flow works like:" />
-<meta name="description" content="You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See tome-gatsby for an example of a Gatsby integration.
-
-If you want to use Drupal to generate HTML, Tome ships with a static site generator that uses Drupal&#039;s internal request handling and concurrency to ensure that pages are exported as quickly as possible.
-
-The static site generation flow works like:" />
-<meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="twitter:creator" content="@DrupalSAM" />
-<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="twitter:creator:id" content="@DrupalSAM" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="shortcut icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="revision" href="/docs/technical/static" />
+<link rel="icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
 <link rel="prev" href="/docs/technical/importer" />
 <link rel="up" href="/docs/technical" />
 <link rel="next" href="/docs/site-settings" />
 
     <title>Static site generation | Tome</title>
-    <link rel="stylesheet" href="/sites/default/files/css/css_Q7lilNudr0lrAlTz2pWi8fh7creeU3wLBwWntb8CZLs.css?pt78v0" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_TdJqSuGl2JIxFvtHx6SQD4nxj_kI9SIPcyiQL089Dnw.css?pt78v0" media="all" />
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" media="all" />
-<link rel="stylesheet" href="/sites/default/files/css/css_nS_MJliQn2kMoEe8HX1TCBkuIoTp6m8x7b_il6EUnu8.css?pt78v0" media="all" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_1EkIbkGg3gp-voCDfRqzdJayimxX8z_h7S3w2GWqiJk.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_pmAdrN__qVd_mE_lgdCDknMhhgAeEcYW2MILb4K_K08.css" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_bxU15wLegZoqaK-j4Y7tWjk-VWrIO1821OJn7glJbHY.css" />
 
     
-<!--[if lte IE 8]>
-<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
-<![endif]-->
-
   </head>
   <body class="path-node page-node-type-book">
         <a href="#main-content" class="visually-hidden focusable skip-link">
@@ -80,7 +66,7 @@ The static site generation flow works like:" />
 
           <aside class="sidebar" role="complementary">
           <div class="region region-sidebar">
-    <div id="block-expandedbooknavigation--2" class="block block-tfyi-book block-expanded-book-navigation">
+    <div id="block-expandedbooknavigation" class="block block-tfyi-book block-expanded-book-navigation">
   
     
         <nav id="book-block-menu-1" class="book-block-menu" role="navigation" aria-label="Book outline for Documentation">
@@ -95,6 +81,9 @@ The static site generation flow works like:" />
               </li>
                 <li class="menu-item">
         <a href="/docs/installing-existing-site" hreflang="en">Installing to an existing site</a>
+              </li>
+                <li class="menu-item">
+        <a href="/node/24" hreflang="en">Upgrading module/core versions</a>
               </li>
                 <li class="menu-item">
         <a href="/docs/use-cases" hreflang="en">Use cases</a>
@@ -176,7 +165,7 @@ The static site generation flow works like:" />
     
     <div class="content">
         <div class="region region-content">
-    <div id="block-tomefyi-page-title--2" class="block block-core block-page-title-block">
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-tomefyi-page-title" class="block block-core block-page-title-block">
   
     
       
@@ -185,7 +174,7 @@ The static site generation flow works like:" />
 
 
   </div>
-<div id="block-mainpagecontent--2" class="block block-system block-system-main-block">
+<div id="block-mainpagecontent" class="block block-system block-system-main-block">
   
     
       
@@ -270,8 +259,8 @@ The static site generation flow works like:" />
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","user":{"uid":0,"permissionsHash":"60312b04e756364187b69fb8b0786fa59ce8c8ee4e12f18935273e48593e122a"}}</script>
-<script src="/sites/default/files/js/js_q3z8PIgethlki2eZSsjzuY66RQ11LgJlLY8Zw0Q9yNw.js"></script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/8","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"2f50923e6341ecd7be516fe5190455c06e1a4e4779bb54728c99b064f995f54e"}}</script>
+<script src="/sites/default/files/js/js_Kbbh7yC5kf-weSWDxBsiC6YIXh4PBazkCj3Jk3WBdMo.js"></script>
 
   </body>
 </html>

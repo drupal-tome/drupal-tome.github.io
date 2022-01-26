@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<link rel="canonical" href="https://tome.fyi/docs/technical/importer" />
-<meta name="description" content="When an editing session is started with Tome, work is done from an initial state of content and config based on what was previously exported. This is accomplished by the importer service and related commands. The content import flow works like this:" />
+<link rel="canonical" href="https://tome.fyi/node/24" />
+<meta name="description" content="Upgrades with Tome should work the same as normal Drupal site upgrades: Run composer commands to update module/core versions Run &quot;drush updb&quot;, possibly &quot;drush cron&quot; for some field changes See updated content/config exported with Tome But sometimes upgrades need manual steps. Here are some notes that may be helpful to you:" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="When an editing session is started with Tome, work is done from an initial state of content and config based on what was previously exported. This is accomplished by the importer service and related commands. The content import flow works like this:" />
-<meta name="twitter:title" content="Importing" />
+<meta name="twitter:description" content="Upgrades with Tome should work the same as normal Drupal site upgrades: Run composer commands to update module/core versions Run &quot;drush updb&quot;, possibly &quot;drush cron&quot; for some field changes See updated content/config exported with Tome But sometimes upgrades need manual steps. Here are some notes that may be helpful to you:" />
+<meta name="twitter:title" content="Upgrading module/core versions" />
 <meta name="twitter:creator" content="@DrupalSAM" />
 <meta name="twitter:creator:id" content="@DrupalSAM" />
 <meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
@@ -14,11 +14,11 @@
 <meta name="HandheldFriendly" content="true" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="/themes/custom/tomefyi/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="prev" href="/docs/technical/exporter" />
-<link rel="up" href="/docs/technical" />
-<link rel="next" href="/docs/technical/static" />
+<link rel="prev" href="/docs/installing-existing-site" />
+<link rel="up" href="/docs" />
+<link rel="next" href="/docs/use-cases" />
 
-    <title>Importing | Tome</title>
+    <title>Upgrading module/core versions | Tome</title>
     <link rel="stylesheet" media="all" href="/sites/default/files/css/css_1EkIbkGg3gp-voCDfRqzdJayimxX8z_h7S3w2GWqiJk.css" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_pmAdrN__qVd_mE_lgdCDknMhhgAeEcYW2MILb4K_K08.css" />
 <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Montserrat:900i|Rubik" />
@@ -169,7 +169,7 @@
   
     
       
-  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Importing</span>
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Upgrading module/core versions</span>
 </h1>
 
 
@@ -186,36 +186,45 @@
   
   <div class="node__content">
     
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>When an editing session is started with Tome, work is done from an initial state of content and config based on what was previously exported. This is accomplished by the importer service and related commands.</p>
-
-<p>The content import flow works like this:</p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Upgrades with Tome should work the same as normal Drupal site upgrades:</p>
 
 <ol>
-	<li>A site profile is installed - advanced users should be using "minimal".</li>
-	<li>The "drush tome:import" command is ran.</li>
-	<li>All existing content entities are deleted - this ensures a clean initial state to import from.</li>
-	<li>The "drush&nbsp;config-import" command is internally invoked, and runs normally.</li>
-	<li>A chunked array of content to import is returned by the "tome.importer" service. This array is built using the content index, and a sorted Drupal Graph object.</li>
-	<li>Each chunk of the array is processed serially, then within each chunk content is imported concurrently. This lets content import super fast, without doing anything in the wrong order. For example, you can usually import files concurrently as they don't typically depend on any other entity, but nodes likely have dependencies to other nodes, files, and users.</li>
-	<li>Each piece of content is read from the "tome.storage.content" storage, and then denormalized into a real entity and saved. If the content being denormalized is a translation, it is added to the default entity then saved.</li>
-	<li>Cache is rebuilt.</li>
+	<li>Run composer commands to update module/core versions</li>
+	<li>Run "drush updb", possibly "drush cron" for some field changes</li>
+	<li>See updated content/config exported with Tome</li>
 </ol>
 
-<p>Compared to the content export process, the import process is fairly straightforward. This is due mostly to Drush already figuring out config for us, and the index file being generated on export.</p>
+<p>But sometimes upgrades need manual steps. Here are some notes that may be helpful to you:</p>
+
+<h2>Upgrading from Drupal 8 to Drupal 9</h2>
+
+<ol>
+	<li>In config/system.action.node_delete_action.yml, set "plugin" to "entity:delete_action:node"</li>
+	<li>In settings.php, replace "$config_directories['sync'] = '../config';" with "$settings['config_sync_directory'] = '../config';"</li>
+	<li>In config/core.extension.yml, add "path_alias: 0" to the module list</li>
+</ol>
+
+<h2>&nbsp;Upgrading to Paragraphs 1.6</h2>
+
+<ol>
+	<li>Run "find ./content/ -name 'paragraph*' | xargs -I {} sh -c 'cat {} | jq "del(.behavior_settings)" --unbuffered --indent 4 | tee {}'"</li>
+	<li>Run "find ./content/ -name 'paragraph*' | xargs -I {} sh -c 'cat {} | jq "del(.uid)" --unbuffered --indent 4 | tee {}'"</li>
+	<li>Run "find ./content/ -name 'paragraph*' | xargs -I {} sh -c 'cat {} | jq "del(.revision_uid)" --unbuffered --indent 4 | tee {}'"</li>
+</ol>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
     
-          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Importing</h2>
+          <h2 class="visually-hidden" id="book-label-1">Book traversal links for Upgrading module/core versions</h2>
       <ul class="book-pager">
               <li class="book-pager__item book-pager__item--previous">
-          <a href="/docs/technical/exporter" rel="prev" title="Go to previous page"><b>‹</b> Exporting</a>
+          <a href="/docs/installing-existing-site" rel="prev" title="Go to previous page"><b>‹</b> Installing to an existing site</a>
         </li>
                     <li class="book-pager__item book-pager__item--center">
-          <a href="/docs/technical" title="Go to parent page">Up</a>
+          <a href="/docs" title="Go to parent page">Up</a>
         </li>
                     <li class="book-pager__item book-pager__item--next">
-          <a href="/docs/technical/static" rel="next" title="Go to next page">Static site generation <b>›</b></a>
+          <a href="/docs/use-cases" rel="next" title="Go to next page">Use cases <b>›</b></a>
         </li>
           </ul>
       </nav>
@@ -255,7 +264,7 @@
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/7","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"2f50923e6341ecd7be516fe5190455c06e1a4e4779bb54728c99b064f995f54e"}}</script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/24","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"2f50923e6341ecd7be516fe5190455c06e1a4e4779bb54728c99b064f995f54e"}}</script>
 <script src="/sites/default/files/js/js_Kbbh7yC5kf-weSWDxBsiC6YIXh4PBazkCj3Jk3WBdMo.js"></script>
 
   </body>
