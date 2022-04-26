@@ -83,7 +83,7 @@
         <a href="/docs/installing-existing-site" hreflang="en">Installing to an existing site</a>
               </li>
                 <li class="menu-item">
-        <a href="/node/24" hreflang="en">Upgrading module/core versions</a>
+        <a href="/node/23" hreflang="en">Upgrading module/core versions</a>
               </li>
                 <li class="menu-item">
         <a href="/docs/use-cases" hreflang="en">Use cases</a>
@@ -210,12 +210,14 @@ git commit -m 'Initial commit of starter codebase.'</code></pre>
 
 <p>The starter kit only comes with Drupal core, so you’ll probably need to install contributed themes and modules as well. Eventually the starter kit will come with a Tome-specific distribution, which will be the recommended way to make simple sites. Since Tome is still in development, things are bare-bones for now.</p>
 
+<p><strong>Optional:</strong><em>&nbsp;</em>This is a good time to install a contributed install profile, for example <a href="https://github.com/drupal-tome/bookish">Bookish</a>&nbsp;which is specially crafted for Tome blogs. You can see a demo of Bookish at&nbsp;<a href="https://bookish-drupal.netlify.app">https://bookish-drupal.netlify.app</a>&nbsp;to see if it's something you'd like to use. To install Bookish, run "composer require drupal-tome/bookish".</p>
+
 <p>Next you’ll need to initialize your site by choosing an install profile. Run:</p>
 
 <pre>
 <code class="language-bash">drush tome:init</code></pre>
 
-<p>I would recommend&nbsp;using the "Standard" profile when prompted, since it comes with a default theme and content types. If you installed Standard, you will probably want to uninstall the modules that don't make sense for a static site. To do this, run:</p>
+<p>If you don't want to use Bookish, I would recommend&nbsp;using the "Standard" profile when prompted, since it comes with a default theme and content types. If you installed Standard, you will probably want to uninstall the modules that don't make sense for a static site. To do this, run:</p>
 
 <pre>
 <code class="language-bash">drush pmu search history contact -y</code></pre>
@@ -255,6 +257,8 @@ drush runserver 127.0.0.1:8888</code></pre>
 <code class="language-bash">drush tome:static</code></pre>
 
 <p>This should put a copy of your site in the “html” directory, which you can then upload to a host of your choosing.</p>
+
+<p><strong>Optional<i>:</i></strong>&nbsp;If you're using Bookish, you'll need to index your search results before running "drush tome:static". For more information, visit /admin/help/topic/bookish_help.tome on your local site to view the related Bookish Help Topic.</p>
 
 <p>That's it for now. You're free to start making your Tome site. Make sure to check out the other documentation, and keep in mind that the project is still in development. Thanks!</p>
 
@@ -312,7 +316,7 @@ drush runserver 127.0.0.1:8888</code></pre>
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"2f50923e6341ecd7be516fe5190455c06e1a4e4779bb54728c99b064f995f54e"}}</script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"143831bcf2a857786e1265d1ef7adb40b513f09dec568a9fa1f1905138e1c04f"}}</script>
 <script src="/sites/default/files/js/js_Kbbh7yC5kf-weSWDxBsiC6YIXh4PBazkCj3Jk3WBdMo.js"></script>
 
   </body>

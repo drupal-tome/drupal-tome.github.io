@@ -83,7 +83,7 @@
         <a href="/docs/installing-existing-site" hreflang="en">Installing to an existing site</a>
               </li>
                 <li class="menu-item">
-        <a href="/node/24" hreflang="en">Upgrading module/core versions</a>
+        <a href="/node/23" hreflang="en">Upgrading module/core versions</a>
               </li>
                 <li class="menu-item">
         <a href="/docs/use-cases" hreflang="en">Use cases</a>
@@ -199,6 +199,7 @@
 <code class="language-php">$settings['tome_static_cache_exclude'] = ['/'];</code></pre>
 	Would always rebuild the homepage when&nbsp;running "drush tome:static --partial".</li>
 	<li><strong>tome_static_path_exclude</strong> -&nbsp;&nbsp;An array of paths to exclude from static site generation. Useful for system paths.</li>
+	<li><strong>tome_sync_encoder</strong>&nbsp;- <em>(Added in 8.x-1.6)</em> The encoder to use when exporting content. Defaults to&nbsp;"json" but "yaml" is also available in an experimental state.</li>
 </ul>
 
 <p>Config is exported to your config sync directory. It's recommended that you set this to "../config" with a settings.php line like:</p>
@@ -260,7 +261,7 @@
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/12","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"2f50923e6341ecd7be516fe5190455c06e1a4e4779bb54728c99b064f995f54e"}}</script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/12","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"143831bcf2a857786e1265d1ef7adb40b513f09dec568a9fa1f1905138e1c04f"}}</script>
 <script src="/sites/default/files/js/js_Kbbh7yC5kf-weSWDxBsiC6YIXh4PBazkCj3Jk3WBdMo.js"></script>
 
   </body>
