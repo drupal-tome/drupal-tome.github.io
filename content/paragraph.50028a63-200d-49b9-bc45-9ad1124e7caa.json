@@ -27,6 +27,11 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
     "default_langcode": [
         {
             "value": true
@@ -56,7 +61,7 @@
     "field_link": [],
     "field_text": [
         {
-            "value": "<p>Tome is designed to be extended and customized, letting you use only what you need to build your site.</p>\r\n",
+            "value": "<p>Tome is designed to be extended and customized, letting you use only what you need to build your site.<\/p>\r\n",
             "format": "rich_text"
         }
     ]

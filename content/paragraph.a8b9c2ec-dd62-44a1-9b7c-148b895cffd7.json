@@ -27,6 +27,11 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
     "default_langcode": [
         {
             "value": true
@@ -55,14 +60,14 @@
     ],
     "field_link": [
         {
-            "uri": "https://www.youtube.com/watch?v=uqmq5FBP_T0",
+            "uri": "https:\/\/www.youtube.com\/watch?v=uqmq5FBP_T0",
             "title": "Click here to watch the screencast!",
             "options": []
         }
     ],
     "field_text": [
         {
-            "value": "<p>Click here to watch the latest screencast!</p>\r\n",
+            "value": "<p>Click here to watch the latest screencast!<\/p>\r\n",
             "format": "rich_text"
         }
     ]

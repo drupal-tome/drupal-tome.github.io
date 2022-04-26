@@ -27,6 +27,11 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
     "default_langcode": [
         {
             "value": true
@@ -59,7 +64,7 @@
     "field_link": [],
     "field_text": [
         {
-            "value": "<p>With Tome, your content is stored as static JSON files. Make a change, commit it, and spin down Drupal.</p>\r\n",
+            "value": "<p>With Tome, your content is stored as static JSON files. Make a change, commit it, and spin down Drupal.<\/p>\r\n",
             "format": "rich_text"
         }
     ]

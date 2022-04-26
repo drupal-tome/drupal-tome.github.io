@@ -27,6 +27,11 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
     "default_langcode": [
         {
             "value": true
@@ -55,7 +60,7 @@
     ],
     "field_link": [
         {
-            "uri": "internal:/docs/getting-started",
+            "uri": "internal:\/docs\/getting-started",
             "title": "Learn more",
             "options": []
         }

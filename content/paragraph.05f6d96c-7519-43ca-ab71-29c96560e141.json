@@ -27,6 +27,11 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
     "default_langcode": [
         {
             "value": true
@@ -62,14 +67,14 @@
     ],
     "field_link": [
         {
-            "uri": "https://www.drupal.org/project/lunr",
+            "uri": "https:\/\/www.drupal.org\/project\/lunr",
             "title": "Learn more",
             "options": []
         }
     ],
     "field_text": [
         {
-            "value": "<p>Perform static, client side searches with Lunr.js.&nbsp;</p>\r\n",
+            "value": "<p>Perform static, client side searches with Lunr.js.&nbsp;<\/p>\r\n",
             "format": "rich_text"
         }
     ]
