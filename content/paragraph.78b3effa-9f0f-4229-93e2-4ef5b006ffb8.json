@@ -27,6 +27,11 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
     "default_langcode": [
         {
             "value": true
@@ -56,7 +61,7 @@
     "field_link": [],
     "field_text": [
         {
-            "value": "<p>A static site generator for Drupal 8</p>\r\n",
+            "value": "<p>A static site generator for Drupal 9<\/p>\r\n",
             "format": "rich_text"
         }
     ]
