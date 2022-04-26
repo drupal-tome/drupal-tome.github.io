@@ -34,15 +34,15 @@
             "value": true
         }
     ],
-    "title": [
-        {
-            "value": "Home"
-        }
-    ],
     "uid": [
         {
             "target_type": "user",
             "target_uuid": "ed803c7d-e897-4ebb-99a7-1de7754316c4"
+        }
+    ],
+    "title": [
+        {
+            "value": "Home"
         }
     ],
     "created": [
@@ -53,7 +53,7 @@
     ],
     "changed": [
         {
-            "value": "2019-03-09T23:21:33+00:00",
+            "value": "2022-04-26T21:05:46+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
