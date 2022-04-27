@@ -3,7 +3,7 @@ type: theme
 base theme: classy
 description: 'Theme for the tome.fyi website.'
 version: VERSION
-core: 8.x
+core_version_requirement: ^8.8 || ^9
 libraries:
   - tomefyi/main
 
