@@ -27,6 +27,11 @@
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
+    "behavior_settings": [
+        {
+            "value": []
+        }
+    ],
     "default_langcode": [
         {
             "value": true
