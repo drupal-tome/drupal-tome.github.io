@@ -36,7 +36,7 @@
     ],
     "changed": [
         {
-            "value": "2018-08-08T05:26:14+00:00",
+            "value": "2022-04-28T15:31:27+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -57,7 +57,7 @@
     ],
     "body": [
         {
-            "value": "<p class=\"text-align-center\"><a href=\"https:\/\/github.com\/drupal-tome\">Github<\/a>&nbsp;- <a href=\"https:\/\/www.drupal.org\/project\/tome\">Drupal.org<\/a> - <a href=\"https:\/\/twitter.com\/DrupalSAM\">Twitter<\/a>&nbsp;- <a href=\"https:\/\/drupalslack.herokuapp.com\">Slack (#tome)<\/a><\/p>\r\n\r\n<p class=\"text-align-center\">Tome is in development and likely has some bugs. Please be patient and&nbsp;respectful when reporting issues!<\/p>\r\n\r\n<p class=\"text-align-center\">This site is built with Tome! <a href=\"https:\/\/github.com\/drupal-tome\/drupal-tome.github.io\">Check it out and build it locally from Github<\/a>.<\/p>\r\n",
+            "value": "<p class=\"text-align-center\"><a href=\"https:\/\/github.com\/drupal-tome\">Github<\/a>&nbsp;- <a href=\"https:\/\/www.drupal.org\/project\/tome\">Drupal.org<\/a> - <a href=\"https:\/\/twitter.com\/mortensonsam\">Twitter<\/a>&nbsp;- <a href=\"https:\/\/drupalslack.herokuapp.com\">Slack (#tome)<\/a><\/p>\r\n\r\n<p class=\"text-align-center\">Tome is in development and likely has some bugs. Please be patient and&nbsp;respectful when reporting issues!<\/p>\r\n\r\n<p class=\"text-align-center\">This site is built with Tome! <a href=\"https:\/\/github.com\/drupal-tome\/drupal-tome.github.io\">Check it out and build it locally from Github<\/a>.<\/p>\r\n",
             "format": "rich_text",
             "summary": ""
         }
