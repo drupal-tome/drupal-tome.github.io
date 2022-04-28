@@ -41,7 +41,7 @@
     
       
             <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><div class="header-menu">
-<p><a href="https://drupal.org/project/tome">Source</a>&nbsp;• <a href="https://github.com/drupal-tome">Github</a> • <a href="/docs">Documentation</a></p>
+<p><a href="https://drupal.org/project/tome">Source</a>&nbsp;• <a href="https://github.com/drupal-tome">Github</a> • <a href="/docs">Documentation</a>&nbsp;• <a href="https://bookish-drupal.netlify.app/">Demo</a></p>
 </div>
 </div>
       
@@ -128,6 +128,9 @@
         <a href="/docs/hosting/github-pages" hreflang="en">Github pages</a>
               </li>
                 <li class="menu-item">
+        <a href="/docs/hosting/gitpod" hreflang="en">Gitpod</a>
+              </li>
+                <li class="menu-item">
         <a href="/docs/hosting/netlify" hreflang="en">Netlify</a>
               </li>
                 <li class="menu-item">
@@ -208,8 +211,6 @@ git init
 git add .
 git commit -m 'Initial commit of starter codebase.'</code></pre>
 
-<p>The starter kit only comes with Drupal core, so you’ll probably need to install contributed themes and modules as well. Eventually the starter kit will come with a Tome-specific distribution, which will be the recommended way to make simple sites. Since Tome is still in development, things are bare-bones for now.</p>
-
 <p><strong>Optional:</strong><em>&nbsp;</em>This is a good time to install a contributed install profile, for example <a href="https://github.com/drupal-tome/bookish">Bookish</a>&nbsp;which is specially crafted for Tome blogs. You can see a demo of Bookish at&nbsp;<a href="https://bookish-drupal.netlify.app">https://bookish-drupal.netlify.app</a>&nbsp;to see if it's something you'd like to use. To install Bookish, run "composer require drupal-tome/bookish".</p>
 
 <p>Next you’ll need to initialize your site by choosing an install profile. Run:</p>
@@ -238,9 +239,9 @@ drush runserver 127.0.0.1:8888</code></pre>
 
 <p>A browser window should pop up and log you in as admin.</p>
 
-<p>Now you’re ready to start using Drupal to build you site. Let’s start by adding a new article. Expand “Shortcuts” in the admin toolbar, click “Add content”, then “Article”. Fill out the fields to your liking, and make sure to upload an image.</p>
+<p>Now you’re ready to start using Drupal to build you site. Let’s start by adding a new node. Visit <a href="http://127.0.0.1:8888/node/add">http://127.0.0.1:8888/node/add</a>&nbsp;and pick a node type to add (ex: article, blog). Fill out the fields to your liking, and make sure to upload an image.</p>
 
-<p>Once your article has been created, go back to your command line window and run “git status”. You should see that&nbsp;two new files exist in the “content” directory, one for the article node you made, and one for the file you uploaded. There should also be a copy of your uploaded file in the “files” directory. Feel free to commit these files now if you’d like.</p>
+<p>Once your node has been created, go back to your command line window and run “git status”. You should see that&nbsp;two new files exist in the “content” directory, one for the node you made, and one for the file you uploaded. There should also be a copy of your uploaded file in the “files” directory. Feel free to commit these files now if you’d like.</p>
 
 <p>Tome is always watching your site for changes, and automatically syncs modified config, content, and files as needed. Running “drush tome:export”, which exports everything currently on your site, should be pretty rare after your initial install.</p>
 
@@ -249,7 +250,7 @@ drush runserver 127.0.0.1:8888</code></pre>
 <pre>
 <code class="language-bash">drush tome:install</code></pre>
 
-<p>If you visit your site again, you should see that your article and image as they originally appeared.</p>
+<p>If you visit your site again, you should see that your node and image as they originally appeared.</p>
 
 <p>Even though your site doesn't have much going on yet, let’s test the static site generation as well. Whenever you’re ready to generate static HTML for your site, run:</p>
 
@@ -261,8 +262,6 @@ drush runserver 127.0.0.1:8888</code></pre>
 <p><strong>Optional<i>:</i></strong>&nbsp;If you're using Bookish, you'll need to index your search results before running "drush tome:static". For more information, visit /admin/help/topic/bookish_help.tome on your local site to view the related Bookish Help Topic.</p>
 
 <p>That's it for now. You're free to start making your Tome site. Make sure to check out the other documentation, and keep in mind that the project is still in development. Thanks!</p>
-
-<p>&nbsp;</p>
 </div>
       
   <nav id="book-navigation-1" class="book-navigation" role="navigation" aria-labelledby="book-label-1">
@@ -298,7 +297,7 @@ drush runserver 127.0.0.1:8888</code></pre>
   
     
       
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="text-align-center"><a href="https://github.com/drupal-tome">Github</a>&nbsp;- <a href="https://www.drupal.org/project/tome">Drupal.org</a> - <a href="https://twitter.com/DrupalSAM">Twitter</a>&nbsp;- <a href="https://drupalslack.herokuapp.com">Slack (#tome)</a></p>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p class="text-align-center"><a href="https://github.com/drupal-tome">Github</a>&nbsp;- <a href="https://www.drupal.org/project/tome">Drupal.org</a> - <a href="https://twitter.com/mortensonsam">Twitter</a>&nbsp;- <a href="https://drupalslack.herokuapp.com">Slack (#tome)</a></p>
 
 <p class="text-align-center">Tome is in development and likely has some bugs. Please be patient and&nbsp;respectful when reporting issues!</p>
 
@@ -316,7 +315,7 @@ drush runserver 127.0.0.1:8888</code></pre>
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"143831bcf2a857786e1265d1ef7adb40b513f09dec568a9fa1f1905138e1c04f"}}</script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"441fcc92e601820560c4fdbdef39bc2131ec7bd8c123c72f7ad596854270b3da"}}</script>
 <script src="/sites/default/files/js/js_Kbbh7yC5kf-weSWDxBsiC6YIXh4PBazkCj3Jk3WBdMo.js"></script>
 
   </body>
