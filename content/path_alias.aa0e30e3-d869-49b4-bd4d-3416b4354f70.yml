@@ -1,0 +1,10 @@
+uuid:
+  - value: aa0e30e3-d869-49b4-bd4d-3416b4354f70
+langcode:
+  - value: en
+path:
+  - value: /node/fc5e3bf2-0fce-4fef-9ba0-7eea030c0d05
+alias:
+  - value: /docs/technical/docker
+status:
+  - value: true

@@ -1,0 +1,33 @@
+uuid:
+  - value: 5e7498fd-45bc-4b54-a65d-f0f091d2096e
+langcode:
+  - value: en
+type:
+  - target_id: rich_text
+    target_type: block_content_type
+    target_uuid: 56c1c7e7-d8e5-4ff4-a8ba-02aa4609556d
+revision_created:
+  - value: '2019-01-16T15:37:53+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_user: {  }
+revision_log: {  }
+status:
+  - value: true
+info:
+  - value: 'Header menu'
+changed:
+  - value: '2022-04-28T15:57:04+00:00'
+    format: 'Y-m-d\TH:i:sP'
+reusable:
+  - value: true
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+body:
+  - value: |
+      <div class="header-menu">
+      <p><a href="https://drupal.org/project/tome">Source</a>&nbsp;• <a href="https://github.com/drupal-tome">Github</a> • <a href="/docs">Documentation</a>&nbsp;• <a href="https://bookish-drupal.netlify.app/">Demo</a></p>
+      </div>
+    format: rich_text
+    summary: ''

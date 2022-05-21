@@ -12,34 +12,34 @@ id: hero
 label: Hero
 image_style_mappings:
   -
-    breakpoint_id: tomefyi.wide
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: hero
-  -
     breakpoint_id: tomefyi.wide
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: hero
+    breakpoint_id: tomefyi.wide
+    multiplier: 2x
   -
-    breakpoint_id: tomefyi.narrow
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: hero_380px
-  -
     breakpoint_id: tomefyi.narrow
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: hero_380px
+    breakpoint_id: tomefyi.narrow
+    multiplier: 2x
   -
+    image_mapping_type: image_style
+    image_mapping: hero_200px
     breakpoint_id: tomefyi.mobile
     multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: hero_200px
-  -
     breakpoint_id: tomefyi.mobile
     multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: hero_200px
 breakpoint_group: tomefyi
 fallback_image_style: hero

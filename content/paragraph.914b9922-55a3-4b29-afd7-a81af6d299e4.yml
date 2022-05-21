@@ -1,0 +1,34 @@
+uuid:
+  - value: 914b9922-55a3-4b29-afd7-a81af6d299e4
+langcode:
+  - value: en
+type:
+  - target_id: hero
+    target_type: paragraphs_type
+    target_uuid: 1678f17b-44eb-4043-9a6f-296bf6294737
+status:
+  - value: true
+created:
+  - value: '2019-01-13T18:11:08+00:00'
+    format: 'Y-m-d\TH:i:sP'
+behavior_settings:
+  - value: {  }
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+field_alignment:
+  - value: left
+field_class: {  }
+field_file:
+  - display: true
+    description: ''
+    target_type: file
+    target_uuid: 36d81390-1196-41ab-b8eb-6ccd337533e6
+field_headline:
+  - value: 'Use tools you love'
+field_link: {  }
+field_text:
+  - value: |
+      <p>Making a static site with Tome is as easy as making any Drupal site. Create a theme, create content, and push static HTML to production.</p>
+    format: rich_text

@@ -1,0 +1,59 @@
+uuid:
+  - value: 564eb5bf-4eeb-433e-a61a-710de5ab2f0d
+langcode:
+  - value: en
+type:
+  - target_id: book
+    target_type: node_type
+    target_uuid: 870f5e4b-075f-48ba-972b-7b47064b4efd
+revision_timestamp:
+  - value: '2018-07-04T19:05:12+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+revision_log: {  }
+status:
+  - value: true
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+title:
+  - value: Importing
+created:
+  - value: '2018-07-04T19:04:55+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2018-07-04T19:14:15+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  - value: false
+sticky:
+  - value: false
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+path:
+  - alias: /docs/technical/importer
+    langcode: en
+body:
+  - value: |
+      <p>When an editing session is started with Tome, work is done from an initial state of content and config based on what was previously exported. This is accomplished by the importer service and related commands.</p>
+
+      <p>The content import flow works like this:</p>
+
+      <ol>
+      	<li>A site profile is installed - advanced users should be using "minimal".</li>
+      	<li>The "drush tome:import" command is ran.</li>
+      	<li>All existing content entities are deleted - this ensures a clean initial state to import from.</li>
+      	<li>The "drush&nbsp;config-import" command is internally invoked, and runs normally.</li>
+      	<li>A chunked array of content to import is returned by the "tome.importer" service. This array is built using the content index, and a sorted Drupal Graph object.</li>
+      	<li>Each chunk of the array is processed serially, then within each chunk content is imported concurrently. This lets content import super fast, without doing anything in the wrong order. For example, you can usually import files concurrently as they don't typically depend on any other entity, but nodes likely have dependencies to other nodes, files, and users.</li>
+      	<li>Each piece of content is read from the "tome.storage.content" storage, and then denormalized into a real entity and saved. If the content being denormalized is a translation, it is added to the default entity then saved.</li>
+      	<li>Cache is rebuilt.</li>
+      </ol>
+
+      <p>Compared to the content export process, the import process is fairly straightforward. This is due mostly to Drush already figuring out config for us, and the index file being generated on export.</p>
+    format: rich_text
+    summary: ''

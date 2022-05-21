@@ -1,0 +1,10 @@
+uuid:
+  - value: 36e36210-7724-453d-86c9-bc1e27f26a23
+langcode:
+  - value: en
+path:
+  - value: /node/d95e4710-be0b-49c9-8300-e02f339bf023
+alias:
+  - value: /docs/sub-modules
+status:
+  - value: true

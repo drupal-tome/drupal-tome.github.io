@@ -1,0 +1,88 @@
+uuid:
+  - value: 237a647a-3880-4007-a530-2029955fe26f
+langcode:
+  - value: en
+type:
+  - target_id: book
+    target_type: node_type
+    target_uuid: 870f5e4b-075f-48ba-972b-7b47064b4efd
+revision_timestamp:
+  - value: '2019-03-09T07:15:42+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+revision_log: {  }
+status:
+  - value: true
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+title:
+  - value: 'Hosted Drupal + Rewrites'
+created:
+  - value: '2019-03-09T07:04:44+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2019-03-09T07:37:08+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  - value: false
+sticky:
+  - value: false
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+path:
+  - alias: /docs/hosting/hosted-drupal-rewrites
+    langcode: en
+body:
+  - value: |
+      <p>Some Tome users may find it useful to use Tome Static only as a caching layer for their Drupal site, serving some requests from the static export directory and others from Drupal. This is similar to how the <a href="https://drupal.org/project/boost">Boost</a> module worked, the main difference being that Tome generates all static pages before hand and Boost did so on-demand.</p>
+
+      <h2>PHP</h2>
+
+      <p>Here's a snippet you could add to settings.php to conditionally serve pages from your static export directory.</p>
+
+      <p>Note that this code is just an example and needs to be reviewed and tested before production use:</p>
+
+      <pre>
+      <code class="language-php">// Add this code to the bottom of settings.php
+      $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+      // Check if the incoming path is for a user-facing path.
+      if (strpos($path, '/admin') !== 0 &amp;&amp; !preg_match('|^/node/.*/edit$|', $path)) {
+        $path = realpath('../html' . $path);
+        if (is_dir($path)) {
+          $path .= '/index.html';
+        }
+        // HTML pages are updated often and should have an expiry.
+        if (pathinfo($path, PATHINFO_EXTENSION) === 'html') {
+          header('Cache-Control: public, max-age=600');
+        }
+        // If the file exists and is safe to serve, do so.
+        if (strpos($path, realpath('../html')) === 0 &amp;&amp; file_exists($path)) {
+          echo file_get_contents($path);
+          die;
+        }
+        // Fallback to a simple 404.
+        header('HTTP/1.0 404 Not Found');
+        echo 'File not found.';
+        die;
+      }
+      </code></pre>
+
+      <h2>Apache</h2>
+
+      <p>Here's a snippet that should work with .htaccess files. The "html" folder needs to be in the same directory level as your Apache document root as rewrites to parent directories (i.e. ../html) are not allowed.</p>
+
+      <p>Note that this code is just an example and needs to be reviewed and tested before production use:</p>
+
+      <pre>
+      <code class="language-apache">RewriteEngine On
+      RewriteRule !^(admin.*|node/.*/edit) /html/$1
+      </code></pre>
+
+      <p>If you find bugs in these examples, or want to add more, please file an issue at <a href="https://github.com/drupal-tome/drupal-tome.github.io">drupal-tome/drupal-tome.github.io</a>&nbsp;and let me know!</p>
+    format: rich_text
+    summary: ''

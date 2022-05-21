@@ -1,0 +1,111 @@
+uuid:
+  - value: 0fcc860c-8a8b-4b13-89a5-36d12a34e5fc
+langcode:
+  - value: en
+type:
+  - target_id: book
+    target_type: node_type
+    target_uuid: 870f5e4b-075f-48ba-972b-7b47064b4efd
+revision_timestamp:
+  - value: '2019-05-13T06:18:12+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+revision_log: {  }
+status:
+  - value: true
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+title:
+  - value: 'API reference'
+created:
+  - value: '2019-05-13T06:17:28+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2019-05-13T15:49:11+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  - value: false
+sticky:
+  - value: false
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+path:
+  - alias: /docs/technical/api
+    langcode: en
+body:
+  - value: |
+      <p>This document covers different APIs that Tome provides.</p>
+
+      <h2>Events</h2>
+
+      <ul>
+      	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::COLLECT_PATHS (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/EntityPathSubscriber.php">example</a>)</em><br />
+      	This event is fired when collecting paths for the static generator. It can be used to provide or modify paths, which is useful if there are specific paths you want to be included that Tome may have missed. If you want to exclude a path, consider setting the <a href="/docs/site-settings/">"tome_static_path_exclude" setting.</a></li>
+      	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::PATH_PLACEHOLDER (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/EntityPathSubscriber.php">example</a>)</em><br />
+      	This event is&nbsp;fired when replacing a path placeholder. This is useful if you implemented the "TomeStaticEvents::COLLECT_PATHS" event and wanted to provide an entity specific route that is expensive to load, so instead you provided a placeholder. This is how Tome can process so many entity paths without running out of memory.</li>
+      	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::REQUEST_PREPARE (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/PageCacheRequestPrepareSubscriber.php">example</a>)</em><br />
+      	This event is fired&nbsp;when preparing for a new request. Drupal isn't really designed to handle multiple requests in one bootstrap, but Tome tries to get around this by resetting the global and container state to avoid any request specific behavior. This would be useful if you needed to reset a&nbsp;request specific cache for your own services.</li>
+      	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::MODIFY_HTML (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/PagerPathSubscriber.php">example</a>)</em><br />
+      	This event is fired when finding paths related to an HTML document. You can use it to make any modifications to HTML, ideally related to finding paths to transform and add to the list of paths to invoke. Specifically, this is used for transforming links that include query parameters to paths that will work with the static site (i.e. ?page=1 -&gt; /page/1).</li>
+      	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::MODIFY_DESTINATION (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/EventSubscriber/PagerPathSubscriber.php">example</a>)</em><br />
+      	This event is fired when determining the destination for a path. If you've transformed a path in HTML with the "TomeStaticEvents::MODIFY_HTML" event, you'll also want to make sure the destination for that path matches your modifications. This event is fired before "index.html" is appended to paths without an extension.</li>
+      	<li><em>\Drupal\tome_static\Event\TomeStaticEvents::FILE_SAVED</em><br />
+      	This event is fired anytime a file is saved by the static generator, including static assets that are copied from the filesystem like images or stylesheets. This is the only unused event in Tome, and exists to enable other modules to sync the static export to an external service when they're saved.</li>
+      	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::EXPORT_CONTENT (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/BookEventSubscriber.php">example</a>)</em><br />
+      	This event is fired&nbsp;after a single content entity is exported. This <strong>should not be be used</strong> to modify the JSON&nbsp;output of the exporter (use normalizers for that), but can be used to export assets &nbsp;related to the content.</li>
+      	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::DELETE_CONTENT (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/ContentHasherEventSubscriber.php">example</a>)</em><br />
+      	This event is fired after&nbsp;a single content entity is deleted.</li>
+      	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::IMPORT_CONTENT (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/ContentHasherEventSubscriber.php">example</a>)</em><br />
+      	This event is fired&nbsp;after a single content entity is imported (created or updated).</li>
+      	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::EXPORT_ALL (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/BookEventSubscriber.php">example</a>)</em><br />
+      	This event is fired after&nbsp;the entire export process is complete.</li>
+      	<li><em>\Drupal\tome_sync\Event\TomeSyncEvents::IMPORT_ALL (<a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_sync/src/EventSubscriber/BookEventSubscriber.php">example</a>)</em><br />
+      	This event is fired after the entire import process is complete. Note that this event is also fired after partial imports are complete.</li>
+      </ul>
+
+      <h2>Using the tome_static.generator service</h2>
+
+      <p>Beyond what's documented in the <a href="https://git.drupalcode.org/project/tome/blob/8.x-1.x/modules/tome_static/src/StaticGeneratorInterface.php">static generator's interface</a>, it can be hard to know how to accurately generate static pages manually. Here's a documented code snippet that goes over almost everything the static command and form does:</p>
+
+      <pre>
+      <code class="language-php">&lt;?php
+
+      /** @var \Drupal\tome_static\StaticGeneratorInterface $static */
+      $static = \Drupal::service('tome_static.generator');
+
+      /** @var \Drupal\tome_static\RequestPreparer $request_preparer */
+      $request_preparer = \Drupal::service('tome_static.request_preparer');
+
+      // Prepare for a new request. This is necessary so that static caches in Drupal
+      // can be reset between multiple requests in one bootstrap.
+      $request_preparer-&gt;prepareForRequest();
+
+      // Request an arbitrary path. "$invoke_paths" at this point is anything that
+      // needs to be copied (an existing file) or requested (an image derivative,
+      // other paths, etc.)
+      $invoke_paths = $static-&gt;requestPath('/foo');
+
+      // Export paths will try to copy or remove as many paths as possible without
+      // making a new internal request.
+      $invoke_paths = $static-&gt;exportPaths($invoke_paths);
+
+      // The remaining invoke paths need to be handled in new requests.
+      foreach ($invoke_paths as $path) {
+        // Since we are only trying to export one path, restrict new requests to
+        // paths with extensions, which are probably RSS feeds and image derivatives.
+        if (pathinfo($path, PATHINFO_EXTENSION)) {
+          $request_preparer-&gt;prepareForRequest();
+          // This could return more paths, but we're ignoring that for simplicity.
+          $static-&gt;requestPath($path);
+        }
+      }
+      </code></pre>
+
+      <p>&nbsp;</p>
+    format: rich_text
+    summary: ''

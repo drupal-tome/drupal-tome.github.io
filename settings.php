@@ -793,3 +793,5 @@ $databases['default']['default'] = array (
 );
 $settings['install_profile'] = 'minimal';
 $settings['config_sync_directory'] = '../config';
+
+$settings['tome_sync_encoder'] = 'yaml';

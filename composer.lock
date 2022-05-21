@@ -2156,7 +2156,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/tome.git",
-                "reference": "57fd3dd7979253e5bc82adf9ee5de3f099b29c1d"
+                "reference": "08d2b9f045eb6998ece624f114a41b83a9750acb"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -2178,8 +2178,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4+12-dev",
-                    "datestamp": "1642973927",
+                    "version": "8.x-1.6+1-dev",
+                    "datestamp": "1650988372",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."

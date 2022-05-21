@@ -1,0 +1,10 @@
+uuid:
+  - value: 09c1278e-cdd8-4678-af8a-09f9abe24e51
+langcode:
+  - value: en
+path:
+  - value: /node/beecb58c-096a-4ad1-b0cb-9d8da9bb380d
+alias:
+  - value: /docs/technical/static
+status:
+  - value: true

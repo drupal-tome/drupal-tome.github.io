@@ -24,23 +24,23 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       hero: hero
       rich_text: rich_text
       diagram: diagram
       heroes: heroes
+    negate: 0
     target_bundles_drag_drop:
-      hero:
-        enabled: true
-        weight: 2
-      rich_text:
-        enabled: true
-        weight: 3
       diagram:
-        enabled: true
         weight: 4
-      heroes:
         enabled: true
+      hero:
+        weight: 2
+        enabled: true
+      heroes:
         weight: 7
+        enabled: true
+      rich_text:
+        weight: 3
+        enabled: true
 field_type: entity_reference_revisions

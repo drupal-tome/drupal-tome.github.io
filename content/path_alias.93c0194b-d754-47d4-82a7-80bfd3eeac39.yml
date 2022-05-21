@@ -1,0 +1,10 @@
+uuid:
+  - value: 93c0194b-d754-47d4-82a7-80bfd3eeac39
+langcode:
+  - value: en
+path:
+  - value: /node/237a647a-3880-4007-a530-2029955fe26f
+alias:
+  - value: /docs/hosting/hosted-drupal-rewrites
+status:
+  - value: true
