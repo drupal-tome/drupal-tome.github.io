@@ -1,0 +1,31 @@
+uuid:
+  - value: 78b3effa-9f0f-4229-93e2-4ef5b006ffb8
+langcode:
+  - value: en
+type:
+  - target_id: hero
+    target_type: paragraphs_type
+    target_uuid: 1678f17b-44eb-4043-9a6f-296bf6294737
+status:
+  - value: true
+created:
+  - value: '2019-01-13T18:09:16+00:00'
+    format: 'Y-m-d\TH:i:sP'
+behavior_settings:
+  - value: {  }
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+field_alignment:
+  - value: left
+field_class:
+  - value: home-header
+field_file: {  }
+field_headline:
+  - value: Tome
+field_link: {  }
+field_text:
+  - value: |
+      <p>A static site generator for Drupal 9</p>
+    format: rich_text

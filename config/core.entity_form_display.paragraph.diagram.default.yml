@@ -14,20 +14,20 @@ bundle: diagram
 mode: default
 content:
   field_description:
+    type: string_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_file:
+    type: file_generic
     weight: 0
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
 hidden:
   created: true
   status: true

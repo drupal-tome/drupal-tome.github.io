@@ -1,0 +1,59 @@
+uuid:
+  - value: 7da31bfb-b8e2-49c5-8040-59dc8ecfeec3
+langcode:
+  - value: en
+type:
+  - target_id: book
+    target_type: node_type
+    target_uuid: 870f5e4b-075f-48ba-972b-7b47064b4efd
+revision_timestamp:
+  - value: '2018-07-04T18:27:00+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+revision_log: {  }
+status:
+  - value: true
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+title:
+  - value: Exporting
+created:
+  - value: '2018-07-04T18:26:24+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2018-07-04T18:59:59+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  - value: false
+sticky:
+  - value: false
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+path:
+  - alias: /docs/technical/exporter
+    langcode: en
+body:
+  - value: |
+      <p>One of the main features of Tome is that it stores everything about a Drupal site - its content, configuration, and files -&nbsp;in one place. This is accomplished in part by how data is exported and stored.</p>
+
+      <p>The content export flow works like this:</p>
+
+      <ol>
+      	<li>Content is edited in the user interface.</li>
+      	<li>Hooks in tome.module are invoked which call methods on the&nbsp;"tome.exporter" service.</li>
+      	<li>The exporter normalizes the entity. Tome implements custom normalizers to clean up data - for example revision and entity IDs are removed since UUIDs are used, computed fields and removed, and user fields that change every login are removed.&nbsp;</li>
+      	<li>The normalized data is saved using the "tome.storage.content" service. Entities are exported in the format "entity_type:uuid:langcode". If the entity is the default translation, the langcode is omitted.&nbsp;The storage serializes data as JSON, but can be swapped out if another format is desired.</li>
+      	<li>If the content being exported happens to be a file entity, the original file is copied to the export directory.</li>
+      	<li>The content index file is updated or created in the "meta" directory. The index file exists to track content dependencies, so that content can be imported in order without causing errors. For now, dependencies are only calculated based on the values of entity reference fields.</li>
+      </ol>
+
+      <p>If content is deleted, it is also deleted from the content storage. If the content is a file, the original file is deleted. If the content is a&nbsp;default translation, all other translations will be deleted at that time.</p>
+
+      <p>Configuration (config) export is much more simple - an event subscriber is used to track changes to config and config translations, and the "config.storage.sync" service is used to write the changes to the filesystem. This is equivalent to running "drush config-export" after every config change.</p>
+    format: rich_text
+    summary: ''

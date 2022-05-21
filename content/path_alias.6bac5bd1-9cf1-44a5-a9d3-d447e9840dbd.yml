@@ -1,0 +1,10 @@
+uuid:
+  - value: 6bac5bd1-9cf1-44a5-a9d3-d447e9840dbd
+langcode:
+  - value: en
+path:
+  - value: /node/564eb5bf-4eeb-433e-a61a-710de5ab2f0d
+alias:
+  - value: /docs/technical/importer
+status:
+  - value: true

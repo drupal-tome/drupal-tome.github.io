@@ -1,0 +1,116 @@
+uuid:
+  - value: 35c0a22b-5453-44a0-92c6-73f8f206d094
+langcode:
+  - value: en
+type:
+  - target_id: book
+    target_type: node_type
+    target_uuid: 870f5e4b-075f-48ba-972b-7b47064b4efd
+revision_timestamp:
+  - value: '2018-06-16T22:02:18+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+revision_log: {  }
+status:
+  - value: true
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+title:
+  - value: 'Getting started'
+created:
+  - value: '2018-06-16T21:58:14+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2022-04-28T16:03:06+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  - value: false
+sticky:
+  - value: false
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+path:
+  - alias: /docs/getting-started
+    langcode: en
+body:
+  - value: |
+      <p>While anyone can download and install Tome on a new or existing Drupal site, it works best when used with specific Drupal configurations. This guide will take you from creating a new site to making your first commit.</p>
+
+      <p>Before continuing, it’s expected that your local machine has:</p>
+
+      <ol>
+      	<li>PHP 7 or greater installed.</li>
+      	<li>SQLite&nbsp;3.26+&nbsp;</li>
+      	<li>Composer installed globally.</li>
+      </ol>
+
+      <p>A global Drush installation is not required to use Tome, but is easier to use than typing “./vendor/bin/drush” every time you want to run a command. This guide will assume that the “drush” command is available.</p>
+
+      <p>To start, create a new instance of the starter project by running:</p>
+
+      <pre>
+      <code class="language-bash">composer create-project drupal-tome/tome-project my_site --stability dev --no-interaction --no-install
+      cd my_site
+      composer install
+      git init
+      git add .
+      git commit -m 'Initial commit of starter codebase.'</code></pre>
+
+      <p><strong>Optional:</strong><em>&nbsp;</em>This is a good time to install a contributed install profile, for example <a href="https://github.com/drupal-tome/bookish">Bookish</a>&nbsp;which is specially crafted for Tome blogs. You can see a demo of Bookish at&nbsp;<a href="https://bookish-drupal.netlify.app">https://bookish-drupal.netlify.app</a>&nbsp;to see if it's something you'd like to use. To install Bookish, run "composer require drupal-tome/bookish".</p>
+
+      <p>Next you’ll need to initialize your site by choosing an install profile. Run:</p>
+
+      <pre>
+      <code class="language-bash">drush tome:init</code></pre>
+
+      <p>If you don't want to use Bookish, I would recommend&nbsp;using the "Standard" profile when prompted, since it comes with a default theme and content types. If you installed Standard, you will probably want to uninstall the modules that don't make sense for a static site. To do this, run:</p>
+
+      <pre>
+      <code class="language-bash">drush pmu search history contact -y</code></pre>
+
+      <p>If you run “git status” at this point, you should see that the “config” folder is full of exported configuration. You’ll want to commit those changes now so you have a base to work off of in your history. Run:</p>
+
+      <pre>
+      <code class="language-bash">git add .
+      git commit -am 'Installed the Standard profile.'</code></pre>
+
+      <p>Next you’ll need to start up a local webserver. In a new tab, run:</p>
+
+      <pre>
+      <code class="language-bash">cd [path to your my_site codebase]
+      drush runserver 127.0.0.1:8888</code></pre>
+
+      <p>Then switch back to your original tab, and run "drush uli -l 127.0.0.1:8888"</p>
+
+      <p>A browser window should pop up and log you in as admin.</p>
+
+      <p>Now you’re ready to start using Drupal to build you site. Let’s start by adding a new node. Visit <a href="http://127.0.0.1:8888/node/add">http://127.0.0.1:8888/node/add</a>&nbsp;and pick a node type to add (ex: article, blog). Fill out the fields to your liking, and make sure to upload an image.</p>
+
+      <p>Once your node has been created, go back to your command line window and run “git status”. You should see that&nbsp;two new files exist in the “content” directory, one for the node you made, and one for the file you uploaded. There should also be a copy of your uploaded file in the “files” directory. Feel free to commit these files now if you’d like.</p>
+
+      <p>Tome is always watching your site for changes, and automatically syncs modified config, content, and files as needed. Running “drush tome:export”, which exports everything currently on your site, should be pretty rare after your initial install.</p>
+
+      <p>We’re going to test that your site can be fully rebuilt from scratch, to ensure that everything is working properly. Run:</p>
+
+      <pre>
+      <code class="language-bash">drush tome:install</code></pre>
+
+      <p>If you visit your site again, you should see that your node and image as they originally appeared.</p>
+
+      <p>Even though your site doesn't have much going on yet, let’s test the static site generation as well. Whenever you’re ready to generate static HTML for your site, run:</p>
+
+      <pre>
+      <code class="language-bash">drush tome:static</code></pre>
+
+      <p>This should put a copy of your site in the “html” directory, which you can then upload to a host of your choosing.</p>
+
+      <p><strong>Optional<i>:</i></strong>&nbsp;If you're using Bookish, you'll need to index your search results before running "drush tome:static". For more information, visit /admin/help/topic/bookish_help.tome on your local site to view the related Bookish Help Topic.</p>
+
+      <p>That's it for now. You're free to start making your Tome site. Make sure to check out the other documentation, and keep in mind that the project is still in development. Thanks!</p>
+    format: rich_text
+    summary: 'Get started with Tome by following this guide.'

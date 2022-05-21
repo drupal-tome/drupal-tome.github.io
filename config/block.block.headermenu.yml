@@ -17,8 +17,8 @@ plugin: 'block_content:5e7498fd-45bc-4b54-a65d-f0f091d2096e'
 settings:
   id: 'block_content:5e7498fd-45bc-4b54-a65d-f0f091d2096e'
   label: 'Header menu'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

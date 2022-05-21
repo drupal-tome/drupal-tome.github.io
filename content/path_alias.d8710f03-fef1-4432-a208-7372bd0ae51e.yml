@@ -1,0 +1,10 @@
+uuid:
+  - value: d8710f03-fef1-4432-a208-7372bd0ae51e
+langcode:
+  - value: en
+path:
+  - value: /node/9bc3b15f-df6b-4e76-9e79-b6ec85eeb0c0
+alias:
+  - value: /docs/hosting/gitpod
+status:
+  - value: true

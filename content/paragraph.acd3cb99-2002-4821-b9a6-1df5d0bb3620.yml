@@ -1,0 +1,38 @@
+uuid:
+  - value: acd3cb99-2002-4821-b9a6-1df5d0bb3620
+langcode:
+  - value: en
+type:
+  - target_id: hero
+    target_type: paragraphs_type
+    target_uuid: 1678f17b-44eb-4043-9a6f-296bf6294737
+status:
+  - value: true
+created:
+  - value: '2019-01-13T19:02:29+00:00'
+    format: 'Y-m-d\TH:i:sP'
+behavior_settings:
+  - value: {  }
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+field_alignment:
+  - value: center
+field_class:
+  - value: module-icon
+field_file:
+  - display: true
+    description: ''
+    target_type: file
+    target_uuid: ce2dcc04-6aca-41f4-9eb5-a18d886c88ad
+field_headline:
+  - value: 'Tome Static'
+field_link:
+  - uri: 'internal:/docs/sub-modules'
+    title: 'Learn more'
+    options: {  }
+field_text:
+  - value: |
+      <p>Generate static HTML from your Drupal site.&nbsp;</p>
+    format: rich_text

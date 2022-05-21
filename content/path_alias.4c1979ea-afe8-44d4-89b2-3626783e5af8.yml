@@ -1,0 +1,10 @@
+uuid:
+  - value: 4c1979ea-afe8-44d4-89b2-3626783e5af8
+langcode:
+  - value: en
+path:
+  - value: /node/335d7491-d1a0-4428-b544-e317737c178f
+alias:
+  - value: /docs/hosting/github-pages
+status:
+  - value: true

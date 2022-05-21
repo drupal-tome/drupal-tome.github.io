@@ -20,31 +20,29 @@ bundle: hero
 mode: default
 content:
   field_file:
-    weight: 2
+    type: svg_formatter
     label: hidden
     settings:
       inline: true
+      sanitize: false
+      apply_dimensions: false
       width: 100
       height: 100
       enable_alt: true
       enable_title: true
-      sanitize: false
-      apply_dimensions: false
     third_party_settings: {  }
-    type: svg_formatter
+    weight: 2
     region: content
   field_headline:
-    weight: 0
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   field_link:
     type: link
-    weight: 3
-    region: content
     label: hidden
     settings:
       trim_length: 80
@@ -53,12 +51,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_text:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
 hidden:
   field_alignment: true

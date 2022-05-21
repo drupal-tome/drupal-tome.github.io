@@ -16,13 +16,13 @@ plugin: expanded_book_navigation
 settings:
   id: expanded_book_navigation
   label: 'Expanded book navigation'
-  provider: tfyi_book
   label_display: '0'
+  provider: tfyi_book
 visibility:
   node_type:
     id: node_type
-    bundles:
-      book: book
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      book: book

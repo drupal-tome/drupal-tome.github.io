@@ -1,0 +1,23 @@
+uuid:
+  - value: ce2dcc04-6aca-41f4-9eb5-a18d886c88ad
+langcode:
+  - value: en
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+filename:
+  - value: tomestatic.svg
+uri:
+  - value: 'public://2019-01/tomestatic.svg'
+filemime:
+  - value: image/svg+xml
+filesize:
+  - value: 5002
+status:
+  - value: true
+created:
+  - value: '2019-01-13T19:02:58+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2019-01-13T19:04:19+00:00'
+    format: 'Y-m-d\TH:i:sP'

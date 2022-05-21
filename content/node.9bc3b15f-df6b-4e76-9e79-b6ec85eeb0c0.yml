@@ -1,0 +1,85 @@
+uuid:
+  - value: 9bc3b15f-df6b-4e76-9e79-b6ec85eeb0c0
+langcode:
+  - value: en
+type:
+  - target_id: book
+    target_type: node_type
+    target_uuid: 870f5e4b-075f-48ba-972b-7b47064b4efd
+revision_timestamp:
+  - value: '2022-04-28T15:54:15+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+revision_log: {  }
+status:
+  - value: true
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+title:
+  - value: Gitpod
+created:
+  - value: '2022-04-28T15:48:16+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2022-04-28T16:03:55+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  - value: false
+sticky:
+  - value: false
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+path:
+  - alias: /docs/hosting/gitpod
+    langcode: en
+body:
+  - value: |
+      <p><a href="https://www.gitpod.io/">Gitpod</a>&nbsp;is a service that allows you to spin up an editing environment for your Git repositories. Since the editing environment is a real container and not just an IDE, you can use it to install Tome and edit your Drupal site without ever using local development.</p>
+
+      <p><em>Note that this is a guide for using Gitpod to edit your site, you will still need to host your static site somewhere else.</em></p>
+
+      <p>To start using Gitpod, first create a .gitpod.yml file in your repository. This will tell Gitpod how to spin up your editing environment. If you used the drupal-tome/tome-project Composer project you may already have this file, but if not it should look something like this:</p>
+
+      <pre>
+      <code class="language-yaml">image: mortenson/tome
+      tasks:
+        - name: Install tome
+          command: |
+            COMPOSER_MEMORY_LIMIT=2048M composer install
+            [ -d content ] &amp;&amp; drush tome:install -y
+            gp sync-done install
+        - name: Init and login
+          init: |
+            echo "Waiting for install..."
+            gp sync-await install
+          command: |
+            eval $(gp env -e DRUSH_OPTIONS_URI="0.0.0.0:8888")
+            [ ! -d content ] &amp;&amp; echo "Looks like you haven't initialized a Tome site yet - make sure to composer require any profiles you want to use (ex: 'composer require drupal-tome/bookish'), then run drush tome:init to get started!"
+            [ -d content ] &amp;&amp; drush uli
+        - name: Runserver
+          init: |
+            echo "Waiting for install..."
+            gp sync-await install
+          command: |
+            [ ! -d content ] &amp;&amp; echo "When you're finished running drush tome:init you can use this tab to run your server with 'drush runserver 0.0.0.0:8888'"
+            [ -d content ] &amp;&amp; drush runserver 0.0.0.0:8888
+          openMode: split-right
+      ports:
+        - port: 8888
+          onOpen: ignore
+        - port: 8889
+          onOpen: ignore
+      </code></pre>
+
+      <p>The configuration above will install Tome, start a server, and give you a login link. It also handles cases where you haven't installed Tome yet, which may not be relevant to your site.</p>
+
+      <p>Once you've committed a .gitpod.yml file, login to Gitpod at&nbsp;<a href="https://gitpod.io">https://gitpod.io</a>&nbsp;and create a new Project for your repository. Once created, spin up a new Workspace to start editing content in Drupal. From within the Visual Studio Code instance you should see your edits in Drupal come through and be able to commit and push them from there.</p>
+
+      <p>No more local development, for free (for now)!</p>
+    format: rich_text
+    summary: ''

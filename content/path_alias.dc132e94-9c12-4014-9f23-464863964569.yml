@@ -1,0 +1,10 @@
+uuid:
+  - value: dc132e94-9c12-4014-9f23-464863964569
+langcode:
+  - value: en
+path:
+  - value: /node/c9a98bc9-6d6c-4d86-b371-8cd9a2cb433d
+alias:
+  - value: /docs/hosting/render
+status:
+  - value: true

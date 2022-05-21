@@ -1,0 +1,10 @@
+uuid:
+  - value: 80c0a6a4-83e4-4b79-a0c7-f04956d58398
+langcode:
+  - value: en
+path:
+  - value: /node/9c0d28b9-841e-4892-bee8-20055fc3c039
+alias:
+  - value: /docs/hosting/netlify
+status:
+  - value: true

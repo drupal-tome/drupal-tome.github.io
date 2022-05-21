@@ -1,0 +1,10 @@
+uuid:
+  - value: b4bee079-aaa1-4484-b5fd-cb7bcde59d95
+langcode:
+  - value: en
+path:
+  - value: /node/7da31bfb-b8e2-49c5-8040-59dc8ecfeec3
+alias:
+  - value: /docs/technical/exporter
+status:
+  - value: true

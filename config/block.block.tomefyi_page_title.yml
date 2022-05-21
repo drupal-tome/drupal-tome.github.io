@@ -17,14 +17,14 @@ plugin: page_title_block
 settings:
   id: page_title_block
   label: 'Page title'
-  provider: core
   label_display: '0'
+  provider: core
 visibility:
   node_type:
     id: node_type
-    bundles:
-      blog: blog
-      book: book
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      blog: blog
+      book: book

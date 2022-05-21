@@ -1,0 +1,10 @@
+uuid:
+  - value: 37375e33-946a-4201-880a-04b5f312cc36
+langcode:
+  - value: en
+path:
+  - value: /node/2c408856-32b1-4bd1-bd05-9369b74693bc
+alias:
+  - value: /docs/site-settings
+status:
+  - value: true

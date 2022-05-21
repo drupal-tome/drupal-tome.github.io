@@ -1,0 +1,10 @@
+uuid:
+  - value: 256705f7-ba93-42bf-8de4-efcea22f28de
+langcode:
+  - value: en
+path:
+  - value: /node/611ef57c-c8d1-41f2-a109-4d1a7749a0b7
+alias:
+  - value: /docs/module-compatibility
+status:
+  - value: true

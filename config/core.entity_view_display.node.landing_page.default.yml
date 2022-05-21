@@ -17,18 +17,18 @@ mode: default
 content:
   field_paragraphs:
     type: entity_reference_revisions_entity_view
-    weight: 1
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_description: true
   field_preview_image: true

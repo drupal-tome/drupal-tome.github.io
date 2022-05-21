@@ -1,0 +1,63 @@
+uuid:
+  - value: beecb58c-096a-4ad1-b0cb-9d8da9bb380d
+langcode:
+  - value: en
+type:
+  - target_id: book
+    target_type: node_type
+    target_uuid: 870f5e4b-075f-48ba-972b-7b47064b4efd
+revision_timestamp:
+  - value: '2018-07-04T19:14:40+00:00'
+    format: 'Y-m-d\TH:i:sP'
+revision_uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+revision_log: {  }
+status:
+  - value: true
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+title:
+  - value: 'Static site generation'
+created:
+  - value: '2018-07-04T19:14:35+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2019-05-13T06:11:44+00:00'
+    format: 'Y-m-d\TH:i:sP'
+promote:
+  - value: false
+sticky:
+  - value: false
+default_langcode:
+  - value: true
+revision_translation_affected:
+  - value: true
+path:
+  - alias: /docs/technical/static
+    langcode: en
+body:
+  - value: |
+      <p>You may use any static site generator in conjunction with Tome by reading exporting JSON directly. See <a href="https://github.com/drupal-tome/tome-gatsby">tome-gatsby</a> for an example of a&nbsp;<a href="https://www.gatsbyjs.org/">Gatsby</a> integration.</p>
+
+      <p>If you want to use Drupal to generate HTML, Tome&nbsp;ships with a static site generator that uses Drupal's internal request handling and concurrency to ensure that pages are exported as quickly as possible.</p>
+
+      <p>The static site generation flow works like:</p>
+
+      <ol>
+      	<li>The "drush tome:static" command is ran.</li>
+      	<li>The "tome.static" service collects all paths known to Drupal. Currently this is a combination of all routes that do not use parameters, and all entity "canonical" paths (and the paths of their translations).&nbsp;If the site uses URL language negotiation, each configured language prefix is also collected. Only entities/routes that are accessible to anonymous are exported.</li>
+      	<li>The "cache.tome_static" service removes all paths that already cached and in the static build. The cache uses core cache tags to determine cacheability of paths.</li>
+      	<li>Paths are exported using a user-configurable concurrency, which defaults to five. This means that five paths will be processed by Drupal at a time.</li>
+      	<li>For each path, the script first checks if the path is a static file that can be immediately copied. This is common for pre-generated files in the files directory.</li>
+      	<li>If the path isn't a static file, a new process is invoked and Drupal handles the request. This is done using the "http.kernel" service. If a response with the status code 200 is returned, the content of that response is saved to the filesystem.</li>
+      	<li>If the response was HTML, that HTMl is parsed and assets are collected. The currently recognized assets are pager links (to support Views pagers), images, responsive images (using srcset), stylesheets, scripts, and favicons.</li>
+      	<li>If the response was CSS, URLs within "url(...)" are parsed as assets.</li>
+      	<li>All collected asset paths are then returned to the parent process, which exports&nbsp;them starting at step 3.</li>
+      	<li>Steps 3-8 repeat until there are no more assets to be exported.</li>
+      </ol>
+
+      <p>&nbsp;</p>
+    format: rich_text
+    summary: ''

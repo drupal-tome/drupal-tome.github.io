@@ -1,0 +1,23 @@
+uuid:
+  - value: 916d5c3b-c403-4ba9-9a0e-c3a8eefe0ddf
+langcode:
+  - value: en
+uid:
+  - target_type: user
+    target_uuid: ed803c7d-e897-4ebb-99a7-1de7754316c4
+filename:
+  - value: commit.svg
+uri:
+  - value: 'public://2019-01/commit.svg'
+filemime:
+  - value: image/svg+xml
+filesize:
+  - value: 1856
+status:
+  - value: true
+created:
+  - value: '2019-01-13T18:12:44+00:00'
+    format: 'Y-m-d\TH:i:sP'
+changed:
+  - value: '2019-01-13T18:13:17+00:00'
+    format: 'Y-m-d\TH:i:sP'
