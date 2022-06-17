@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-<link rel="canonical" href="https://tome.fyi/node/23" />
+<link rel="canonical" href="https://tome.fyi/docs/upgrading-module-core-versions" />
 <meta name="description" content="Upgrades with Tome should work the same as normal Drupal site upgrades: Run composer commands to update module/core versions Run &quot;drush updb&quot;, possibly &quot;drush cron&quot; for some field changes See updated content/config exported with Tome But sometimes upgrades need manual steps. Here are some notes that may be helpful to you:" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="Upgrades with Tome should work the same as normal Drupal site upgrades: Run composer commands to update module/core versions Run &quot;drush updb&quot;, possibly &quot;drush cron&quot; for some field changes See updated content/config exported with Tome But sometimes upgrades need manual steps. Here are some notes that may be helpful to you:" />
@@ -83,7 +83,7 @@
         <a href="/docs/installing-existing-site" hreflang="en">Installing to an existing site</a>
               </li>
                 <li class="menu-item">
-        <a href="/node/23" hreflang="en">Upgrading module/core versions</a>
+        <a href="/docs/upgrading-module-core-versions" hreflang="en">Upgrading module/core versions</a>
               </li>
                 <li class="menu-item">
         <a href="/docs/use-cases" hreflang="en">Use cases</a>
@@ -199,6 +199,14 @@
 
 <p>But sometimes upgrades need manual steps. Here are some notes that may be helpful to you:</p>
 
+<h2>Upgrading from Drupal &lt;9.4.0 to Drupal 9.4.0</h2>
+
+<p><em>Note: this could be fixed in&nbsp;<a href="https://www.drupal.org/project/drupal/issues/3285200">https://www.drupal.org/project/drupal/issues/3285200</a></em></p>
+
+<ol>
+	<li>In config/core.extension.yml, add "sqlite: 0" to the module list</li>
+</ol>
+
 <h2>Upgrading from Drupal 8 to Drupal 9</h2>
 
 <ol>
@@ -267,7 +275,7 @@
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/23","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"b0e5f7c7487a44c4b3c3a724a2d8ffb05efbd41f912cf1fbe3e5da46c3649ecd"}}</script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/23","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"4fa618fd0e9d6da729613bd526ef1a624ad21f06c35583be2a8d3c7f28c16caf"}}</script>
 <script src="/sites/default/files/js/js_Kbbh7yC5kf-weSWDxBsiC6YIXh4PBazkCj3Jk3WBdMo.js"></script>
 
   </body>
