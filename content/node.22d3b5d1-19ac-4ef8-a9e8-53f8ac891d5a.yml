@@ -24,7 +24,7 @@ created:
   - value: '2022-01-26T13:39:11+00:00'
     format: 'Y-m-d\TH:i:sP'
 changed:
-  - value: '2022-01-26T13:57:33+00:00'
+  - value: '2022-06-17T15:30:59+00:00'
     format: 'Y-m-d\TH:i:sP'
 promote:
   - value: false
@@ -35,8 +35,7 @@ default_langcode:
 revision_translation_affected:
   - value: true
 path:
-  - alias: null
-    pid: null
+  - alias: /docs/upgrading-module-core-versions
     langcode: en
 body:
   - value: |
@@ -49,6 +48,14 @@ body:
       </ol>
 
       <p>But sometimes upgrades need manual steps. Here are some notes that may be helpful to you:</p>
+
+      <h2>Upgrading from Drupal &lt;9.4.0 to Drupal 9.4.0</h2>
+
+      <p><em>Note: this could be fixed in&nbsp;<a href="https://www.drupal.org/project/drupal/issues/3285200">https://www.drupal.org/project/drupal/issues/3285200</a></em></p>
+
+      <ol>
+      	<li>In config/core.extension.yml, add "sqlite: 0" to the module list</li>
+      </ol>
 
       <h2>Upgrading from Drupal 8 to Drupal 9</h2>
 

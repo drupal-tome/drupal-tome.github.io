@@ -1,0 +1,10 @@
+uuid:
+  - value: 752a54ab-544d-4c0d-add3-dbcefe9b1812
+langcode:
+  - value: en
+path:
+  - value: /node/22d3b5d1-19ac-4ef8-a9e8-53f8ac891d5a
+alias:
+  - value: /docs/upgrading-module-core-versions
+status:
+  - value: true
