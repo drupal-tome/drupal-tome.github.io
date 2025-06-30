@@ -39,7 +39,7 @@ path:
     langcode: en
 body:
   - value: |
-      <p>If you have an existing Drupal 8 site, installing Tome is fairly straightforward. This guide will take you through the process of installing Tome or Tome Static.</p>
+      <p>If you have an existing Drupal site, installing Tome is fairly straightforward. This guide will take you through the process of installing Tome or Tome Static.</p>
 
       <h2>Installing Tome Static</h2>
 

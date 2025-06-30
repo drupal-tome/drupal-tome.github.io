@@ -38,7 +38,7 @@ path:
   - alias: /home
     langcode: en
 field_description:
-  - value: 'The homepage for Tome, a static site generator for Drupal 8.'
+  - value: 'The homepage for Tome, a static site generator for Drupal.'
 field_paragraphs:
   - target_type: paragraph
     target_uuid: 78b3effa-9f0f-4229-93e2-4ef5b006ffb8

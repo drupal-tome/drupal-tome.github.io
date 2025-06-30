@@ -41,11 +41,11 @@ body:
   - value: |
       <p>This guide will describe how you can use traditional Drupal hosting, Tome Static, and Netlify to have a normal content editing experience while still running static html on your public-facing site.</p>
 
-      <p>First, you'll need to host a Drupal 8 site somewhere. For my testing, I've used&nbsp;<a href="https://pantheon.io/">Pantheon</a>, which provides a free-tier and the ability to lock down environments, which is important for keeping people away from your content editing domain.</p>
+      <p>First, you'll need to host a Drupal site somewhere. For my testing, I've used&nbsp;<a href="https://pantheon.io/">Pantheon</a>, which provides a free-tier and the ability to lock down environments, which is important for keeping people away from your content editing domain.</p>
 
       <ol>
       	<li>
-      	<p>Assuming you have a basic Drupal 8 installation, run this command&nbsp;from where your site's "composer.json" file lives: "composer require drupal/tome drupal/tome_netlify".</p>
+      	<p>Assuming you have a basic Drupal installation, run this command&nbsp;from where your site's "composer.json" file lives: "composer require drupal/tome drupal/tome_netlify".</p>
       	</li>
       	<li>
       	<p>Edit your site "settings.php" file and set the "tome_static_directory" setting to a writeable directory on your hosting provider. For Pantheon, I add this block of code:<br />

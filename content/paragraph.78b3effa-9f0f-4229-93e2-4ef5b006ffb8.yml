@@ -27,5 +27,5 @@ field_headline:
 field_link: {  }
 field_text:
   - value: |
-      <p>A static site generator for Drupal 9</p>
+      <p>A static site generator for Drupal</p>
     format: rich_text
